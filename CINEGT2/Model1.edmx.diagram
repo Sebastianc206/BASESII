@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="43ad839e24d84c12932a5a0d7f96d0f3" Name="Diagram1">
+        <EntityTypeShape EntityType="CINEBDModel.Asiento" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEBDModel.Cambio_Asiento" Width="1.5" PointX="7.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEBDModel.Catalogo_Asignacion" Width="1.5" PointX="0.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEBDModel.Log_Transaccion" Width="1.5" PointX="5.375" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEBDModel.Pelicula" Width="1.5" PointX="7.125" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEBDModel.SALA" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEBDModel.Sesion" Width="1.5" PointX="4.375" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEBDModel.SesionCSV" Width="1.5" PointX="6.625" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEBDModel.Transaccion" Width="1.5" PointX="2.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEBDModel.Transaccion_Asiento" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CINEBDModel.Usuarios" Width="1.5" PointX="7.75" PointY="9" IsExpanded="true" />
+        <AssociationConnector Association="CINEBDModel.FK__Asiento__ID_Sala__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEBDModel.FK__Transacci__ID_As__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEBDModel.FK__Cambio_As__ID_As__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEBDModel.FK__Cambio_As__ID_Tr__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEBDModel.FK__Transacci__ID_Ti__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEBDModel.FK__Sesion__ID_Pelic__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEBDModel.FK__Sesion__ID_Sala__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEBDModel.FK__Transacci__ID_Se__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEBDModel.FK__SesionCSV__ID_Us__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEBDModel.FK__Transacci__ID_Tr__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="CINEBDModel.FK__Transacci__ID_Us__5441852A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
