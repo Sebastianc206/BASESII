@@ -1,0 +1,13 @@
+D:\source\repos\CINEBD\obj\Debug\CINEBD.csproj.AssemblyReference.cache
+D:\source\repos\CINEBD\obj\Debug\CINEBD.Form1.resources
+D:\source\repos\CINEBD\obj\Debug\CINEBD.Properties.Resources.resources
+D:\source\repos\CINEBD\obj\Debug\CINEBD.csproj.GenerateResource.cache
+D:\source\repos\CINEBD\obj\Debug\CINEBD.csproj.CoreCompileInputs.cache
+D:\source\repos\CINEBD\bin\Debug\CINEBD.exe.config
+D:\source\repos\CINEBD\bin\Debug\CINEBD.exe
+D:\source\repos\CINEBD\bin\Debug\CINEBD.pdb
+D:\source\repos\CINEBD\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\source\repos\CINEBD\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\source\repos\CINEBD\obj\Debug\CINEBD.csproj.CopyComplete
+D:\source\repos\CINEBD\obj\Debug\CINEBD.exe
+D:\source\repos\CINEBD\obj\Debug\CINEBD.pdb
