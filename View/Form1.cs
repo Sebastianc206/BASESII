@@ -50,29 +50,20 @@ namespace CINEBD
                     if (rol == "Admin")
                     {
                         MessageBox.Show("Bienvenido Administrador");
+                        View.Operador form2 = new View.Operador();  // Crear instancia del segundo formulario
+                        form2.Show();               // Mostrar el segundo formulario
+                        this.Hide();
                     }
                     else if (rol == "Operador")
                     {
                         MessageBox.Show("Bienvenido Operador");
 
                     }
-
-
-
-                }
-                else if (resultado == -1)
-                {
-                    MessageBox.Show("Úsuario no esta en la base");
-
-                }
-                else if (resultado == -2)
-                {
-                    MessageBox.Show("Contraseña incorrecta");
-
                 }
                 else
                 {
-                    MessageBox.Show("FATAL ERROR");
+                    MessageBox.Show("Usuario o contraseña incorrectos");
+
                 }
             }
             catch (Exception ex)

@@ -11,3 +11,5 @@ D:\source\repos\CINEBD\bin\Debug\System.Configuration.ConfigurationManager.xml
 D:\source\repos\CINEBD\obj\Debug\CINEBD.csproj.CopyComplete
 D:\source\repos\CINEBD\obj\Debug\CINEBD.exe
 D:\source\repos\CINEBD\obj\Debug\CINEBD.pdb
+D:\source\repos\CINEBD\obj\Debug\CINEBD.View.Operador.resources
+D:\source\repos\CINEBD\obj\Debug\CINEBD.View.Compra.resources

@@ -56,17 +56,32 @@
       <DependentUpon>CINEBDDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Controller\LoginController.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="View\Compra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="View\Compra.Designer.cs">
+      <DependentUpon>Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\DBCONTE.cs" />
     <Compile Include="Model\UsuarioLogin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="View\Operador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Operador.Designer.cs">
+      <DependentUpon>Operador.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Compra.resx">
+      <DependentUpon>Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -78,6 +93,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Operador.resx">
+      <DependentUpon>Operador.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="CINEBDDataSet.xsc">
       <DependentUpon>CINEBDDataSet.xsd</DependentUpon>
     </None>
