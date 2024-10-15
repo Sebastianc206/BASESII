@@ -13,3 +13,18 @@ D:\source\repos\CINEBD\obj\Debug\CINEBD.exe
 D:\source\repos\CINEBD\obj\Debug\CINEBD.pdb
 D:\source\repos\CINEBD\obj\Debug\CINEBD.View.Operador.resources
 D:\source\repos\CINEBD\obj\Debug\CINEBD.View.Compra.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\bin\Debug\CINEBD.exe.config
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\bin\Debug\CINEBD.exe
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\bin\Debug\CINEBD.pdb
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.csproj.AssemblyReference.cache
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.Compra.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.Form1.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.Properties.Resources.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.Operador.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.csproj.GenerateResource.cache
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.csproj.Up2Date
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.exe
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.pdb
