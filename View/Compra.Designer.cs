@@ -40,9 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.sALATableAdapter = new CINEBD.CINEBDDataSetTableAdapters.SALATableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.filaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Sala = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKAsientoIDSala3B75D760BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.asientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.asientoTableAdapter = new CINEBD.CINEBDDataSetTableAdapters.AsientoTableAdapter();
@@ -56,14 +53,26 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Fecha_Inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKSesionIDPelic440B1D61BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sesionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sesionTableAdapter = new CINEBD.CINEBDDataSetTableAdapters.SesionTableAdapter();
             this.fKTransacciIDSe5AEE82B9BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.transaccion_AsientoTableAdapter = new CINEBD.CINEBDDataSetTableAdapters.Transaccion_AsientoTableAdapter();
-            this.fKSesionIDPelic440B1D61BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sesionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.Fecha_Inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDSesionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaFinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.origenCSVDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.grupoCSVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDSalaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDPeliculaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDASIENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Sala = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cINEBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALABindingSource)).BeginInit();
@@ -72,9 +81,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.asientoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKSesionIDPelic440B1D61BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sesionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKTransacciIDSe5AEE82B9BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKSesionIDPelic440B1D61BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sesionBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,6 +154,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDASIENTO,
             this.filaDataGridViewTextBoxColumn,
             this.numeroDataGridViewTextBoxColumn,
             this.ID_Sala});
@@ -154,27 +164,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(749, 172);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // filaDataGridViewTextBoxColumn
-            // 
-            this.filaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.filaDataGridViewTextBoxColumn.DataPropertyName = "Fila";
-            this.filaDataGridViewTextBoxColumn.HeaderText = "Fila";
-            this.filaDataGridViewTextBoxColumn.Name = "filaDataGridViewTextBoxColumn";
-            // 
-            // numeroDataGridViewTextBoxColumn
-            // 
-            this.numeroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
-            this.numeroDataGridViewTextBoxColumn.HeaderText = "NumeroAsiento";
-            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
-            // 
-            // ID_Sala
-            // 
-            this.ID_Sala.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID_Sala.DataPropertyName = "ID_Sala";
-            this.ID_Sala.HeaderText = "NoSala";
-            this.ID_Sala.Name = "ID_Sala";
             // 
             // fKAsientoIDSala3B75D760BindingSource
             // 
@@ -198,6 +187,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(748, 318);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
@@ -275,12 +265,40 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha_Inicio,
-            this.Fecha_Fin});
+            this.Fecha_Fin,
+            this.iDSesionDataGridViewTextBoxColumn,
+            this.fechaInicioDataGridViewTextBoxColumn,
+            this.fechaFinDataGridViewTextBoxColumn,
+            this.estadoDataGridViewTextBoxColumn,
+            this.origenCSVDataGridViewCheckBoxColumn,
+            this.grupoCSVDataGridViewTextBoxColumn,
+            this.iDSalaDataGridViewTextBoxColumn,
+            this.iDPeliculaDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.fKSesionIDPelic440B1D61BindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(385, 9);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(376, 70);
             this.dataGridView2.TabIndex = 15;
+            // 
+            // Fecha_Inicio
+            // 
+            this.Fecha_Inicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fecha_Inicio.DataPropertyName = "Fecha_Inicio";
+            this.Fecha_Inicio.HeaderText = "Fecha_Inicio";
+            this.Fecha_Inicio.Name = "Fecha_Inicio";
+            // 
+            // Fecha_Fin
+            // 
+            this.Fecha_Fin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fecha_Fin.DataPropertyName = "Fecha_Fin";
+            this.Fecha_Fin.HeaderText = "Fecha_Fin";
+            this.Fecha_Fin.Name = "Fecha_Fin";
+            this.Fecha_Fin.ReadOnly = true;
+            // 
+            // fKSesionIDPelic440B1D61BindingSource
+            // 
+            this.fKSesionIDPelic440B1D61BindingSource.DataMember = "FK__Sesion__ID_Pelic__440B1D61";
+            this.fKSesionIDPelic440B1D61BindingSource.DataSource = this.peliculaBindingSource;
             // 
             // sesionBindingSource
             // 
@@ -300,30 +318,87 @@
             // 
             this.transaccion_AsientoTableAdapter.ClearBeforeFill = true;
             // 
-            // fKSesionIDPelic440B1D61BindingSource
-            // 
-            this.fKSesionIDPelic440B1D61BindingSource.DataMember = "FK__Sesion__ID_Pelic__440B1D61";
-            this.fKSesionIDPelic440B1D61BindingSource.DataSource = this.peliculaBindingSource;
-            // 
             // sesionBindingSource1
             // 
             this.sesionBindingSource1.DataMember = "Sesion";
             this.sesionBindingSource1.DataSource = this.cINEBDDataSet;
             // 
-            // Fecha_Inicio
+            // iDSesionDataGridViewTextBoxColumn
             // 
-            this.Fecha_Inicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha_Inicio.DataPropertyName = "Fecha_Inicio";
-            this.Fecha_Inicio.HeaderText = "Fecha_Inicio";
-            this.Fecha_Inicio.Name = "Fecha_Inicio";
+            this.iDSesionDataGridViewTextBoxColumn.DataPropertyName = "ID_Sesion";
+            this.iDSesionDataGridViewTextBoxColumn.HeaderText = "ID_Sesion";
+            this.iDSesionDataGridViewTextBoxColumn.Name = "iDSesionDataGridViewTextBoxColumn";
+            this.iDSesionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Fecha_Fin
+            // fechaInicioDataGridViewTextBoxColumn
             // 
-            this.Fecha_Fin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha_Fin.DataPropertyName = "Fecha_Fin";
-            this.Fecha_Fin.HeaderText = "Fecha_Fin";
-            this.Fecha_Fin.Name = "Fecha_Fin";
-            this.Fecha_Fin.ReadOnly = true;
+            this.fechaInicioDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Inicio";
+            this.fechaInicioDataGridViewTextBoxColumn.HeaderText = "Fecha_Inicio";
+            this.fechaInicioDataGridViewTextBoxColumn.Name = "fechaInicioDataGridViewTextBoxColumn";
+            // 
+            // fechaFinDataGridViewTextBoxColumn
+            // 
+            this.fechaFinDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Fin";
+            this.fechaFinDataGridViewTextBoxColumn.HeaderText = "Fecha_Fin";
+            this.fechaFinDataGridViewTextBoxColumn.Name = "fechaFinDataGridViewTextBoxColumn";
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            // 
+            // origenCSVDataGridViewCheckBoxColumn
+            // 
+            this.origenCSVDataGridViewCheckBoxColumn.DataPropertyName = "OrigenCSV";
+            this.origenCSVDataGridViewCheckBoxColumn.HeaderText = "OrigenCSV";
+            this.origenCSVDataGridViewCheckBoxColumn.Name = "origenCSVDataGridViewCheckBoxColumn";
+            // 
+            // grupoCSVDataGridViewTextBoxColumn
+            // 
+            this.grupoCSVDataGridViewTextBoxColumn.DataPropertyName = "GrupoCSV";
+            this.grupoCSVDataGridViewTextBoxColumn.HeaderText = "GrupoCSV";
+            this.grupoCSVDataGridViewTextBoxColumn.Name = "grupoCSVDataGridViewTextBoxColumn";
+            // 
+            // iDSalaDataGridViewTextBoxColumn
+            // 
+            this.iDSalaDataGridViewTextBoxColumn.DataPropertyName = "ID_Sala";
+            this.iDSalaDataGridViewTextBoxColumn.HeaderText = "ID_Sala";
+            this.iDSalaDataGridViewTextBoxColumn.Name = "iDSalaDataGridViewTextBoxColumn";
+            // 
+            // iDPeliculaDataGridViewTextBoxColumn
+            // 
+            this.iDPeliculaDataGridViewTextBoxColumn.DataPropertyName = "ID_Pelicula";
+            this.iDPeliculaDataGridViewTextBoxColumn.HeaderText = "ID_Pelicula";
+            this.iDPeliculaDataGridViewTextBoxColumn.Name = "iDPeliculaDataGridViewTextBoxColumn";
+            // 
+            // IDASIENTO
+            // 
+            this.IDASIENTO.DataPropertyName = "ID_Asiento";
+            this.IDASIENTO.HeaderText = "IDASIENTO";
+            this.IDASIENTO.Name = "IDASIENTO";
+            this.IDASIENTO.ReadOnly = true;
+            // 
+            // filaDataGridViewTextBoxColumn
+            // 
+            this.filaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.filaDataGridViewTextBoxColumn.DataPropertyName = "Fila";
+            this.filaDataGridViewTextBoxColumn.HeaderText = "Fila";
+            this.filaDataGridViewTextBoxColumn.Name = "filaDataGridViewTextBoxColumn";
+            // 
+            // numeroDataGridViewTextBoxColumn
+            // 
+            this.numeroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "NumeroAsiento";
+            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            // 
+            // ID_Sala
+            // 
+            this.ID_Sala.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID_Sala.DataPropertyName = "ID_Sala";
+            this.ID_Sala.HeaderText = "NoSala";
+            this.ID_Sala.Name = "ID_Sala";
             // 
             // Compra
             // 
@@ -356,9 +431,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.asientoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKSesionIDPelic440B1D61BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sesionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKTransacciIDSe5AEE82B9BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKSesionIDPelic440B1D61BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sesionBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -384,9 +459,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn filaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Sala;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
@@ -401,5 +473,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Inicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Fin;
         private System.Windows.Forms.BindingSource sesionBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDSesionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaFinDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn origenCSVDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grupoCSVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDSalaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDPeliculaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDASIENTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Sala;
     }
 }

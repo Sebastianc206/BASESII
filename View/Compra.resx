@@ -141,11 +141,8 @@
   <metadata name="sALATableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>644, 17</value>
   </metadata>
-  <metadata name="ID_Sala.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="IDASIENTO.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="fKAsientoIDSala3B75D760BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1123, 17</value>
   </metadata>
   <metadata name="ID_Sala.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -163,7 +160,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAuwAAAFFCAIAAAA4uS8QAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAjsVJREFUeF7tvXd8HUe5uP/7D0LoPUCASwuEmhD6BXKp4XuBC4QLXCBAQg2EFqp7
+        vgAADr4B6kKxwAAAjsVJREFUeF7tvXd8HUe5uP/7D0LoPUCASwuEmhD6BXKp4XuBC4QLXCBAQg2EFqp7
         773XuPdeZMtFPr333nvvvZfN75X2RJbOkSzHtryz9vt83uQj6eyRXs+ZnXlmd3bm/3seQRAEQRCEhaDE
         IAiCIAjCSlBiEARBEARhJSgxCIIgCIKwEpQYBEEQBEFYyZ0hMRRFteu1Rq5Uz44VuXKj1qI6xxICRbWa
         zWK5O9XhKNVbbdJSbrcqle48hyNfaZJWxpByo97I96TaiXKj2mx3DiQFqt1sFsarFeXGUK0grlpUq43u
@@ -775,6 +772,15 @@
         QYlBEARBEISVoMQgCIIgCMJCnn/+/weXrwIrVTt7dQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="Fecha_Inicio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Fecha_Fin.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="fKSesionIDPelic440B1D61BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>830, 54</value>
+  </metadata>
   <metadata name="Fecha_Inicio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
