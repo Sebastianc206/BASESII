@@ -25,7 +25,7 @@ namespace CINEBD.Model
                 try
                 {
                     connection.Open();
-                    using (SqlCommand command = new SqlCommand("VerificaUsuario", connection))
+                    using (SqlCommand command = new SqlCommand("sp_VerificaUsuario", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
@@ -59,6 +59,36 @@ namespace CINEBD.Model
                     // Manejar cualquier excepción
                     Console.WriteLine("Error: " + ex.Message);
                     return (-99, null); // Código de error especial
+                }
+            }
+        }
+
+        public DataTable ObtenerAsientosPorSala(int idSala)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand("sp_ObtenerAsientosPorSala", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        // Parámetro de entrada para el ID_Sala
+                        command.Parameters.AddWithValue("@ID_Sala", idSala);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataTable asientos = new DataTable();
+                        adapter.Fill(asientos);
+
+                        return asientos;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejar cualquier excepción
+                    Console.WriteLine("Error: " + ex.Message);
+                    return null; // Retornar null en caso de error
                 }
             }
         }

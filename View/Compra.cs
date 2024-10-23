@@ -19,16 +19,22 @@ namespace CINEBD.View
 
         private void Compra_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'cINEBDDataSet.Transaccion_Asiento' Puede moverla o quitarla según sea necesario.
-            this.transaccion_AsientoTableAdapter.Fill(this.cINEBDDataSet.Transaccion_Asiento);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBDDataSet.Sesion' Puede moverla o quitarla según sea necesario.
-            this.sesionTableAdapter.Fill(this.cINEBDDataSet.Sesion);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBDDataSet.Asiento' Puede moverla o quitarla según sea necesario.
-            this.asientoTableAdapter.Fill(this.cINEBDDataSet.Asiento);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBDDataSet.SALA' Puede moverla o quitarla según sea necesario.
-            this.sALATableAdapter.Fill(this.cINEBDDataSet.SALA);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBDDataSet.Pelicula' Puede moverla o quitarla según sea necesario.
-            this.peliculaTableAdapter.Fill(this.cINEBDDataSet.Pelicula);
+            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet1.Asiento' Puede moverla o quitarla según sea necesario.
+            this.asientoTableAdapter1.Fill(this.cINEBD2DataSet1.Asiento);
+            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Sesion' Puede moverla o quitarla según sea necesario.
+            this.sesionTableAdapter1.Fill(this.cINEBD2DataSet.Sesion);
+            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Sesion' Puede moverla o quitarla según sea necesario.
+            this.sesionTableAdapter1.Fill(this.cINEBD2DataSet.Sesion);
+            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Transaccion_Asiento' Puede moverla o quitarla según sea necesario.
+            this.transaccion_AsientoTableAdapter1.Fill(this.cINEBD2DataSet.Transaccion_Asiento);
+            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Asiento' Puede moverla o quitarla según sea necesario.
+            this.asientoTableAdapter1.Fill(this.cINEBD2DataSet.Asiento);
+            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.SALA' Puede moverla o quitarla según sea necesario.
+            this.sALATableAdapter1.Fill(this.cINEBD2DataSet.SALA);
+            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Sesion' Puede moverla o quitarla según sea necesario.
+            this.sesionTableAdapter1.Fill(this.cINEBD2DataSet.Sesion);
+            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Pelicula' Puede moverla o quitarla según sea necesario.
+            this.peliculaTableAdapter1.Fill(this.cINEBD2DataSet.Pelicula);
 
         }
 

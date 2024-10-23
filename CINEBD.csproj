@@ -50,6 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CINEBD2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CINEBD2DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CINEBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -61,6 +66,7 @@
       <DependentUpon>CINEBDDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\Sala.cs" />
     <Compile Include="View\Compra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,17 @@
     <EmbeddedResource Include="View\Operador.resx">
       <DependentUpon>Operador.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CINEBD2DataSet.xsc">
+      <DependentUpon>CINEBD2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CINEBD2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CINEBD2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CINEBD2DataSet.xss">
+      <DependentUpon>CINEBD2DataSet.xsd</DependentUpon>
+    </None>
     <None Include="CINEBDDataSet.xsc">
       <DependentUpon>CINEBDDataSet.xsd</DependentUpon>
     </None>

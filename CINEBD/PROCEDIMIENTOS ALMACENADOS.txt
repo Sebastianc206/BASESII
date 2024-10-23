@@ -1,0 +1,192 @@
+--PROCEDIMIENTO PARA VERIFICAR EL USUARIO 
+CREATE OR ALTER PROCEDURE sp_VerificaUsuario
+    @Nombre varchar(50),
+    @Contraseña varchar(255),
+    @Rol varchar(50) OUTPUT  -- Parámetro de salida para devolver el rol
+AS
+BEGIN
+    BEGIN TRAN
+    DECLARE @ContraDsc varbinary(64)
+    SET @ContraDsc = HASHBYTES('SHA2_256', @Contraseña)
+
+    -- Verificar si el usuario existe
+    IF EXISTS (SELECT * FROM Usuarios WHERE Nombre = @Nombre)
+    BEGIN
+        -- Verificar si la contraseña es correcta
+        IF EXISTS (SELECT * FROM Usuarios WHERE Nombre = @Nombre AND Contraseña = @ContraDsc)
+        BEGIN
+            -- Obtener el rol
+            SELECT @Rol = Rol FROM Usuarios WHERE Nombre = @Nombre AND Contraseña = @ContraDsc
+            COMMIT TRAN
+            RETURN 1  -- Usuario y contraseña correctos
+        END
+        ELSE
+        BEGIN
+            ROLLBACK TRAN
+            SET @Rol = NULL  -- No se encontró el rol
+            RETURN -2  -- Contraseña incorrecta
+        END
+    END
+    ELSE
+    BEGIN
+        ROLLBACK TRAN
+        SET @Rol = NULL  -- No se encontró el rol
+        RETURN -1  -- Usuario no existe
+    END
+END
+
+
+GO
+
+DECLARE @RolSalida varchar(50);
+DECLARE @Resultado int;
+
+EXEC @Resultado = sp_VerificaUsuario @Nombre = 'admin', @Contraseña = 'admin123', @Rol = @RolSalida OUTPUT;
+
+-- Ver el resultado
+SELECT @Resultado AS Resultado, @RolSalida AS Rol;
+
+
+--PROCEDIMIENTO ASIGNAR ASIENTOS 
+
+CREATE TYPE AsientoFilaNumeroType AS TABLE
+(
+    Fila CHAR(1),
+    Numero INT
+);
+
+GO
+
+CREATE PROCEDURE CompraMultiple
+    @ID_Pelicula INT,
+    @ID_Sala INT,
+    @Fecha DATE,
+    @ID_Usuario INT,
+    @ID_Tipo_Asignacion INT,
+    @Asientos AsientoFilaNumeroType READONLY
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        DECLARE @ID_Sesion INT;
+        DECLARE @ID_Transaccion INT;
+        DECLARE @CantidadAsientos INT;
+
+        -- Verificar si existe una sesión para la película, sala y fecha dadas
+        SELECT @ID_Sesion = ID_Sesion
+        FROM Sesion
+        WHERE ID_Pelicula = @ID_Pelicula
+          AND ID_Sala = @ID_Sala
+          AND CONVERT(DATE, Fecha_Inicio) = @Fecha
+          AND Estado = 'Activa';
+
+        IF @ID_Sesion IS NULL
+        BEGIN
+            RAISERROR('No se encontró una sesión activa para la película, sala y fecha especificadas.', 16, 1);
+            RETURN;
+        END
+
+        -- Verificar si los asientos existen y están disponibles
+        IF EXISTS (
+            SELECT 1 
+            FROM @Asientos a
+            LEFT JOIN Asiento ast ON ast.Fila = a.Fila AND ast.Numero = a.Numero AND ast.ID_Sala = @ID_Sala
+            LEFT JOIN Transaccion_Asiento ta ON ta.Fila = a.Fila AND ta.Numero = a.Numero AND ta.ID_Sala = @ID_Sala AND ta.ID_Sesion = @ID_Sesion
+            WHERE ast.Fila IS NULL OR ta.Estado_Asignacion = 'Asignado'
+        )
+        BEGIN
+            RAISERROR('Uno o más asientos seleccionados no existen o no están disponibles.', 16, 1);
+            RETURN;
+        END
+
+        -- Obtener la cantidad de asientos
+        SELECT @CantidadAsientos = COUNT(*) FROM @Asientos;
+
+        -- Crear la transacción
+        INSERT INTO Transaccion (Fecha_Hora, Tipo_Transaccion, Cantidad_Asientos, Estado, ID_Usuario, ID_Tipo_Asignacion)
+        VALUES (GETDATE(), 'Venta', @CantidadAsientos, 'Completada', @ID_Usuario, @ID_Tipo_Asignacion);
+
+        SET @ID_Transaccion = SCOPE_IDENTITY();
+
+        -- Asignar los asientos
+        INSERT INTO Transaccion_Asiento (Estado_Asignacion, Fecha_Hora_Asignacion, ID_Transaccion, Fila, Numero, ID_Sala, ID_Sesion)
+        SELECT 'Asignado', GETDATE(), @ID_Transaccion, a.Fila, a.Numero, @ID_Sala, @ID_Sesion
+        FROM @Asientos a;
+
+        -- Registrar la transacción en el log
+        INSERT INTO Log_Transaccion (Fecha_Hora, Usuario, Accion, ID_Operacion, Tabla_Cambio, Datos_Anteriores, Datos_Nuevos, Descripcion)
+        VALUES (
+            GETDATE(),
+            (SELECT Nombre FROM Usuarios WHERE ID_Usuario = @ID_Usuario),
+            'Venta',
+            @ID_Transaccion,
+            'Transaccion_Asiento',
+            NULL,
+            (SELECT STRING_AGG(CONCAT(Fila, Numero), ', ') FROM @Asientos),
+            CONCAT('Compra de ', @CantidadAsientos, ' asientos realizada.')
+        );
+
+        COMMIT TRANSACTION;
+
+        -- Devolver información de la compra
+        SELECT 
+            t.ID_Transaccion,
+            s.Fecha_Inicio AS Fecha_Sesion,
+            p.Nombre AS Pelicula,
+            STRING_AGG(CONCAT(a.Fila, a.Numero), ', ') AS Asientos,
+            'Compra exitosa' AS Resultado
+        FROM Transaccion t
+        JOIN Transaccion_Asiento ta ON t.ID_Transaccion = ta.ID_Transaccion
+        JOIN Sesion s ON ta.ID_Sesion = s.ID_Sesion
+        JOIN Pelicula p ON s.ID_Pelicula = p.ID_Pelicula
+        JOIN @Asientos a ON ta.Fila = a.Fila AND ta.Numero = a.Numero
+        WHERE t.ID_Transaccion = @ID_Transaccion
+        GROUP BY t.ID_Transaccion, s.Fecha_Inicio, p.Nombre;
+
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+
+        DECLARE @ErrorMessage NVARCHAR(4000) = ERROR_MESSAGE();
+        DECLARE @ErrorSeverity INT = ERROR_SEVERITY();
+        DECLARE @ErrorState INT = ERROR_STATE();
+
+        RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState);
+    END CATCH;
+END;
+GO
+
+-- Declarar variables para IDs
+DECLARE @ID_Pelicula INT;
+DECLARE @ID_Sala INT;
+DECLARE @ID_Usuario INT;
+DECLARE @ID_Tipo_Asignacion INT;
+DECLARE @Asientos AsientoFilaNumeroType;
+
+-- Obtener los IDs necesarios
+SELECT @ID_Pelicula = ID_Pelicula FROM Pelicula WHERE Nombre = 'Los Increíbles 3';
+SELECT @ID_Sala = ID_Sala FROM Sesion WHERE ID_Pelicula = @ID_Pelicula AND Fecha_Inicio = '2024-10-16 17:00';
+SELECT @ID_Usuario = ID_Usuario FROM Usuarios WHERE Nombre = 'user1';
+SELECT @ID_Tipo_Asignacion = ID_Tipo_Asignacion FROM Catalogo_Asignacion WHERE Nombre = 'Manual';
+
+-- Insertar los asientos que queremos comprar
+INSERT INTO @Asientos (Fila, Numero) VALUES 
+('B', 1), ('B', 2), ('B', 3);
+
+-- Ejecutar el procedimiento almacenado
+EXEC CompraMultiple
+    @ID_Pelicula = @ID_Pelicula, 
+    @ID_Sala = @ID_Sala, 
+    @Fecha = '2024-10-16', 
+    @ID_Usuario = @ID_Usuario, 
+    @ID_Tipo_Asignacion = @ID_Tipo_Asignacion,
+    @Asientos = @Asientos;
+
+-- Consultar los resultados para verificar
+SELECT * FROM Transaccion;
+SELECT * FROM Transaccion_Asiento;
+SELECT * FROM Log_Transaccion;
