@@ -19,7 +19,7 @@ namespace CINEBD.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            View.Compra compra = new View.Compra();
+            View.Sesiones compra = new View.Sesiones();
             compra.Show();
             this.Hide();
         }

@@ -66,12 +66,13 @@
       <DependentUpon>CINEBDDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Controller\LoginController.cs" />
-    <Compile Include="Controller\Sala.cs" />
-    <Compile Include="View\Compra.cs">
+    <Compile Include="Controller\AsientoController.cs" />
+    <Compile Include="Model\Asiento.cs" />
+    <Compile Include="View\Sesiones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Compra.Designer.cs">
-      <DependentUpon>Compra.cs</DependentUpon>
+    <Compile Include="View\Sesiones.Designer.cs">
+      <DependentUpon>Sesiones.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
@@ -89,8 +90,8 @@
     <Compile Include="View\Operador.Designer.cs">
       <DependentUpon>Operador.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Compra.resx">
-      <DependentUpon>Compra.cs</DependentUpon>
+    <EmbeddedResource Include="View\Sesiones.resx">
+      <DependentUpon>Sesiones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

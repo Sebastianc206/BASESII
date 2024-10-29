@@ -15,11 +15,11 @@
     <Shape ID="DesignTable:Transaccion" ZOrder="13" X="654" Y="516" Height="210" Width="213" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:Transaccion_Asiento" ZOrder="12" X="322" Y="516" Height="229" Width="262" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
     <Shape ID="DesignTable:Usuarios" ZOrder="11" X="937" Y="720" Height="153" Width="194" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
-    <Shape ID="DesignTable:CompraMultiple" ZOrder="10" X="1582" Y="70" Height="172" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignSources:QueriesTableAdapter" ZOrder="1" X="1952" Y="70" Height="48" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="16" />
+    <Shape ID="DesignSources:QueriesTableAdapter" ZOrder="2" X="1952" Y="70" Height="48" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="16" />
+    <Shape ID="DesignTable:sp_ObtenerAsientosDisponibles" ZOrder="1" X="2322" Y="70" Height="134" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK__Asiento__ID_Sala__3B75D760" ZOrder="9" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Asiento__ID_Sala__3B75D760" ZOrder="10" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>521</X>
@@ -31,7 +31,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Sesion__ID_Pelic__4316F928" ZOrder="8" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Sesion__ID_Pelic__4316F928" ZOrder="9" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>322</X>
@@ -43,7 +43,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Sesion__ID_Sala__4222D4EF" ZOrder="7" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Sesion__ID_Sala__4222D4EF" ZOrder="8" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>346</X>
@@ -59,7 +59,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Transacci__ID_Ti__5070F446" ZOrder="6" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Transacci__ID_Ti__5070F446" ZOrder="7" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>937</X>
@@ -71,7 +71,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Transacci__ID_Us__4F7CD00D" ZOrder="5" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Transacci__ID_Us__4F7CD00D" ZOrder="6" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>937</X>
@@ -87,7 +87,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Transacci__ID_Se__571DF1D5" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Transacci__ID_Se__571DF1D5" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>227</X>
@@ -103,7 +103,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Transacci__ID_Tr__5535A963" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Transacci__ID_Tr__5535A963" ZOrder="4" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>654</X>
@@ -115,7 +115,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Transaccion_Asie__5629CD9C" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Transaccion_Asie__5629CD9C" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>644</X>

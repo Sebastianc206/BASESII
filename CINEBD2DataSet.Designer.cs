@@ -42,7 +42,7 @@ namespace CINEBD {
         
         private UsuariosDataTable tableUsuarios;
         
-        private CompraMultipleDataTable tableCompraMultiple;
+        private sp_ObtenerAsientosDisponiblesDataTable tablesp_ObtenerAsientosDisponibles;
         
         private global::System.Data.DataRelation relationFK__Asiento__ID_Sala__3B75D760;
         
@@ -115,8 +115,8 @@ namespace CINEBD {
                 if ((ds.Tables["Usuarios"] != null)) {
                     base.Tables.Add(new UsuariosDataTable(ds.Tables["Usuarios"]));
                 }
-                if ((ds.Tables["CompraMultiple"] != null)) {
-                    base.Tables.Add(new CompraMultipleDataTable(ds.Tables["CompraMultiple"]));
+                if ((ds.Tables["sp_ObtenerAsientosDisponibles"] != null)) {
+                    base.Tables.Add(new sp_ObtenerAsientosDisponiblesDataTable(ds.Tables["sp_ObtenerAsientosDisponibles"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -230,9 +230,9 @@ namespace CINEBD {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public CompraMultipleDataTable CompraMultiple {
+        public sp_ObtenerAsientosDisponiblesDataTable sp_ObtenerAsientosDisponibles {
             get {
-                return this.tableCompraMultiple;
+                return this.tablesp_ObtenerAsientosDisponibles;
             }
         }
         
@@ -330,8 +330,8 @@ namespace CINEBD {
                 if ((ds.Tables["Usuarios"] != null)) {
                     base.Tables.Add(new UsuariosDataTable(ds.Tables["Usuarios"]));
                 }
-                if ((ds.Tables["CompraMultiple"] != null)) {
-                    base.Tables.Add(new CompraMultipleDataTable(ds.Tables["CompraMultiple"]));
+                if ((ds.Tables["sp_ObtenerAsientosDisponibles"] != null)) {
+                    base.Tables.Add(new sp_ObtenerAsientosDisponiblesDataTable(ds.Tables["sp_ObtenerAsientosDisponibles"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -420,10 +420,10 @@ namespace CINEBD {
                     this.tableUsuarios.InitVars();
                 }
             }
-            this.tableCompraMultiple = ((CompraMultipleDataTable)(base.Tables["CompraMultiple"]));
+            this.tablesp_ObtenerAsientosDisponibles = ((sp_ObtenerAsientosDisponiblesDataTable)(base.Tables["sp_ObtenerAsientosDisponibles"]));
             if ((initTable == true)) {
-                if ((this.tableCompraMultiple != null)) {
-                    this.tableCompraMultiple.InitVars();
+                if ((this.tablesp_ObtenerAsientosDisponibles != null)) {
+                    this.tablesp_ObtenerAsientosDisponibles.InitVars();
                 }
             }
             this.relationFK__Asiento__ID_Sala__3B75D760 = this.Relations["FK__Asiento__ID_Sala__3B75D760"];
@@ -462,8 +462,8 @@ namespace CINEBD {
             base.Tables.Add(this.tableTransaccion_Asiento);
             this.tableUsuarios = new UsuariosDataTable();
             base.Tables.Add(this.tableUsuarios);
-            this.tableCompraMultiple = new CompraMultipleDataTable();
-            base.Tables.Add(this.tableCompraMultiple);
+            this.tablesp_ObtenerAsientosDisponibles = new sp_ObtenerAsientosDisponiblesDataTable();
+            base.Tables.Add(this.tablesp_ObtenerAsientosDisponibles);
             this.relationFK__Asiento__ID_Sala__3B75D760 = new global::System.Data.DataRelation("FK__Asiento__ID_Sala__3B75D760", new global::System.Data.DataColumn[] {
                         this.tableSALA.ID_SalaColumn}, new global::System.Data.DataColumn[] {
                         this.tableAsiento.ID_SalaColumn}, false);
@@ -558,7 +558,7 @@ namespace CINEBD {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeCompraMultiple() {
+        private bool ShouldSerializesp_ObtenerAsientosDisponibles() {
             return false;
         }
         
@@ -645,7 +645,7 @@ namespace CINEBD {
         public delegate void UsuariosRowChangeEventHandler(object sender, UsuariosRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void CompraMultipleRowChangeEventHandler(object sender, CompraMultipleRowChangeEvent e);
+        public delegate void sp_ObtenerAsientosDisponiblesRowChangeEventHandler(object sender, sp_ObtenerAsientosDisponiblesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3615,22 +3615,18 @@ namespace CINEBD {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class CompraMultipleDataTable : global::System.Data.TypedTableBase<CompraMultipleRow> {
+        public partial class sp_ObtenerAsientosDisponiblesDataTable : global::System.Data.TypedTableBase<sp_ObtenerAsientosDisponiblesRow> {
             
-            private global::System.Data.DataColumn columnID_Transaccion;
+            private global::System.Data.DataColumn columnID_Sala;
             
-            private global::System.Data.DataColumn columnFecha_Sesion;
+            private global::System.Data.DataColumn columnFila;
             
-            private global::System.Data.DataColumn columnPelicula;
-            
-            private global::System.Data.DataColumn columnAsientos;
-            
-            private global::System.Data.DataColumn columnResultado;
+            private global::System.Data.DataColumn columnNumero;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CompraMultipleDataTable() {
-                this.TableName = "CompraMultiple";
+            public sp_ObtenerAsientosDisponiblesDataTable() {
+                this.TableName = "sp_ObtenerAsientosDisponibles";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3638,7 +3634,7 @@ namespace CINEBD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal CompraMultipleDataTable(global::System.Data.DataTable table) {
+            internal sp_ObtenerAsientosDisponiblesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -3655,48 +3651,32 @@ namespace CINEBD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected CompraMultipleDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected sp_ObtenerAsientosDisponiblesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ID_TransaccionColumn {
+            public global::System.Data.DataColumn ID_SalaColumn {
                 get {
-                    return this.columnID_Transaccion;
+                    return this.columnID_Sala;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Fecha_SesionColumn {
+            public global::System.Data.DataColumn FilaColumn {
                 get {
-                    return this.columnFecha_Sesion;
+                    return this.columnFila;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PeliculaColumn {
+            public global::System.Data.DataColumn NumeroColumn {
                 get {
-                    return this.columnPelicula;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn AsientosColumn {
-                get {
-                    return this.columnAsientos;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ResultadoColumn {
-                get {
-                    return this.columnResultado;
+                    return this.columnNumero;
                 }
             }
             
@@ -3711,56 +3691,56 @@ namespace CINEBD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CompraMultipleRow this[int index] {
+            public sp_ObtenerAsientosDisponiblesRow this[int index] {
                 get {
-                    return ((CompraMultipleRow)(this.Rows[index]));
+                    return ((sp_ObtenerAsientosDisponiblesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CompraMultipleRowChangeEventHandler CompraMultipleRowChanging;
+            public event sp_ObtenerAsientosDisponiblesRowChangeEventHandler sp_ObtenerAsientosDisponiblesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CompraMultipleRowChangeEventHandler CompraMultipleRowChanged;
+            public event sp_ObtenerAsientosDisponiblesRowChangeEventHandler sp_ObtenerAsientosDisponiblesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CompraMultipleRowChangeEventHandler CompraMultipleRowDeleting;
+            public event sp_ObtenerAsientosDisponiblesRowChangeEventHandler sp_ObtenerAsientosDisponiblesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CompraMultipleRowChangeEventHandler CompraMultipleRowDeleted;
+            public event sp_ObtenerAsientosDisponiblesRowChangeEventHandler sp_ObtenerAsientosDisponiblesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddCompraMultipleRow(CompraMultipleRow row) {
+            public void Addsp_ObtenerAsientosDisponiblesRow(sp_ObtenerAsientosDisponiblesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CompraMultipleRow AddCompraMultipleRow(System.DateTime Fecha_Sesion, string Pelicula, string Asientos, string Resultado) {
-                CompraMultipleRow rowCompraMultipleRow = ((CompraMultipleRow)(this.NewRow()));
+            public sp_ObtenerAsientosDisponiblesRow Addsp_ObtenerAsientosDisponiblesRow(int ID_Sala, string Fila, int Numero) {
+                sp_ObtenerAsientosDisponiblesRow rowsp_ObtenerAsientosDisponiblesRow = ((sp_ObtenerAsientosDisponiblesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        Fecha_Sesion,
-                        Pelicula,
-                        Asientos,
-                        Resultado};
-                rowCompraMultipleRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowCompraMultipleRow);
-                return rowCompraMultipleRow;
+                        ID_Sala,
+                        Fila,
+                        Numero};
+                rowsp_ObtenerAsientosDisponiblesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_ObtenerAsientosDisponiblesRow);
+                return rowsp_ObtenerAsientosDisponiblesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CompraMultipleRow FindByID_Transaccion(int ID_Transaccion) {
-                return ((CompraMultipleRow)(this.Rows.Find(new object[] {
-                            ID_Transaccion})));
+            public sp_ObtenerAsientosDisponiblesRow FindByID_SalaFilaNumero(int ID_Sala, string Fila, int Numero) {
+                return ((sp_ObtenerAsientosDisponiblesRow)(this.Rows.Find(new object[] {
+                            ID_Sala,
+                            Fila,
+                            Numero})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                CompraMultipleDataTable cln = ((CompraMultipleDataTable)(base.Clone()));
+                sp_ObtenerAsientosDisponiblesDataTable cln = ((sp_ObtenerAsientosDisponiblesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3768,71 +3748,60 @@ namespace CINEBD {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new CompraMultipleDataTable();
+                return new sp_ObtenerAsientosDisponiblesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnID_Transaccion = base.Columns["ID_Transaccion"];
-                this.columnFecha_Sesion = base.Columns["Fecha_Sesion"];
-                this.columnPelicula = base.Columns["Pelicula"];
-                this.columnAsientos = base.Columns["Asientos"];
-                this.columnResultado = base.Columns["Resultado"];
+                this.columnID_Sala = base.Columns["ID_Sala"];
+                this.columnFila = base.Columns["Fila"];
+                this.columnNumero = base.Columns["Numero"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID_Transaccion = new global::System.Data.DataColumn("ID_Transaccion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_Transaccion);
-                this.columnFecha_Sesion = new global::System.Data.DataColumn("Fecha_Sesion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFecha_Sesion);
-                this.columnPelicula = new global::System.Data.DataColumn("Pelicula", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPelicula);
-                this.columnAsientos = new global::System.Data.DataColumn("Asientos", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAsientos);
-                this.columnResultado = new global::System.Data.DataColumn("Resultado", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnResultado);
+                this.columnID_Sala = new global::System.Data.DataColumn("ID_Sala", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Sala);
+                this.columnFila = new global::System.Data.DataColumn("Fila", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFila);
+                this.columnNumero = new global::System.Data.DataColumn("Numero", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_Transaccion}, true));
-                this.columnID_Transaccion.AutoIncrement = true;
-                this.columnID_Transaccion.AllowDBNull = false;
-                this.columnID_Transaccion.ReadOnly = true;
-                this.columnID_Transaccion.Unique = true;
-                this.columnFecha_Sesion.AllowDBNull = false;
-                this.columnPelicula.AllowDBNull = false;
-                this.columnPelicula.MaxLength = 100;
-                this.columnAsientos.ReadOnly = true;
-                this.columnAsientos.MaxLength = 8000;
-                this.columnResultado.ReadOnly = true;
-                this.columnResultado.MaxLength = 14;
+                                this.columnID_Sala,
+                                this.columnFila,
+                                this.columnNumero}, true));
+                this.columnID_Sala.AllowDBNull = false;
+                this.columnFila.AllowDBNull = false;
+                this.columnFila.MaxLength = 1;
+                this.columnNumero.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CompraMultipleRow NewCompraMultipleRow() {
-                return ((CompraMultipleRow)(this.NewRow()));
+            public sp_ObtenerAsientosDisponiblesRow Newsp_ObtenerAsientosDisponiblesRow() {
+                return ((sp_ObtenerAsientosDisponiblesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new CompraMultipleRow(builder);
+                return new sp_ObtenerAsientosDisponiblesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(CompraMultipleRow);
+                return typeof(sp_ObtenerAsientosDisponiblesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.CompraMultipleRowChanged != null)) {
-                    this.CompraMultipleRowChanged(this, new CompraMultipleRowChangeEvent(((CompraMultipleRow)(e.Row)), e.Action));
+                if ((this.sp_ObtenerAsientosDisponiblesRowChanged != null)) {
+                    this.sp_ObtenerAsientosDisponiblesRowChanged(this, new sp_ObtenerAsientosDisponiblesRowChangeEvent(((sp_ObtenerAsientosDisponiblesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3840,8 +3809,8 @@ namespace CINEBD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.CompraMultipleRowChanging != null)) {
-                    this.CompraMultipleRowChanging(this, new CompraMultipleRowChangeEvent(((CompraMultipleRow)(e.Row)), e.Action));
+                if ((this.sp_ObtenerAsientosDisponiblesRowChanging != null)) {
+                    this.sp_ObtenerAsientosDisponiblesRowChanging(this, new sp_ObtenerAsientosDisponiblesRowChangeEvent(((sp_ObtenerAsientosDisponiblesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3849,8 +3818,8 @@ namespace CINEBD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.CompraMultipleRowDeleted != null)) {
-                    this.CompraMultipleRowDeleted(this, new CompraMultipleRowChangeEvent(((CompraMultipleRow)(e.Row)), e.Action));
+                if ((this.sp_ObtenerAsientosDisponiblesRowDeleted != null)) {
+                    this.sp_ObtenerAsientosDisponiblesRowDeleted(this, new sp_ObtenerAsientosDisponiblesRowChangeEvent(((sp_ObtenerAsientosDisponiblesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3858,14 +3827,14 @@ namespace CINEBD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.CompraMultipleRowDeleting != null)) {
-                    this.CompraMultipleRowDeleting(this, new CompraMultipleRowChangeEvent(((CompraMultipleRow)(e.Row)), e.Action));
+                if ((this.sp_ObtenerAsientosDisponiblesRowDeleting != null)) {
+                    this.sp_ObtenerAsientosDisponiblesRowDeleting(this, new sp_ObtenerAsientosDisponiblesRowChangeEvent(((sp_ObtenerAsientosDisponiblesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveCompraMultipleRow(CompraMultipleRow row) {
+            public void Removesp_ObtenerAsientosDisponiblesRow(sp_ObtenerAsientosDisponiblesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3892,7 +3861,7 @@ namespace CINEBD {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "CompraMultipleDataTable";
+                attribute2.FixedValue = "sp_ObtenerAsientosDisponiblesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4850,104 +4819,48 @@ namespace CINEBD {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class CompraMultipleRow : global::System.Data.DataRow {
+        public partial class sp_ObtenerAsientosDisponiblesRow : global::System.Data.DataRow {
             
-            private CompraMultipleDataTable tableCompraMultiple;
+            private sp_ObtenerAsientosDisponiblesDataTable tablesp_ObtenerAsientosDisponibles;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal CompraMultipleRow(global::System.Data.DataRowBuilder rb) : 
+            internal sp_ObtenerAsientosDisponiblesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableCompraMultiple = ((CompraMultipleDataTable)(this.Table));
+                this.tablesp_ObtenerAsientosDisponibles = ((sp_ObtenerAsientosDisponiblesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ID_Transaccion {
+            public int ID_Sala {
                 get {
-                    return ((int)(this[this.tableCompraMultiple.ID_TransaccionColumn]));
+                    return ((int)(this[this.tablesp_ObtenerAsientosDisponibles.ID_SalaColumn]));
                 }
                 set {
-                    this[this.tableCompraMultiple.ID_TransaccionColumn] = value;
+                    this[this.tablesp_ObtenerAsientosDisponibles.ID_SalaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime Fecha_Sesion {
+            public string Fila {
                 get {
-                    return ((global::System.DateTime)(this[this.tableCompraMultiple.Fecha_SesionColumn]));
+                    return ((string)(this[this.tablesp_ObtenerAsientosDisponibles.FilaColumn]));
                 }
                 set {
-                    this[this.tableCompraMultiple.Fecha_SesionColumn] = value;
+                    this[this.tablesp_ObtenerAsientosDisponibles.FilaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Pelicula {
+            public int Numero {
                 get {
-                    return ((string)(this[this.tableCompraMultiple.PeliculaColumn]));
+                    return ((int)(this[this.tablesp_ObtenerAsientosDisponibles.NumeroColumn]));
                 }
                 set {
-                    this[this.tableCompraMultiple.PeliculaColumn] = value;
+                    this[this.tablesp_ObtenerAsientosDisponibles.NumeroColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Asientos {
-                get {
-                    try {
-                        return ((string)(this[this.tableCompraMultiple.AsientosColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Asientos\' de la tabla \'CompraMultiple\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCompraMultiple.AsientosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Resultado {
-                get {
-                    try {
-                        return ((string)(this[this.tableCompraMultiple.ResultadoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Resultado\' de la tabla \'CompraMultiple\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCompraMultiple.ResultadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsAsientosNull() {
-                return this.IsNull(this.tableCompraMultiple.AsientosColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetAsientosNull() {
-                this[this.tableCompraMultiple.AsientosColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsResultadoNull() {
-                return this.IsNull(this.tableCompraMultiple.ResultadoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetResultadoNull() {
-                this[this.tableCompraMultiple.ResultadoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5261,22 +5174,22 @@ namespace CINEBD {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class CompraMultipleRowChangeEvent : global::System.EventArgs {
+        public class sp_ObtenerAsientosDisponiblesRowChangeEvent : global::System.EventArgs {
             
-            private CompraMultipleRow eventRow;
+            private sp_ObtenerAsientosDisponiblesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CompraMultipleRowChangeEvent(CompraMultipleRow row, global::System.Data.DataRowAction action) {
+            public sp_ObtenerAsientosDisponiblesRowChangeEvent(sp_ObtenerAsientosDisponiblesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CompraMultipleRow Row {
+            public sp_ObtenerAsientosDisponiblesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -8593,7 +8506,7 @@ SELECT ID_Usuario, Nombre, Rol, Contraseña FROM Usuarios WHERE (ID_Usuario = @I
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class CompraMultipleTableAdapter : global::System.ComponentModel.Component {
+    public partial class sp_ObtenerAsientosDisponiblesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -8607,7 +8520,7 @@ SELECT ID_Usuario, Nombre, Rol, Contraseña FROM Usuarios WHERE (ID_Usuario = @I
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public CompraMultipleTableAdapter() {
+        public sp_ObtenerAsientosDisponiblesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -8704,12 +8617,10 @@ SELECT ID_Usuario, Nombre, Rol, Contraseña FROM Usuarios WHERE (ID_Usuario = @I
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "CompraMultiple";
-            tableMapping.ColumnMappings.Add("ID_Transaccion", "ID_Transaccion");
-            tableMapping.ColumnMappings.Add("Fecha_Sesion", "Fecha_Sesion");
-            tableMapping.ColumnMappings.Add("Pelicula", "Pelicula");
-            tableMapping.ColumnMappings.Add("Asientos", "Asientos");
-            tableMapping.ColumnMappings.Add("Resultado", "Resultado");
+            tableMapping.DataSetTable = "sp_ObtenerAsientosDisponibles";
+            tableMapping.ColumnMappings.Add("ID_Sala", "ID_Sala");
+            tableMapping.ColumnMappings.Add("Fila", "Fila");
+            tableMapping.ColumnMappings.Add("Numero", "Numero");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -8726,58 +8637,30 @@ SELECT ID_Usuario, Nombre, Rol, Contraseña FROM Usuarios WHERE (ID_Usuario = @I
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.CompraMultiple";
+            this._commandCollection[0].CommandText = "dbo.sp_ObtenerAsientosDisponibles";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Pelicula", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Sala", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Usuario", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Tipo_Asignacion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Asientos", global::System.Data.SqlDbType.Structured, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Sesion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CINEBD2DataSet.CompraMultipleDataTable dataTable, global::System.Nullable<int> ID_Pelicula, global::System.Nullable<int> ID_Sala, global::System.Nullable<global::System.DateTime> Fecha, global::System.Nullable<int> ID_Usuario, global::System.Nullable<int> ID_Tipo_Asignacion, object Asientos) {
+        public virtual int Fill(CINEBD2DataSet.sp_ObtenerAsientosDisponiblesDataTable dataTable, global::System.Nullable<int> ID_Sala, global::System.Nullable<int> ID_Sesion) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((ID_Pelicula.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Pelicula.Value));
+            if ((ID_Sala.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Sala.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((ID_Sala.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(ID_Sala.Value));
+            if ((ID_Sesion.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(ID_Sesion.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Fecha.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(Fecha.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((ID_Usuario.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(ID_Usuario.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((ID_Tipo_Asignacion.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(ID_Tipo_Asignacion.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Asientos == null)) {
-                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[6].Value = ((object)(Asientos));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8790,45 +8673,21 @@ SELECT ID_Usuario, Nombre, Rol, Contraseña FROM Usuarios WHERE (ID_Usuario = @I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CINEBD2DataSet.CompraMultipleDataTable GetData(global::System.Nullable<int> ID_Pelicula, global::System.Nullable<int> ID_Sala, global::System.Nullable<global::System.DateTime> Fecha, global::System.Nullable<int> ID_Usuario, global::System.Nullable<int> ID_Tipo_Asignacion, object Asientos) {
+        public virtual CINEBD2DataSet.sp_ObtenerAsientosDisponiblesDataTable GetData(global::System.Nullable<int> ID_Sala, global::System.Nullable<int> ID_Sesion) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((ID_Pelicula.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Pelicula.Value));
+            if ((ID_Sala.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Sala.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((ID_Sala.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(ID_Sala.Value));
+            if ((ID_Sesion.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(ID_Sesion.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Fecha.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(Fecha.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((ID_Usuario.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(ID_Usuario.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((ID_Tipo_Asignacion.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(ID_Tipo_Asignacion.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Asientos == null)) {
-                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[6].Value = ((object)(Asientos));
-            }
-            CINEBD2DataSet.CompraMultipleDataTable dataTable = new CINEBD2DataSet.CompraMultipleDataTable();
+            CINEBD2DataSet.sp_ObtenerAsientosDisponiblesDataTable dataTable = new CINEBD2DataSet.sp_ObtenerAsientosDisponiblesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

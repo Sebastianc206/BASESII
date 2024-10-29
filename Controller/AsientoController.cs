@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace CINEBD.Controller
 {
-    public class Sala
+    public class AsientoController
     {
         private DBCONTE dbConte;
 
-        public Sala()
+        public AsientoController()
         {
             dbConte = new DBCONTE();
         }
 
-        public DataTable ObtenerAsientosPorSala(int idSala)
+        public DataTable ObtenerAsientosPorSala(int idSala, int idSesion)
         {
-            return dbConte.ObtenerAsientosPorSala(idSala);
+            return dbConte.ObtenerAsientosPorSala(idSala, idSesion);
         }
     }
 }

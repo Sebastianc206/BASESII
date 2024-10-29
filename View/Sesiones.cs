@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CINEBD.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,16 @@ using System.Windows.Forms;
 
 namespace CINEBD.View
 {
-    public partial class Compra : Form
+
+    public partial class Sesiones : Form
     {
-        public Compra()
+        private AsientoController asientoController; // Instancia del controlador
+
+        public Sesiones()
         {
             InitializeComponent();
+            asientoController = new AsientoController(); // Inicializar el controlador en el constructor
+
         }
 
         private void Compra_Load(object sender, EventArgs e)
@@ -57,6 +63,42 @@ namespace CINEBD.View
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Verificar si hay una fila seleccionada
+            if (dataGridView2.CurrentRow == null)
+            {
+                MessageBox.Show("Por favor, seleccione una sesión primero.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Extraer los valores seleccionados en el DataGridView
+            int idSesion = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["ID_Sesion"].Value);
+            int idSala = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["ID_Sala"].Value);
+
+            // Obtener los asientos usando el controlador
+            DataTable asientos = asientoController.ObtenerAsientosPorSala(idSala, idSesion);
+
+            // Verificar si se obtuvieron datos
+            if (asientos != null && asientos.Rows.Count > 0)
+            {
+                dataGridView1.DataSource = asientos; // Cargar los asientos en el segundo DataGridView
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron asientos para la sesión seleccionada.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

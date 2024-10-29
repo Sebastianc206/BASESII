@@ -63,25 +63,36 @@ namespace CINEBD.Model
             }
         }
 
-        public DataTable ObtenerAsientosPorSala(int idSala)
+        public DataTable ObtenerAsientosPorSala(int idSala, int idSesion)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-                    using (SqlCommand command = new SqlCommand("sp_ObtenerAsientosPorSala", connection))
+                    using (SqlCommand command = new SqlCommand("sp_ObtenerAsientosDisponibles", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
                         // Parámetro de entrada para el ID_Sala
                         command.Parameters.AddWithValue("@ID_Sala", idSala);
+                        command.Parameters.AddWithValue ("@ID_Sesion", idSesion);
 
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        DataTable asientos = new DataTable();
-                        adapter.Fill(asientos);
+                        DataTable asientosDisponibles = new DataTable();
+                        adapter.Fill(asientosDisponibles);
 
-                        return asientos;
+                        // Verificar si se están llenando los datos
+                        if (asientosDisponibles.Rows.Count > 0)
+                        {
+                            Console.WriteLine("Datos cargados correctamente.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("No se encontraron datos.");
+                        }
+
+                        return asientosDisponibles;
                     }
                 }
                 catch (Exception ex)
