@@ -1,6 +1,6 @@
 ﻿namespace CINEBD.View
 {
-    partial class Sesiones
+    partial class ComprarEntrada
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sesiones));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComprarEntrada));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.peliculaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.cINEBD2DataSet = new CINEBD.CINEBD2DataSet();
@@ -284,6 +284,7 @@
             this.dataGridView2.DataSource = this.fKSesionIDPelic4316F928BindingSource3;
             this.dataGridView2.Location = new System.Drawing.Point(201, 9);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.Size = new System.Drawing.Size(578, 78);
             this.dataGridView2.TabIndex = 15;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
@@ -294,6 +295,7 @@
             this.Fecha_Inicio.DataPropertyName = "Fecha_Inicio";
             this.Fecha_Inicio.HeaderText = "Fecha_Inicio";
             this.Fecha_Inicio.Name = "Fecha_Inicio";
+            this.Fecha_Inicio.ReadOnly = true;
             // 
             // Fecha_Fin
             // 
@@ -315,6 +317,7 @@
             this.ID_Sala.DataPropertyName = "ID_Sala";
             this.ID_Sala.HeaderText = "ID_Sala";
             this.ID_Sala.Name = "ID_Sala";
+            this.ID_Sala.ReadOnly = true;
             // 
             // fKSesionIDPelic4316F928BindingSource3
             // 
@@ -473,6 +476,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 442);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(766, 198);
             this.dataGridView1.TabIndex = 18;
             // 
@@ -480,7 +484,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 652);
+            this.ClientSize = new System.Drawing.Size(914, 652);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
@@ -594,11 +598,11 @@
         private System.Windows.Forms.BindingSource fKAsientoIDSala3B75D760BindingSource3;
         private System.Windows.Forms.BindingSource sALABindingSource4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Inicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Fin;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Sesion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Sala;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

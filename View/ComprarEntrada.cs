@@ -12,11 +12,11 @@ using System.Windows.Forms;
 namespace CINEBD.View
 {
 
-    public partial class Sesiones : Form
+    public partial class ComprarEntrada : Form
     {
         private AsientoController asientoController; // Instancia del controlador
 
-        public Sesiones()
+        public ComprarEntrada()
         {
             InitializeComponent();
             asientoController = new AsientoController(); // Inicializar el controlador en el constructor
@@ -100,6 +100,8 @@ namespace CINEBD.View
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // Permite seleccionar una fila completa.
+            dataGridView2.MultiSelect = false; // Deshabilita la selección múltiple.
 
         }
     }

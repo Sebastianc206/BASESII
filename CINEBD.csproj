@@ -67,34 +67,54 @@
     </Compile>
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\AsientoController.cs" />
+    <Compile Include="Controller\PeliculaController.cs" />
+    <Compile Include="Controller\SesionController.cs" />
     <Compile Include="Model\Asiento.cs" />
-    <Compile Include="View\Sesiones.cs">
+    <Compile Include="View\AsignarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Sesiones.Designer.cs">
-      <DependentUpon>Sesiones.cs</DependentUpon>
+    <Compile Include="View\AsignarSesion.Designer.cs">
+      <DependentUpon>AsignarSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form1.cs">
+    <Compile Include="View\CrearPelicula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\CrearPelicula.Designer.cs">
+      <DependentUpon>CrearPelicula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComprarEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ComprarEntrada.Designer.cs">
+      <DependentUpon>ComprarEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InicioSesion.Designer.cs">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\DBCONTE.cs" />
     <Compile Include="Model\UsuarioLogin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\Operador.cs">
+    <Compile Include="View\Submenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Operador.Designer.cs">
-      <DependentUpon>Operador.cs</DependentUpon>
+    <Compile Include="View\Submenu.Designer.cs">
+      <DependentUpon>Submenu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Sesiones.resx">
-      <DependentUpon>Sesiones.cs</DependentUpon>
+    <EmbeddedResource Include="View\AsignarSesion.resx">
+      <DependentUpon>AsignarSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="View\CrearPelicula.resx">
+      <DependentUpon>CrearPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ComprarEntrada.resx">
+      <DependentUpon>ComprarEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InicioSesion.resx">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,8 +125,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Operador.resx">
-      <DependentUpon>Operador.cs</DependentUpon>
+    <EmbeddedResource Include="View\Submenu.resx">
+      <DependentUpon>Submenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CINEBD2DataSet.xsc">
       <DependentUpon>CINEBD2DataSet.xsd</DependentUpon>

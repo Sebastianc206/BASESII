@@ -1,192 +1,230 @@
---PROCEDIMIENTO PARA VERIFICAR EL USUARIO 
-CREATE OR ALTER PROCEDURE sp_VerificaUsuario
-    @Nombre varchar(50),
-    @Contraseña varchar(255),
-    @Rol varchar(50) OUTPUT  -- Parámetro de salida para devolver el rol
+--PROCEDIMIENTO CREAR PELICULA
+CREATE OR ALTER PROCEDURE sp_CrearPelicula 
+    @nombre VARCHAR(100), 
+    @clasificacion VARCHAR(10), 
+    @duracion INT, 
+    @descripcion NVARCHAR(MAX),
+    @mensajeError NVARCHAR(MAX) OUTPUT
 AS
 BEGIN
-    BEGIN TRAN
-    DECLARE @ContraDsc varbinary(64)
-    SET @ContraDsc = HASHBYTES('SHA2_256', @Contraseña)
+    SET NOCOUNT ON
 
-    -- Verificar si el usuario existe
-    IF EXISTS (SELECT * FROM Usuarios WHERE Nombre = @Nombre)
-    BEGIN
-        -- Verificar si la contraseña es correcta
-        IF EXISTS (SELECT * FROM Usuarios WHERE Nombre = @Nombre AND Contraseña = @ContraDsc)
+    BEGIN TRY
+        BEGIN TRAN
+
+        -- Verificar que la duración sea válida
+        IF @duracion <= 0
         BEGIN
-            -- Obtener el rol
-            SELECT @Rol = Rol FROM Usuarios WHERE Nombre = @Nombre AND Contraseña = @ContraDsc
-            COMMIT TRAN
-            RETURN 1  -- Usuario y contraseña correctos
-        END
-        ELSE
-        BEGIN
+            SET @mensajeError = 'ERROR: La película no cuenta con una duración correcta, debe ser mayor que 0';
             ROLLBACK TRAN
-            SET @Rol = NULL  -- No se encontró el rol
-            RETURN -2  -- Contraseña incorrecta
+            RETURN
         END
-    END
-    ELSE
-    BEGIN
-        ROLLBACK TRAN
-        SET @Rol = NULL  -- No se encontró el rol
-        RETURN -1  -- Usuario no existe
-    END
+
+        -- Verificar que la película no esté ya registrada
+        IF EXISTS (SELECT 1 FROM Pelicula WHERE Nombre = @nombre OR Clasificacion = @clasificacion OR Descripcion = @descripcion)
+        BEGIN
+            SET @mensajeError = 'ERROR: La película ya existe en el sistema';
+            ROLLBACK TRAN
+            RETURN
+        END
+
+        -- Insertar la película si no existe
+        INSERT INTO Pelicula (Nombre, Clasificacion, Duracion, Descripcion)
+        VALUES (@nombre, @clasificacion, @duracion, @descripcion)
+
+        -- Confirmar la transacción si no hubo errores
+        COMMIT TRAN
+        SET @mensajeError = 'La operación fue exitosa.'
+    END TRY
+    BEGIN CATCH
+        -- Capturar y mostrar el error
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRAN
+
+        SET @mensajeError = ERROR_MESSAGE()
+    END CATCH
 END
 
 
-GO
+go
+--PRUEBAS DEL SP:
+DECLARE @mensaje NVARCHAR(MAX);
+exec sp_CrearPelicula 'Pruebadepeli222', 'Clase B', 100, 'pruebis pruebis', @mensajeError = @mensaje OUTPUT --CON ESTA SI DEJA, SI SE INTENTA EJECUTAR 2 VECES DEBE LANZAR ERROR
+print @mensaje
+exec sp_CrearPelicula 'Pruebadepeli', 'Clase B', 00, 'pruebis pruebis 2' --ESTA PRUEBA ES PARA VER QUE NO ACEPTE LAS PELICULAS CON DURACION MENOR A 0
+select * from pelicula
 
-DECLARE @RolSalida varchar(50);
-DECLARE @Resultado int;
+go
 
-EXEC @Resultado = sp_VerificaUsuario @Nombre = 'admin', @Contraseña = 'admin123', @Rol = @RolSalida OUTPUT;
+CREATE OR ALTER PROCEDURE VerificaUsuario
+    @Nombre VARCHAR(50),
+    @Contraseña VARCHAR(255),
+    @Rol VARCHAR(50) OUTPUT,  -- Parámetro de salida para devolver el rol
+    @mensajeError NVARCHAR(MAX) OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON
 
--- Ver el resultado
-SELECT @Resultado AS Resultado, @RolSalida AS Rol;
+    BEGIN TRY
+        BEGIN TRAN
 
+        DECLARE @ContraDsc VARBINARY(64);
+        SET @ContraDsc = HASHBYTES('SHA2_256', @Contraseña)
 
---PROCEDIMIENTO ASIGNAR ASIENTOS 
+        -- Verificar si el usuario existe
+        IF NOT EXISTS (SELECT 1 FROM Usuarios WHERE Nombre = @Nombre)
+        BEGIN
+            SET @mensajeError = 'ERROR: El usuario no existe en el sistema'
+            ROLLBACK TRAN
+            RETURN
+        END
 
-CREATE TYPE AsientoFilaNumeroType AS TABLE
-(
-    Fila CHAR(1),
-    Numero INT
-);
+        -- Verificar si la contraseña es correcta
+        IF NOT EXISTS (SELECT 1 FROM Usuarios WHERE Nombre = @Nombre AND Contraseña = @ContraDsc)
+        BEGIN
+            SET @mensajeError = 'ERROR: Contraseña incorrecta'
+            ROLLBACK TRAN
+            RETURN
+        END
 
-GO
+        -- Obtener el rol del usuario
+        SELECT @Rol = Rol FROM Usuarios WHERE Nombre = @Nombre
 
-CREATE PROCEDURE CompraMultiple
-    @ID_Pelicula INT,
-    @ID_Sala INT,
-    @Fecha DATE,
-    @ID_Usuario INT,
-    @ID_Tipo_Asignacion INT,
-    @Asientos AsientoFilaNumeroType READONLY
+        -- Confirmar la transacción si no hubo errores
+        COMMIT TRAN
+        SET @mensajeError = 'Usuario y contraseña correctos'
+    END TRY
+    BEGIN CATCH
+        -- Capturar y mostrar el error
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRAN
+
+        SET @mensajeError = ERROR_MESSAGE()
+        SET @Rol = NULL
+    END CATCH
+END
+
+DECLARE @RolPrueba VARCHAR(50);
+DECLARE @MensajeErrorPrueba NVARCHAR(MAX);
+EXEC VerificaUsuario
+    @Nombre = 'admin',
+    @Contraseña = 'admin123',
+    @Rol = @RolPrueba OUTPUT,
+    @mensajeError = @MensajeErrorPrueba OUTPUT;
+
+print @RolPrueba
+print @MensajeErrorPrueba
+
+go
+
+select * from Usuarios
+
+go
+select * from Log_Transaccion
+select * from Transaccion
+select * from Pelicula
+select * from Sesion
+go
+
+CREATE OR ALTER PROCEDURE sp_CrearSesion
+    @fechaInicio DATETIME2, 
+    @idSala INT,
+    @idPelicula INT,
+    @mensajeError NVARCHAR(MAX) OUTPUT
 AS
 BEGIN
     SET NOCOUNT ON;
-    
+
     BEGIN TRY
         BEGIN TRANSACTION;
 
-        DECLARE @ID_Sesion INT;
-        DECLARE @ID_Transaccion INT;
-        DECLARE @CantidadAsientos INT;
+        -- Variables
+        DECLARE @duracion INT;
+        SELECT @duracion = duracion FROM Pelicula WHERE id_pelicula = @idPelicula;
 
-        -- Verificar si existe una sesión para la película, sala y fecha dadas
-        SELECT @ID_Sesion = ID_Sesion
-        FROM Sesion
-        WHERE ID_Pelicula = @ID_Pelicula
-          AND ID_Sala = @ID_Sala
-          AND CONVERT(DATE, Fecha_Inicio) = @Fecha
-          AND Estado = 'Activa';
+        -- Fecha fin
+        DECLARE @fechaFin DATETIME2;
+        SET @fechaFin = DATEADD(MINUTE, @duracion, @fechaInicio);
 
-        IF @ID_Sesion IS NULL
-        BEGIN
-            RAISERROR('No se encontró una sesión activa para la película, sala y fecha especificadas.', 16, 1);
-            RETURN;
-        END
-
-        -- Verificar si los asientos existen y están disponibles
-        IF EXISTS (
+        -- Verificar si la película existe
+        IF NOT EXISTS (
             SELECT 1 
-            FROM @Asientos a
-            LEFT JOIN Asiento ast ON ast.Fila = a.Fila AND ast.Numero = a.Numero AND ast.ID_Sala = @ID_Sala
-            LEFT JOIN Transaccion_Asiento ta ON ta.Fila = a.Fila AND ta.Numero = a.Numero AND ta.ID_Sala = @ID_Sala AND ta.ID_Sesion = @ID_Sesion
-            WHERE ast.Fila IS NULL OR ta.Estado_Asignacion = 'Asignado'
+            FROM Pelicula 
+            WHERE ID_pelicula = @idPelicula
         )
         BEGIN
-            RAISERROR('Uno o más asientos seleccionados no existen o no están disponibles.', 16, 1);
+            SET @mensajeError = 'ERROR: La película NO existe en el sistema';
+            ROLLBACK TRANSACTION;
             RETURN;
-        END
+        END;
 
-        -- Obtener la cantidad de asientos
-        SELECT @CantidadAsientos = COUNT(*) FROM @Asientos;
+        -- Verificar si la sala existe
+        IF NOT EXISTS (
+            SELECT 1 
+            FROM Sala
+            WHERE ID_sala = @idSala
+        )
+        BEGIN
+            SET @mensajeError = 'ERROR: La sala NO existe en el sistema';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
 
-        -- Crear la transacción
-        INSERT INTO Transaccion (Fecha_Hora, Tipo_Transaccion, Cantidad_Asientos, Estado, ID_Usuario, ID_Tipo_Asignacion)
-        VALUES (GETDATE(), 'Venta', @CantidadAsientos, 'Completada', @ID_Usuario, @ID_Tipo_Asignacion);
+        -- Verificar que no se traslapen las sesiones
+        IF EXISTS(
+            SELECT 1
+            FROM Sesion
+            WHERE id_sala = @idSala AND Estado = 'Activa'
+            AND (
+                (@fechaInicio BETWEEN fecha_inicio AND fecha_fin OR @fechaFin BETWEEN fecha_inicio AND fecha_fin)
+                OR 
+                (fecha_inicio BETWEEN @fechaInicio AND @fechaFin OR fecha_fin BETWEEN @fechaInicio AND @fechaFin)
+            )
+        )
+        BEGIN
+            SET @mensajeError = 'ERROR: La sesión se traslapa';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
 
-        SET @ID_Transaccion = SCOPE_IDENTITY();
+        -- Verificar que haya un espacio de 15 minutos entre las sesiones
+        IF EXISTS(
+            SELECT 1
+            FROM Sesion
+            WHERE id_sala = @idSala AND estado = 'Activa'
+            AND (
+                ABS(DATEDIFF(MINUTE, fecha_fin, @fechaInicio)) < 15 OR ABS(DATEDIFF(MINUTE, @fechaFin, fecha_inicio)) < 15
+            )
+        )
+        BEGIN
+            SET @mensajeError = 'ERROR: Entre sesiones deben haber 15 minutos de por medio para usar la misma sala.';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
 
-        -- Asignar los asientos
-        INSERT INTO Transaccion_Asiento (Estado_Asignacion, Fecha_Hora_Asignacion, ID_Transaccion, Fila, Numero, ID_Sala, ID_Sesion)
-        SELECT 'Asignado', GETDATE(), @ID_Transaccion, a.Fila, a.Numero, @ID_Sala, @ID_Sesion
-        FROM @Asientos a;
-
-        -- Registrar la transacción en el log
-        INSERT INTO Log_Transaccion (Fecha_Hora, Usuario, Accion, ID_Operacion, Tabla_Cambio, Datos_Anteriores, Datos_Nuevos, Descripcion)
-        VALUES (
-            GETDATE(),
-            (SELECT Nombre FROM Usuarios WHERE ID_Usuario = @ID_Usuario),
-            'Venta',
-            @ID_Transaccion,
-            'Transaccion_Asiento',
-            NULL,
-            (SELECT STRING_AGG(CONCAT(Fila, Numero), ', ') FROM @Asientos),
-            CONCAT('Compra de ', @CantidadAsientos, ' asientos realizada.')
-        );
-
+        -- Insertar la sesión
+        INSERT INTO Sesion (Fecha_Inicio, Fecha_Fin, Estado, ID_Sala, ID_Pelicula)
+        VALUES (@fechaInicio, @fechaFin, 'Activa', @idSala, @idPelicula);
+    
+        -- Confirmar la transacción si no hubo errores
         COMMIT TRANSACTION;
-
-        -- Devolver información de la compra
-        SELECT 
-            t.ID_Transaccion,
-            s.Fecha_Inicio AS Fecha_Sesion,
-            p.Nombre AS Pelicula,
-            STRING_AGG(CONCAT(a.Fila, a.Numero), ', ') AS Asientos,
-            'Compra exitosa' AS Resultado
-        FROM Transaccion t
-        JOIN Transaccion_Asiento ta ON t.ID_Transaccion = ta.ID_Transaccion
-        JOIN Sesion s ON ta.ID_Sesion = s.ID_Sesion
-        JOIN Pelicula p ON s.ID_Pelicula = p.ID_Pelicula
-        JOIN @Asientos a ON ta.Fila = a.Fila AND ta.Numero = a.Numero
-        WHERE t.ID_Transaccion = @ID_Transaccion
-        GROUP BY t.ID_Transaccion, s.Fecha_Inicio, p.Nombre;
-
+        SET @mensajeError = 'La sesión fue registrada exitosamente.';
     END TRY
     BEGIN CATCH
+        -- Capturar y mostrar el error
         IF @@TRANCOUNT > 0
             ROLLBACK TRANSACTION;
 
-        DECLARE @ErrorMessage NVARCHAR(4000) = ERROR_MESSAGE();
-        DECLARE @ErrorSeverity INT = ERROR_SEVERITY();
-        DECLARE @ErrorState INT = ERROR_STATE();
-
-        RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState);
-    END CATCH;
+        SET @mensajeError = ERROR_MESSAGE();
+    END CATCH
 END;
-GO
 
--- Declarar variables para IDs
-DECLARE @ID_Pelicula INT;
-DECLARE @ID_Sala INT;
-DECLARE @ID_Usuario INT;
-DECLARE @ID_Tipo_Asignacion INT;
-DECLARE @Asientos AsientoFilaNumeroType;
+go
+DECLARE @MensajeErrorPrueba NVARCHAR(MAX);
 
--- Obtener los IDs necesarios
-SELECT @ID_Pelicula = ID_Pelicula FROM Pelicula WHERE Nombre = 'Los Increíbles 3';
-SELECT @ID_Sala = ID_Sala FROM Sesion WHERE ID_Pelicula = @ID_Pelicula AND Fecha_Inicio = '2024-10-16 17:00';
-SELECT @ID_Usuario = ID_Usuario FROM Usuarios WHERE Nombre = 'user1';
-SELECT @ID_Tipo_Asignacion = ID_Tipo_Asignacion FROM Catalogo_Asignacion WHERE Nombre = 'Manual';
-
--- Insertar los asientos que queremos comprar
-INSERT INTO @Asientos (Fila, Numero) VALUES 
-('B', 1), ('B', 2), ('B', 3);
-
--- Ejecutar el procedimiento almacenado
-EXEC CompraMultiple
-    @ID_Pelicula = @ID_Pelicula, 
-    @ID_Sala = @ID_Sala, 
-    @Fecha = '2024-10-16', 
-    @ID_Usuario = @ID_Usuario, 
-    @ID_Tipo_Asignacion = @ID_Tipo_Asignacion,
-    @Asientos = @Asientos;
-
--- Consultar los resultados para verificar
-SELECT * FROM Transaccion;
-SELECT * FROM Transaccion_Asiento;
-SELECT * FROM Log_Transaccion;
+EXEC sp_CrearSesion
+    @fechaInicio = '2024-10-10T16:20:00',
+    @idSala = 3,
+    @idPelicula = 15,
+    @mensajeError = @MensajeErrorPrueba OUTPUT;
+print @MensajeErrorPrueba

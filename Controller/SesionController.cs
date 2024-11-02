@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace CINEBD.Controller
 {
-    public class LoginController
+    internal class SesionController
     {
         private DBCONTE dBCONTE;
 
-        public LoginController()
+        public SesionController()
         {
             dBCONTE = new DBCONTE();
         }
 
-        public string VerificarUsuario(string nombre, string contraseña, out string rol)
+        public string CrearSesion(DateTime fechaInicio, int idSala, int idPelicula)
         {
-            // Llamar al método del modelo para verificar el usuario
-            return dBCONTE.VerificarUsuario(nombre, contraseña, out rol);
+            // Llamar al método del modelo para crear la sesión
+            return dBCONTE.CrearSesion(fechaInicio, idSala, idPelicula);
         }
     }
 }

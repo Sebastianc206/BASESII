@@ -34,12 +34,14 @@ C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASES
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\bin\Debug\System.Configuration.ConfigurationManager.xml
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.csproj.AssemblyReference.cache
-C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.Form1.resources
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.Properties.Resources.resources
-C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.View.Operador.resources
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.csproj.GenerateResource.cache
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.csproj.CoreCompileInputs.cache
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.csproj.Up2Date
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.exe
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.pdb
-C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.View.Sesiones.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.View.CrearPelicula.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.View.AsignarSesion.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.View.ComprarEntrada.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.InicioSesion.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.View.Submenu.resources
