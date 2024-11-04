@@ -70,5 +70,18 @@ namespace CINEBD.View
                 MessageBox.Show(resultado, "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Verificar que haya un elemento seleccionado
+            if (comboBox1.SelectedValue != null && comboBox1.SelectedItem is DataRowView selectedRow)
+            {
+                // Obtener la duración de la película seleccionada
+                int duracion = Convert.ToInt32(selectedRow["Duracion"]);
+
+                // Mostrar la duración en el TextBox
+                textBox1.Text = duracion.ToString();
+            }
+        }
     }
 }

@@ -72,6 +72,13 @@ namespace CINEBD.View
             textBox3.Text = string.Empty;
             listBox1.ClearSelected();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            View.AsignarSesion asignarSesion = new View.AsignarSesion();
+            asignarSesion.Show();
+            this.Close();
+        }
     }
 }
     

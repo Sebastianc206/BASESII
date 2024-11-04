@@ -1,25 +1,24 @@
 ﻿using CINEBD.Model;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CINEBD.Controller
 {
-    public class AsientoController
+    internal class AnulacionController
     {
         private DBCONTE dbConte;
 
-        public AsientoController()
+        public AnulacionController()
         {
             dbConte = new DBCONTE();
         }
-
-        public DataTable ObtenerAsientosPorSala(int idSala, int idSesion)
+        public string AnularTransaccion(int idTransaccion)
         {
-            return dbConte.ObtenerAsientosPorSala(idSala, idSesion);
+            // Llamar al método del modelo para crear la película
+            return dbConte.AnularTransaccion(idTransaccion);
         }
     }
 }

@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace CINEBD.Controller
 {
-    public class AsientoController
+    public class DesactivarSesionController
     {
         private DBCONTE dbConte;
 
-        public AsientoController()
+        public DesactivarSesionController()
         {
             dbConte = new DBCONTE();
         }
-
-        public DataTable ObtenerAsientosPorSala(int idSala, int idSesion)
+        public string DesactivarSesion(int idSesion)
         {
-            return dbConte.ObtenerAsientosPorSala(idSala, idSesion);
+            // Llamar al método del modelo para crear la sesión
+            return dbConte.DesactivarSesion(idSesion);
         }
     }
 }

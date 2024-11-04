@@ -51,9 +51,6 @@
             this.fKAsientoIDSala3B75D760BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.asientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.asientoTableAdapter = new CINEBD.CINEBDDataSetTableAdapters.AsientoTableAdapter();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Fecha_Inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_Fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,6 +87,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cINEBD2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).BeginInit();
@@ -137,7 +137,7 @@
             this.comboBox1.DataSource = this.peliculaBindingSource2;
             this.comboBox1.DisplayMember = "Nombre";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 31);
+            this.comboBox1.Location = new System.Drawing.Point(13, 31);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(162, 21);
             this.comboBox1.TabIndex = 0;
@@ -169,7 +169,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 9);
+            this.label1.Location = new System.Drawing.Point(34, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 13);
             this.label1.TabIndex = 1;
@@ -243,35 +243,6 @@
             // 
             this.asientoTableAdapter.ClearBeforeFill = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(785, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "TIPO DE SELECCION";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(806, 151);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(79, 17);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "Automatica";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(806, 117);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(61, 17);
-            this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "Manual";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
@@ -282,10 +253,10 @@
             this.ID_Sesion,
             this.ID_Sala});
             this.dataGridView2.DataSource = this.fKSesionIDPelic4316F928BindingSource3;
-            this.dataGridView2.Location = new System.Drawing.Point(201, 9);
+            this.dataGridView2.Location = new System.Drawing.Point(181, 9);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(578, 78);
+            this.dataGridView2.Size = new System.Drawing.Size(472, 78);
             this.dataGridView2.TabIndex = 15;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -307,6 +278,7 @@
             // 
             // ID_Sesion
             // 
+            this.ID_Sesion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ID_Sesion.DataPropertyName = "ID_Sesion";
             this.ID_Sesion.HeaderText = "ID_Sesion";
             this.ID_Sesion.Name = "ID_Sesion";
@@ -318,6 +290,7 @@
             this.ID_Sala.HeaderText = "ID_Sala";
             this.ID_Sala.Name = "ID_Sala";
             this.ID_Sala.ReadOnly = true;
+            this.ID_Sala.Visible = false;
             // 
             // fKSesionIDPelic4316F928BindingSource3
             // 
@@ -454,9 +427,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(793, 12);
+            this.button1.Location = new System.Drawing.Point(13, 58);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 51);
+            this.button1.Size = new System.Drawing.Size(162, 29);
             this.button1.TabIndex = 16;
             this.button1.Text = "VER DISPONIBILIDAD";
             this.button1.UseVisualStyleBackColor = true;
@@ -465,7 +438,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 94);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 93);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(768, 342);
             this.pictureBox1.TabIndex = 17;
@@ -479,22 +452,49 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(766, 198);
             this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
-            // Sesiones
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(659, 58);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 29);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "COMPRAR ASIENTOS";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(662, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "CANTIDAD ASIENTOS";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(659, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(120, 20);
+            this.textBox1.TabIndex = 21;
+            // 
+            // ComprarEntrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 652);
+            this.ClientSize = new System.Drawing.Size(792, 652);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
-            this.Name = "Sesiones";
+            this.Name = "ComprarEntrada";
             this.Text = "Compra";
             this.Load += new System.EventHandler(this.Compra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource2)).EndInit();
@@ -554,9 +554,6 @@
         private System.Windows.Forms.BindingSource asientoBindingSource;
         private CINEBDDataSetTableAdapters.AsientoTableAdapter asientoTableAdapter;
         private System.Windows.Forms.BindingSource fKAsientoIDSala3B75D760BindingSource;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource sesionBindingSource;
         private CINEBDDataSetTableAdapters.SesionTableAdapter sesionTableAdapter;
@@ -604,5 +601,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Fin;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Sesion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Sala;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

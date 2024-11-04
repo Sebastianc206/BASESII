@@ -65,11 +65,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CINEBDDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\AnulacionController.cs" />
     <Compile Include="Controller\AsientoController.cs" />
+    <Compile Include="Controller\DesactivarSesionController.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\ObtenerSesionesController.cs" />
+    <Compile Include="Controller\ObtenerTranController.cs" />
     <Compile Include="Controller\PeliculaController.cs" />
     <Compile Include="Controller\SesionController.cs" />
-    <Compile Include="Model\Asiento.cs" />
+    <Compile Include="Controller\VentaController.cs" />
+    <Compile Include="Model\SesionContext.cs" />
+    <Compile Include="View\AnularTransaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AnularTransaccion.Designer.cs">
+      <DependentUpon>AnularTransaccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AsignarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +99,12 @@
     <Compile Include="View\ComprarEntrada.Designer.cs">
       <DependentUpon>ComprarEntrada.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DesactivarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DesactivarSesion.Designer.cs">
+      <DependentUpon>DesactivarSesion.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,15 +112,23 @@
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\DBCONTE.cs" />
-    <Compile Include="Model\UsuarioLogin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\SeleccionCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SeleccionCompra.Designer.cs">
+      <DependentUpon>SeleccionCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Submenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Submenu.Designer.cs">
       <DependentUpon>Submenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AnularTransaccion.resx">
+      <DependentUpon>AnularTransaccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AsignarSesion.resx">
       <DependentUpon>AsignarSesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ComprarEntrada.resx">
       <DependentUpon>ComprarEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DesactivarSesion.resx">
+      <DependentUpon>DesactivarSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
@@ -125,6 +153,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\SeleccionCompra.resx">
+      <DependentUpon>SeleccionCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Submenu.resx">
       <DependentUpon>Submenu.cs</DependentUpon>
     </EmbeddedResource>

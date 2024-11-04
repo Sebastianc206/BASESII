@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace CINEBD.Model
 {
-    internal class Asiento
+    public class SesionContext
     {
-        public int ID_Sala { get; set; }
-        public string Fila { get; set; }
-        public int Numero { get; set; }
+        public static string CurrentUser { get; set; }
+
     }
 }

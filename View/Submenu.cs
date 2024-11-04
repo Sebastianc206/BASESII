@@ -34,7 +34,7 @@ namespace CINEBD.View
 
             private void button1_Click(object sender, EventArgs e)
         {
-            View.ComprarEntrada compra = new View.ComprarEntrada();
+            View.SeleccionCompra compra = new View.SeleccionCompra();
             compra.Show();
             
         }
@@ -55,6 +55,18 @@ namespace CINEBD.View
         {
             View.AsignarSesion asignarSesion = new View.AsignarSesion();
             asignarSesion.Show();
+        }
+
+        private void btn_anulacion_Click(object sender, EventArgs e)
+        {
+            View.AnularTransaccion anularTransaccion = new View.AnularTransaccion();
+            anularTransaccion.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            View.DesactivarSesion desactivarSesion = new View.DesactivarSesion();
+            desactivarSesion.Show();
         }
     }
 }

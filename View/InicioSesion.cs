@@ -17,12 +17,10 @@ namespace CINEBD
     public partial class InicioSesion : Form
     {
         private LoginController loginController;
-
         public InicioSesion()
         {
             InitializeComponent();
             loginController = new LoginController();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -61,12 +59,15 @@ namespace CINEBD
             else
             {
                 MessageBox.Show(resultado, "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Guardar el usuario actual para el contexto de sesión
+                Model.SesionContext.CurrentUser = nombreUsuario;  // Aquí guardamos el nombre del usuario en una clase estática
+
                 View.Submenu operador = new View.Submenu(rol);
                 operador.Show();
                 this.Hide();
             }
 
-       
         }
     }
     }
