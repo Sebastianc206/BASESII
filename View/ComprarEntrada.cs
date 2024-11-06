@@ -17,12 +17,24 @@ namespace CINEBD.View
     {
         private AsientoController asientoController; // Instancia del controlador
         private VentaController ventaController;
-        public ComprarEntrada()
+        private bool esCompraAutomatica;
+        public ComprarEntrada(bool esAutomatica)
         {
             InitializeComponent();
             asientoController = new AsientoController(); // Inicializar el controlador en el constructor
             ventaController = new VentaController();
+            this.esCompraAutomatica = esAutomatica;
 
+            if (esCompraAutomatica)
+            {
+                // Desactivar la selección manual de asientos si es compra automática
+                dataGridView1.Enabled = false;
+            }
+            else
+            {
+                // Activar la selección manual de asientos si es compra manual
+                dataGridView1.Enabled = true;
+            }
         }
 
         private void Compra_Load(object sender, EventArgs e)
@@ -80,6 +92,7 @@ namespace CINEBD.View
                     MessageBox.Show("Por favor, seleccione una sesión primero.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+                // Permitir solo números y teclas de control como retroceso
 
                 // Extraer los valores seleccionados en el DataGridView
                 int idSesion = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["ID_Sesion"].Value);
@@ -93,10 +106,15 @@ namespace CINEBD.View
                 {
                     dataGridView1.DataSource = asientos; // Cargar los asientos en el segundo DataGridView
                     dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridView1.Columns["ID_Sala"].HeaderText = "No.Sala";
+
+                    dataGridView1.ClearSelection();
+
                 }
                 else
                 {
                     MessageBox.Show("No se encontraron asientos para la sesión seleccionada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.DataSource = null; // Limpiar el DataGridView si no se encontraron registros
                 }
             }
             catch (Exception ex)
@@ -114,12 +132,12 @@ namespace CINEBD.View
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
 
@@ -135,13 +153,7 @@ namespace CINEBD.View
                 }
 
                 // Obtener los valores ingresados por el usuario
-                DataGridViewRow selectedRow = dataGridView2.CurrentRow;
-                if (selectedRow == null)
-                {
-                    MessageBox.Show("Por favor, seleccione una sesión primero.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
+                DataGridViewRow selectedRow = dataGridView2.SelectedRows[0];
                 int idSesion = Convert.ToInt32(selectedRow.Cells["ID_Sesion"].Value);
                 string nombreUsuario = SesionContext.CurrentUser; // Aquí debes obtener el nombre del usuario que ha iniciado sesión
                 if (!int.TryParse(textBox1.Text, out int cantAsientos) || cantAsientos <= 0)
@@ -149,38 +161,65 @@ namespace CINEBD.View
                     MessageBox.Show("Por favor, ingrese una cantidad válida de asientos.", "Entrada Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                int idTipoAsignacion = 2; // Asumiendo que el índice corresponde al tipo de asignación
-                string asientosTipoManual = null;
 
-                if (idTipoAsignacion == 2) // Asignación manual
+                string resultado = string.Empty;
+
+
+                // Verificar el tipo de compra (manual o automática)
+                if (esCompraAutomatica)
                 {
-                    if (dataGridView1.SelectedRows.Count == 0)
+                    int idTipoAsignacion = 1;
+                    // Llamar al método para realizar la venta de boletos de forma automática
+                    resultado = ventaController.VentaBoletos(idSesion, nombreUsuario, cantAsientos, idTipoAsignacion);
+
+                    // Mostrar el resultado en un MessageBox
+                    if (resultado.Contains("ERROR"))
                     {
-                        MessageBox.Show("Por favor, seleccione al menos un asiento.", "Entrada Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(resultado, "Error en la operación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show(resultado, "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Actualizar el DataGridView para reflejar los cambios en los asientos
+                        button1_Click(sender, e);
+                    }
+                }
+                else
+                {
+                    // Compra manual
+                    int idTipoAsignacion = 2;
+                    string asientosTipoManual = null;
+
+                    if (dataGridView1.SelectedRows.Count < cantAsientos)
+                    {
+                        MessageBox.Show("La cantidad de asientos seleccionados no es suficiente.", "Entrada Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     if (dataGridView1.SelectedRows.Count != cantAsientos)
                     {
-                        MessageBox.Show("La cantidad de asientos seleccionados no coincide con la cantidad solicitada.", "Entrada Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("La cantidad de asientos seleccionados no coincide con la cantidad ingresada.", "Entrada Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                    asientosTipoManual = string.Join(",", dataGridView1.SelectedRows.Cast<DataGridViewRow>().Select(row => $"{row.Cells["Fila"].Value}{row.Cells["Numero"].Value}"));
-                }
+                    asientosTipoManual = string.Join(",", dataGridView1.SelectedRows.Cast<DataGridViewRow>().Take(cantAsientos).Select(row => $"{row.Cells["Fila"].Value}{row.Cells["Numero"].Value}"));
 
-                // Llamar al método para realizar la venta de boletos
-                string resultado = ventaController.VentaBoletos(idSesion, nombreUsuario, cantAsientos, idTipoAsignacion, asientosTipoManual);
+                    // Llamar al método para realizar la venta de boletos de forma manual
+                    resultado = ventaController.VentaBoletos(idSesion, nombreUsuario, cantAsientos, idTipoAsignacion, asientosTipoManual);
 
-                // Mostrar el resultado en un MessageBox
-                if (resultado.Contains("ERROR"))
-                {
-                    MessageBox.Show(resultado, "Error en la operación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show(resultado, "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Mostrar el resultado en un MessageBox
+                    if (resultado.Contains("ERROR"))
+                    {
+                        MessageBox.Show(resultado, "Error en la operación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show(resultado, "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Actualizar el DataGridView para reflejar los cambios en los asientos
-                    button1_Click(sender, e);
+                        // Actualizar el DataGridView para reflejar los cambios en los asientos
+                        button1_Click(sender, e);
+                        dataGridView1.ClearSelection(); // Limpiar la selección para reflejar que la compra se realizó correctamente.
+
+                    }
                 }
             }
             catch (Exception ex)
@@ -191,9 +230,24 @@ namespace CINEBD.View
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
                 textBox1.Text = dataGridView1.SelectedRows.Count.ToString();
-            
+            }
+            else
+            {
+                textBox1.Text = "0";
+            }
+            // En la compra automática no se permite seleccionar asientos manualmente
+            if (esCompraAutomatica)
+            {
+                dataGridView1.ClearSelection();
+                textBox1.Text = "0";
+            }
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.MultiSelect = true; // Permitir la selección de múltiples asientos
         }
+
+       
     }
 }

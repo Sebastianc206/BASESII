@@ -41,11 +41,14 @@ BEGIN
         'Cambio en la tabla Pelicula'
     );
 END;
-
-
+EXEC sp_set_session_context 'Usuario', 'admin';
+update Sesion set Estado= 'Inactiva' where ID_Sesion = 2 
 
 SELECT * FROM Log_Transaccion
+select * from Usuarios
+select * from Sesion
 select * from Transaccion
+
 go
 --PARA LAS SESIONES
 
@@ -151,3 +154,52 @@ BEGIN
 END;
 go
 --TRIGGER DE VENTA
+CREATE OR ALTER TRIGGER trg_AfterInsertTransaccionVenta
+ON Transaccion
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @Operacion VARCHAR(20), @DatosNuevos NVARCHAR(MAX), @Descripcion NVARCHAR(MAX);
+    DECLARE @ID_Operacion INT, @Usuario VARCHAR(50), @TipoTransaccion VARCHAR(20);
+    DECLARE @CantidadAsientos INT;
+
+    -- Obtener el usuario y tipo de transacción desde el contexto de la sesión o inserción
+    SELECT 
+        @ID_Operacion = ID_Transaccion, 
+        @Usuario = CAST(SESSION_CONTEXT(N'Usuario') AS VARCHAR(50)),
+        @TipoTransaccion = Tipo_Transaccion,
+        @CantidadAsientos = Cantidad_Asientos
+    FROM inserted;
+
+    -- Verificar que la transacción sea una venta de boletos
+    IF @TipoTransaccion = 'Venta'
+    BEGIN
+        SET @Operacion = 'Venta';
+        SET @DatosNuevos = (SELECT * FROM inserted FOR JSON AUTO);
+        SET @Descripcion = CONCAT('Venta de boletos: ', @CantidadAsientos, ' asientos.');
+
+        -- Insertar en la tabla Log_Transaccion para registrar la venta de boletos
+        INSERT INTO Log_Transaccion (
+            Fecha_Hora, 
+            Usuario, 
+            Accion, 
+            ID_Operacion, 
+            Tabla_Cambio, 
+            Datos_Anteriores, 
+            Datos_Nuevos, 
+            Descripcion
+        )
+        VALUES (
+            GETDATE(), 
+            @Usuario, 
+            @Operacion, 
+            @ID_Operacion, 
+            'Transaccion', 
+            NULL, 
+            @DatosNuevos, 
+            @Descripcion
+        );
+    END
+END;

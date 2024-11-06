@@ -1,29 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\",
+  "WorkspaceRootPath": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\basesii\\view\\comprarentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:view\\comprarentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\basesii\\view\\comprarentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\view\\comprarentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:view\\comprarentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\basesii\\view\\seleccioncompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\view\\comprarentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:view\\comprarentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\view\\seleccioncompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:view\\seleccioncompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\basesii\\controller\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:controller\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\view\\seleccioncompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:view\\seleccioncompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\model\\dbconte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\model\\dbconte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:model\\dbconte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\cinebd2dataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\controller\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:controller\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\cinebd2dataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
       "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:cinebd2dataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
     }
   ],
@@ -40,9 +44,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "DBCONTE.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\Model\\DBCONTE.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\Model\\DBCONTE.cs",
               "RelativeDocumentMoniker": "Model\\DBCONTE.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\Model\\DBCONTE.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\Model\\DBCONTE.cs",
               "RelativeToolTip": "Model\\DBCONTE.cs",
               "ViewState": "AgIAADwBAAAAAAAAAADwv0QBAACPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -52,11 +56,61 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SeleccionCompra.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\SeleccionCompra.cs",
+              "RelativeDocumentMoniker": "View\\SeleccionCompra.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\SeleccionCompra.cs [Dise\u00F1o]",
+              "RelativeToolTip": "View\\SeleccionCompra.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T00:10:15.868Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "SeleccionCompra.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\SeleccionCompra.cs",
+              "RelativeDocumentMoniker": "View\\SeleccionCompra.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\SeleccionCompra.cs",
+              "RelativeToolTip": "View\\SeleccionCompra.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAIA3wBwAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T00:00:42.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ComprarEntrada.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\ComprarEntrada.cs",
+              "RelativeDocumentMoniker": "View\\ComprarEntrada.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\ComprarEntrada.cs [Dise\u00F1o]",
+              "RelativeToolTip": "View\\ComprarEntrada.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T04:21:27.043Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ComprarEntrada.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\ComprarEntrada.cs",
+              "RelativeDocumentMoniker": "View\\ComprarEntrada.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\ComprarEntrada.cs",
+              "RelativeToolTip": "View\\ComprarEntrada.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAAFQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T07:40:45.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "VentaController.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\Controller\\VentaController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\Controller\\VentaController.cs",
               "RelativeDocumentMoniker": "Controller\\VentaController.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\Controller\\VentaController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\Controller\\VentaController.cs",
               "RelativeToolTip": "Controller\\VentaController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -65,48 +119,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SeleccionCompra.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\View\\SeleccionCompra.cs",
-              "RelativeDocumentMoniker": "View\\SeleccionCompra.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\View\\SeleccionCompra.cs [Dise\u00F1o]",
-              "RelativeToolTip": "View\\SeleccionCompra.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T07:49:07.21Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ComprarEntrada.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\View\\ComprarEntrada.cs",
-              "RelativeDocumentMoniker": "View\\ComprarEntrada.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\View\\ComprarEntrada.cs",
-              "RelativeToolTip": "View\\ComprarEntrada.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAmwMIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T07:40:45.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ComprarEntrada.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\View\\ComprarEntrada.cs",
-              "RelativeDocumentMoniker": "View\\ComprarEntrada.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\View\\ComprarEntrada.cs [Dise\u00F1o]",
-              "RelativeToolTip": "View\\ComprarEntrada.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T04:21:27.043Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CINEBD2DataSet.xsd",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\CINEBD2DataSet.xsd",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\CINEBD2DataSet.xsd",
               "RelativeDocumentMoniker": "CINEBD2DataSet.xsd",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\BASESII\\CINEBD2DataSet.xsd",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\CINEBD2DataSet.xsd",
               "RelativeToolTip": "CINEBD2DataSet.xsd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
               "WhenOpened": "2024-10-24T00:57:16.705Z",

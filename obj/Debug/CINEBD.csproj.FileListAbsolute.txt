@@ -19,10 +19,7 @@ C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\bin\D
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\bin\Debug\System.Configuration.ConfigurationManager.xml
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.csproj.AssemblyReference.cache
-C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.Compra.resources
-C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.Form1.resources
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.Properties.Resources.resources
-C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.Operador.resources
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.csproj.GenerateResource.cache
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.csproj.CoreCompileInputs.cache
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.csproj.Up2Date
@@ -48,3 +45,11 @@ C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASES
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.View.AnularTransaccion.resources
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.View.DesactivarSesion.resources
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\BASESII\obj\Debug\CINEBD.View.SeleccionCompra.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.AnularTransaccion.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.AsignarSesion.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.CrearPelicula.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.ComprarEntrada.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.DesactivarSesion.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.InicioSesion.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.SeleccionCompra.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.Submenu.resources

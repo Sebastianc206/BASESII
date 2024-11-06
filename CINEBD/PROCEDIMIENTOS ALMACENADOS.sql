@@ -229,8 +229,8 @@ DECLARE @MensajeErrorPrueba NVARCHAR(MAX);
 
 EXEC sp_CrearSesion
     @fechaInicio = '2024-10-10T16:20:00',
-    @idSala = 3,
-    @idPelicula = 15,
+    @idSala = 5,
+    @idPelicula = 11,
     @mensajeError = @MensajeErrorPrueba OUTPUT;
 print @MensajeErrorPrueba
 
@@ -377,7 +377,8 @@ END;
 DECLARE @mensaje NVARCHAR(MAX)
 EXEC sp_VentaBoletos @idSesion = 14, @idUsuario = 1, @cantAsientos = 2, @idTipoAsignacion = 1, @mensajeError = @mensaje OUTPUT --auto, si sirve y las pone por separadas, inserta en transaccion_asiento y en transaccion
 DECLARE @mensajeprueba NVARCHAR(MAX)
-EXEC sp_VentaBoletos @idSesion = 12, @nombreUsuario = 'admin', @cantAsientos = 3, @idTipoAsignacion = 2, @asientosTipoManual = 'B1,B2,B3', @mensajeError = @mensajeprueba OUTPUT --manual
+EXEC sp_set_session_context 'Usuario', 'admin';
+EXEC sp_VentaBoletos @idSesion = 22, @nombreUsuario = 'admin', @cantAsientos = 1, @idTipoAsignacion = 2, @asientosTipoManual = 'A5', @mensajeError = @mensajeprueba OUTPUT --manual
 print @mensajeprueba
 
 EXEC sp_VentaBoletos @idSesion = 5, @idUsuario = 1, @cantAsientos = 2, @idTipoAsignacion = 1; --sirve para ver que no acepta en sesiones inactivas
@@ -528,7 +529,7 @@ go
 EXEC sp_ObtenerAsientosDisponibles @ID_Sala = 1, @ID_Sesion = 1
 
 select * from Transaccion_Asiento
-
+select * from Transaccion
 go
 select * from Sesion
 go
@@ -607,3 +608,101 @@ END;
 DECLARE @idPeliculaPrueba INT = 2;
 DECLARE @idSalaPrueba INT = 1;
 EXEC sp_ObtenerSesionPorPeliculaYSala @idPelicula = @idPeliculaPrueba, @idSala = @idSalaPrueba;
+
+go
+select * from Transaccion
+select * from Sesion
+go
+--SP CAMBIO DE ASIENTOS
+CREATE OR ALTER PROCEDURE sp_CambiarBoletos
+    @idTransaccion INT,
+    @idSesion INT,
+    @nuevosAsientos NVARCHAR(MAX),
+    @mensajeError NVARCHAR(MAX) OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        -- Liberar los asientos anteriores
+        UPDATE Transaccion_Asiento with (rowlock)
+        SET Estado_Asignacion = 'Liberado', Fecha_Hora_Asignacion = SYSDATETIME()
+        WHERE ID_Transaccion = @idTransaccion AND Estado_Asignacion = 'Asignado';
+
+        -- Insertar los nuevos asientos (el trigger valida y genera errores si no se cumplen)
+        DECLARE @asientostemp TABLE (fila CHAR(1), numero INT);
+        INSERT INTO @asientostemp (Fila, Numero)
+        SELECT SUBSTRING(s.value, 1, 1), CAST(SUBSTRING(s.value, 2, LEN(s.value) - 1) AS INT)
+        FROM STRING_SPLIT(@nuevosAsientos, ',') AS s;
+
+        -- Obtener ID de sala con bloqueo compartido para evitar actualizaciones concurrentes
+        DECLARE @idSala INT;
+        SELECT @idSala = ID_Sala 
+        FROM Sesion WITH (HOLDLOCK, UPDLOCK)
+        WHERE ID_Sesion = @idSesion;
+
+        -- Insertar en Transaccion_Asiento los nuevos asientos
+        INSERT INTO Transaccion_Asiento (Estado_Asignacion, Fecha_Hora_Asignacion, ID_Transaccion, Fila, Numero, ID_Sala, ID_Sesion)
+        SELECT 'Asignado', SYSDATETIME(), @idTransaccion, fila, numero, @idSala, @idSesion
+        FROM @asientostemp;
+
+		-- Registrar el cambio en la tabla Transaccion
+        INSERT INTO Transaccion (Fecha_Hora, Tipo_Transaccion, Cantidad_Asientos, Estado, ID_Usuario, ID_Tipo_Asignacion)
+        VALUES (
+            SYSDATETIME(), 
+            'Cambio', 
+            (SELECT COUNT(*) FROM @asientostemp), 
+            'Completada', 
+            (SELECT ID_Usuario FROM Transaccion WHERE ID_Transaccion = @idTransaccion), 
+            (SELECT ID_Tipo_Asignacion FROM Transaccion WHERE ID_Transaccion = @idTransaccion)
+        );
+
+        -- Confirmar la transacción
+        COMMIT TRANSACTION;
+        SET @mensajeError = 'El cambio de asientos se ha realizado exitosamente.';
+
+    END TRY
+    BEGIN CATCH
+        -- Manejar el error y deshacer la transacción
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+
+        -- Capturar el mensaje de error lanzado desde el trigger
+        SET @mensajeError = ERROR_MESSAGE();
+    END CATCH
+END;
+
+
+--pruebi
+--id transaccion, idsesion, lugares nuevos
+DECLARE @mensaje NVARCHAR(MAX)
+EXEC sp_CambiarBoletos 59, 1, 'A9,A10', @mensajeError = @mensaje OUTPUT  --CHI
+print @mensaje
+
+select * from Transaccion_Asiento
+SELECT * from Transaccion
+select * from sesion
+go
+CREATE OR ALTER PROCEDURE sp_ObtenerAsientosPorSesionYTransaccion
+    @idSesion INT,
+    @idTransaccion INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        ta.Fila,
+        ta.Numero,
+        ta.ID_Sala,
+        ta.Estado_Asignacion,
+        ta.Fecha_Hora_Asignacion
+    FROM Transaccion_Asiento ta
+    WHERE ta.ID_Sesion = @idSesion AND ta.ID_Transaccion = @idTransaccion;
+END;
+
+-- Prueba para el procedimiento almacenado sp_ObtenerAsientosPorSesionYTransaccion
+DECLARE @idSesionPrueba INT = 22;
+DECLARE @idTransaccionPrueba INT = 84;
+EXEC sp_ObtenerAsientosPorSesionYTransaccion @idSesion = @idSesionPrueba, @idTransaccion = @idTransaccionPrueba;

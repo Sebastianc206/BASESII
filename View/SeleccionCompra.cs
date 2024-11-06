@@ -19,8 +19,16 @@ namespace CINEBD.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            View.ComprarEntrada compra = new View.ComprarEntrada();
+            View.ComprarEntrada compra = new View.ComprarEntrada(false);
             compra.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            View.ComprarEntrada compra = new View.ComprarEntrada(true);
+            compra.Show();
+            this.Hide();
         }
     }
 }
