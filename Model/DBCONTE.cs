@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace CINEBD.Model
 {
@@ -370,6 +371,24 @@ namespace CINEBD.Model
                 }
             }
         }
+
+        public DataTable ObtenerAsientosPorSesionYTransaccion(int idSesion, int idTransaccion)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("sp_ObtenerAsientosPorSesionYTransaccion", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@idSesion", idSesion);
+                    command.Parameters.AddWithValue("@idTransaccion", idTransaccion);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(dataTable);
+                }
+            }
+            return dataTable;      
+    }
+
 
     }
 }

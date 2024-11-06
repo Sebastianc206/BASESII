@@ -67,6 +67,7 @@
             this.btn_cambio.TabIndex = 2;
             this.btn_cambio.Text = "REALIZAR CAMBIO";
             this.btn_cambio.UseVisualStyleBackColor = true;
+            this.btn_cambio.Click += new System.EventHandler(this.btn_cambio_Click);
             // 
             // btn_pelicula
             // 

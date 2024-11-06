@@ -53,3 +53,4 @@ C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\D
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.InicioSesion.resources
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.SeleccionCompra.resources
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.Submenu.resources
+C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.CambioAsiento.resources

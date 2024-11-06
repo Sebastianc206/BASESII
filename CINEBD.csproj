@@ -74,6 +74,7 @@
     <Compile Include="Controller\PeliculaController.cs" />
     <Compile Include="Controller\SesionController.cs" />
     <Compile Include="Controller\VentaController.cs" />
+    <Compile Include="Controller\VerAsientosController.cs" />
     <Compile Include="Model\SesionContext.cs" />
     <Compile Include="View\AnularTransaccion.cs">
       <SubType>Form</SubType>
@@ -86,6 +87,12 @@
     </Compile>
     <Compile Include="View\AsignarSesion.Designer.cs">
       <DependentUpon>AsignarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CambioAsiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CambioAsiento.Designer.cs">
+      <DependentUpon>CambioAsiento.cs</DependentUpon>
     </Compile>
     <Compile Include="View\CrearPelicula.cs">
       <SubType>Form</SubType>
@@ -131,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AsignarSesion.resx">
       <DependentUpon>AsignarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CambioAsiento.resx">
+      <DependentUpon>CambioAsiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CrearPelicula.resx">
       <DependentUpon>CrearPelicula.cs</DependentUpon>

@@ -68,5 +68,11 @@ namespace CINEBD.View
             View.DesactivarSesion desactivarSesion = new View.DesactivarSesion();
             desactivarSesion.Show();
         }
+
+        private void btn_cambio_Click(object sender, EventArgs e)
+        {
+            View.CambioAsiento cambioAsiento = new View.CambioAsiento();    
+            cambioAsiento.Show();
+        }
     }
 }
