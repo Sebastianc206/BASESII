@@ -377,6 +377,7 @@ namespace CINEBD.Model
             DataTable dataTable = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
+                connection.Open(); // Asegúrate de abrir la conexión.|
                 using (SqlCommand command = new SqlCommand("sp_ObtenerAsientosPorSesionYTransaccion", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;

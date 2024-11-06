@@ -26,7 +26,7 @@ namespace CINEBD.View
         {
             try
             {
-                if (!int.TryParse(textBox1.Text, out int idSesion) || !int.TryParse(textBox2.Text, out int idTransaccion))
+                if (!int.TryParse(textBox2.Text, out int idSesion) || !int.TryParse(textBox1.Text, out int idTransaccion))
                 {
                     MessageBox.Show("Por favor, ingrese valores válidos para el ID de Sesión y ID de Transacción.", "Entrada Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
