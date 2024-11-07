@@ -39,6 +39,10 @@ namespace CINEBD.View
 
         private void Compra_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'db_aadccb_cinebdDataSet.Sesion' Puede moverla o quitarla según sea necesario.
+            this.sesionTableAdapter2.Fill(this.db_aadccb_cinebdDataSet.Sesion);
+            // TODO: esta línea de código carga datos en la tabla 'db_aadccb_cinebdDataSet.Pelicula' Puede moverla o quitarla según sea necesario.
+            this.peliculaTableAdapter2.Fill(this.db_aadccb_cinebdDataSet.Pelicula);
             // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet1.Asiento' Puede moverla o quitarla según sea necesario.
             this.asientoTableAdapter1.Fill(this.cINEBD2DataSet1.Asiento);
             // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Sesion' Puede moverla o quitarla según sea necesario.

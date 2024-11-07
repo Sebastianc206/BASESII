@@ -75,6 +75,11 @@
     <Compile Include="Controller\SesionController.cs" />
     <Compile Include="Controller\VentaController.cs" />
     <Compile Include="Controller\VerAsientosController.cs" />
+    <Compile Include="db_aadccb_cinebdDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_aadccb_cinebdDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\SesionContext.cs" />
     <Compile Include="View\AnularTransaccion.cs">
       <SubType>Form</SubType>
@@ -201,6 +206,17 @@
     </None>
     <None Include="CINEBDDataSet1.xss">
       <DependentUpon>CINEBDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="db_aadccb_cinebdDataSet.xsc">
+      <DependentUpon>db_aadccb_cinebdDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_aadccb_cinebdDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_aadccb_cinebdDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_aadccb_cinebdDataSet.xss">
+      <DependentUpon>db_aadccb_cinebdDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

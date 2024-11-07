@@ -45,10 +45,18 @@
             this.sesionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sesionTableAdapter = new CINEBD.CINEBD2DataSetTableAdapters.SesionTableAdapter();
             this.sALATableAdapter = new CINEBD.CINEBD2DataSetTableAdapters.SALATableAdapter();
+            this.db_aadccb_cinebdDataSet = new CINEBD.db_aadccb_cinebdDataSet();
+            this.peliculaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.peliculaTableAdapter1 = new CINEBD.db_aadccb_cinebdDataSetTableAdapters.PeliculaTableAdapter();
+            this.sALABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sALATableAdapter1 = new CINEBD.db_aadccb_cinebdDataSetTableAdapters.SALATableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cINEBD2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sesionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_aadccb_cinebdDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sALABindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +71,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.peliculaBindingSource;
+            this.comboBox1.DataSource = this.peliculaBindingSource1;
             this.comboBox1.DisplayMember = "Nombre";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(200, 59);
@@ -104,7 +112,7 @@
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.sALABindingSource, "ID_Sala", true));
-            this.comboBox2.DataSource = this.sALABindingSource;
+            this.comboBox2.DataSource = this.sALABindingSource1;
             this.comboBox2.DisplayMember = "ID_Sala";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(200, 161);
@@ -172,6 +180,29 @@
             // 
             this.sALATableAdapter.ClearBeforeFill = true;
             // 
+            // db_aadccb_cinebdDataSet
+            // 
+            this.db_aadccb_cinebdDataSet.DataSetName = "db_aadccb_cinebdDataSet";
+            this.db_aadccb_cinebdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // peliculaBindingSource1
+            // 
+            this.peliculaBindingSource1.DataMember = "Pelicula";
+            this.peliculaBindingSource1.DataSource = this.db_aadccb_cinebdDataSet;
+            // 
+            // peliculaTableAdapter1
+            // 
+            this.peliculaTableAdapter1.ClearBeforeFill = true;
+            // 
+            // sALABindingSource1
+            // 
+            this.sALABindingSource1.DataMember = "SALA";
+            this.sALABindingSource1.DataSource = this.db_aadccb_cinebdDataSet;
+            // 
+            // sALATableAdapter1
+            // 
+            this.sALATableAdapter1.ClearBeforeFill = true;
+            // 
             // AsignarSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +224,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.cINEBD2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sALABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sesionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_aadccb_cinebdDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sALABindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,5 +250,10 @@
         private CINEBD2DataSetTableAdapters.SesionTableAdapter sesionTableAdapter;
         private System.Windows.Forms.BindingSource sALABindingSource;
         private CINEBD2DataSetTableAdapters.SALATableAdapter sALATableAdapter;
+        private db_aadccb_cinebdDataSet db_aadccb_cinebdDataSet;
+        private System.Windows.Forms.BindingSource peliculaBindingSource1;
+        private db_aadccb_cinebdDataSetTableAdapters.PeliculaTableAdapter peliculaTableAdapter1;
+        private System.Windows.Forms.BindingSource sALABindingSource1;
+        private db_aadccb_cinebdDataSetTableAdapters.SALATableAdapter sALATableAdapter1;
     }
 }

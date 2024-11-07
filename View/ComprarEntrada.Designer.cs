@@ -90,6 +90,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.db_aadccb_cinebdDataSet = new CINEBD.db_aadccb_cinebdDataSet();
+            this.peliculaBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.peliculaTableAdapter2 = new CINEBD.db_aadccb_cinebdDataSetTableAdapters.PeliculaTableAdapter();
+            this.fKSesionIDPelic4316F928BindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.sesionTableAdapter2 = new CINEBD.db_aadccb_cinebdDataSetTableAdapters.SesionTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cINEBD2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).BeginInit();
@@ -130,11 +135,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.fKSesionIDPelic4316F928BindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_aadccb_cinebdDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKSesionIDPelic4316F928BindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.peliculaBindingSource2;
+            this.comboBox1.DataSource = this.peliculaBindingSource4;
             this.comboBox1.DisplayMember = "Nombre";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(13, 31);
@@ -252,7 +260,7 @@
             this.Fecha_Fin,
             this.ID_Sesion,
             this.ID_Sala});
-            this.dataGridView2.DataSource = this.fKSesionIDPelic4316F928BindingSource3;
+            this.dataGridView2.DataSource = this.fKSesionIDPelic4316F928BindingSource4;
             this.dataGridView2.Location = new System.Drawing.Point(181, 9);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
@@ -480,6 +488,29 @@
             this.textBox1.Size = new System.Drawing.Size(120, 20);
             this.textBox1.TabIndex = 21;
             // 
+            // db_aadccb_cinebdDataSet
+            // 
+            this.db_aadccb_cinebdDataSet.DataSetName = "db_aadccb_cinebdDataSet";
+            this.db_aadccb_cinebdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // peliculaBindingSource4
+            // 
+            this.peliculaBindingSource4.DataMember = "Pelicula";
+            this.peliculaBindingSource4.DataSource = this.db_aadccb_cinebdDataSet;
+            // 
+            // peliculaTableAdapter2
+            // 
+            this.peliculaTableAdapter2.ClearBeforeFill = true;
+            // 
+            // fKSesionIDPelic4316F928BindingSource4
+            // 
+            this.fKSesionIDPelic4316F928BindingSource4.DataMember = "FK__Sesion__ID_Pelic__4316F928";
+            this.fKSesionIDPelic4316F928BindingSource4.DataSource = this.peliculaBindingSource4;
+            // 
+            // sesionTableAdapter2
+            // 
+            this.sesionTableAdapter2.ClearBeforeFill = true;
+            // 
             // ComprarEntrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,6 +568,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.fKSesionIDPelic4316F928BindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_aadccb_cinebdDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKSesionIDPelic4316F928BindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -604,5 +638,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private db_aadccb_cinebdDataSet db_aadccb_cinebdDataSet;
+        private System.Windows.Forms.BindingSource peliculaBindingSource4;
+        private db_aadccb_cinebdDataSetTableAdapters.PeliculaTableAdapter peliculaTableAdapter2;
+        private System.Windows.Forms.BindingSource fKSesionIDPelic4316F928BindingSource4;
+        private db_aadccb_cinebdDataSetTableAdapters.SesionTableAdapter sesionTableAdapter2;
     }
 }

@@ -17,7 +17,7 @@ namespace CINEBD.Model
 
         public DBCONTE()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["CINEBD.Properties.Settings.CINEBDConnectionString"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["CINEBD.Properties.Settings.db_aadccb_cinebdConnectionString"].ConnectionString;
         }
 
         public void EstablecerContextoSesionUsuario(SqlConnection connection)
@@ -389,6 +389,7 @@ namespace CINEBD.Model
             }
             return dataTable;      
     }
+
 
 
     }

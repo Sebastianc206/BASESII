@@ -241,7 +241,7 @@ select * from Transaccion_Asiento
 select * from Log_Transaccion
 go
 
-CREATE OR ALTER PROCEDURE sp_VentaBoletos
+CREATE OR ALTER PROCEDURE VentaBoletos
     @idSesion INT,
     @nombreUsuario VARCHAR(100),
     @cantAsientos INT,
@@ -706,3 +706,90 @@ END;
 DECLARE @idSesionPrueba INT = 22;
 DECLARE @idTransaccionPrueba INT = 84;
 EXEC sp_ObtenerAsientosPorSesionYTransaccion @idSesion = @idSesionPrueba, @idTransaccion = @idTransaccionPrueba;
+
+go
+--SP PARA CAMBIAR BOLETOS
+CREATE OR ALTER PROCEDURE sp_CambiarBoletos
+    @idTransaccion INT,
+    @idSesion INT,
+    @asientosAntiguos NVARCHAR(MAX),
+    @nuevosAsientos NVARCHAR(MAX),
+    @mensajeError NVARCHAR(MAX) OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        -- Convertir los asientos antiguos y nuevos en tablas temporales
+        DECLARE @asientosAntiguosTemp TABLE (fila CHAR(1), numero INT);
+        DECLARE @nuevosAsientosTemp TABLE (fila CHAR(1), numero INT);
+
+        INSERT INTO @asientosAntiguosTemp (fila, numero)
+        SELECT SUBSTRING(s.value, 1, 1), CAST(SUBSTRING(s.value, 2, LEN(s.value) - 1) AS INT)
+        FROM STRING_SPLIT(@asientosAntiguos, ',') AS s;
+
+        INSERT INTO @nuevosAsientosTemp (fila, numero)
+        SELECT SUBSTRING(s.value, 1, 1), CAST(SUBSTRING(s.value, 2, LEN(s.value) - 1) AS INT)
+        FROM STRING_SPLIT(@nuevosAsientos, ',') AS s;
+
+        -- Verificar que la cantidad de asientos coincida
+        IF (SELECT COUNT(*) FROM @asientosAntiguosTemp) != (SELECT COUNT(*) FROM @nuevosAsientosTemp)
+        BEGIN
+            SET @mensajeError = 'ERROR: La cantidad de asientos antiguos no coincide con la cantidad de asientos nuevos.';
+            ROLLBACK TRAN;
+            RETURN;
+        END;
+
+        -- Liberar los asientos anteriores específicos
+        UPDATE ta
+        SET ta.Estado_Asignacion = 'Liberado', ta.Fecha_Hora_Asignacion = SYSDATETIME()
+        FROM Transaccion_Asiento ta
+        JOIN @asientosAntiguosTemp ant ON ta.Fila = ant.fila AND ta.Numero = ant.numero
+        WHERE ta.ID_Transaccion = @idTransaccion AND ta.Estado_Asignacion = 'Asignado';
+
+        -- Obtener ID de sala con bloqueo compartido para evitar actualizaciones concurrentes
+        DECLARE @idSala INT;
+        SELECT @idSala = ID_Sala 
+        FROM Sesion WITH (HOLDLOCK, UPDLOCK)
+        WHERE ID_Sesion = @idSesion;
+
+        -- Insertar en Transaccion_Asiento los nuevos asientos (el trigger valida)
+        INSERT INTO Transaccion_Asiento (Estado_Asignacion, Fecha_Hora_Asignacion, ID_Transaccion, Fila, Numero, ID_Sala, ID_Sesion)
+        SELECT 'Asignado', SYSDATETIME(), @idTransaccion, fila, numero, @idSala, @idSesion
+        FROM @nuevosAsientosTemp;
+
+        -- Registrar el cambio en la tabla Transaccion
+        INSERT INTO Transaccion (Fecha_Hora, Tipo_Transaccion, Cantidad_Asientos, Estado, ID_Usuario, ID_Tipo_Asignacion)
+        VALUES (
+            SYSDATETIME(), 
+            'Cambio', 
+            (SELECT COUNT(*) FROM @nuevosAsientosTemp), 
+            'Completada', 
+            (SELECT ID_Usuario FROM Transaccion WHERE ID_Transaccion = @idTransaccion), 
+            (SELECT ID_Tipo_Asignacion FROM Transaccion WHERE ID_Transaccion = @idTransaccion)
+        );
+
+        -- Confirmar la transacción
+        COMMIT TRANSACTION;
+        SET @mensajeError = 'El cambio de asientos se ha realizado exitosamente.';
+
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+
+        SET @mensajeError = ERROR_MESSAGE();
+    END CATCH
+END;
+
+
+
+--pruebi
+--id transaccion, idsesion, lugares viejos, lugares nuevos
+
+DECLARE @mensaje NVARCHAR(MAX)
+EXEC sp_CambiarBoletos 106, 1044, 'A3', 'A7', @mensajeError = @mensaje OUTPUT  --CHI
+PRINT @mensaje
+select * from Transaccion_Asiento
