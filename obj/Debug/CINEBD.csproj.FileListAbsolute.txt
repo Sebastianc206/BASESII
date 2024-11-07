@@ -54,3 +54,25 @@ C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\D
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.SeleccionCompra.resources
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.Submenu.resources
 C:\Users\USUARIO\OneDrive - Universidad Rafael Landivar\Escritorio\BASESII\obj\Debug\CINEBD.View.CambioAsiento.resources
+C:\Users\javie\OneDrive\Escritorio\BASESII\bin\Debug\CINEBD.exe.config
+C:\Users\javie\OneDrive\Escritorio\BASESII\bin\Debug\CINEBD.exe
+C:\Users\javie\OneDrive\Escritorio\BASESII\bin\Debug\CINEBD.pdb
+C:\Users\javie\OneDrive\Escritorio\BASESII\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\javie\OneDrive\Escritorio\BASESII\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.csproj.AssemblyReference.cache
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.csproj.SuggestedBindingRedirects.cache
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.View.AnularTransaccion.resources
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.View.AsignarSesion.resources
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.View.CambioAsiento.resources
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.View.CrearPelicula.resources
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.View.ComprarEntrada.resources
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.View.DesactivarSesion.resources
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.InicioSesion.resources
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.Properties.Resources.resources
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.View.SeleccionCompra.resources
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.View.Submenu.resources
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.csproj.GenerateResource.cache
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.csproj.CoreCompileInputs.cache
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.csproj.CopyComplete
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.exe
+C:\Users\javie\OneDrive\Escritorio\BASESII\obj\Debug\CINEBD.pdb

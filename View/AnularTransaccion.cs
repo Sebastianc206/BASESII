@@ -25,10 +25,7 @@ namespace CINEBD.View
 
         private void AnularTransaccion_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Transaccion_Asiento' Puede moverla o quitarla según sea necesario.
-            this.transaccion_AsientoTableAdapter.Fill(this.cINEBD2DataSet.Transaccion_Asiento);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Transaccion' Puede moverla o quitarla según sea necesario.
-            this.transaccionTableAdapter.Fill(this.cINEBD2DataSet.Transaccion);
+         
 
         }
 

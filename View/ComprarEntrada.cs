@@ -44,21 +44,12 @@ namespace CINEBD.View
             // TODO: esta línea de código carga datos en la tabla 'db_aadccb_cinebdDataSet.Pelicula' Puede moverla o quitarla según sea necesario.
             this.peliculaTableAdapter2.Fill(this.db_aadccb_cinebdDataSet.Pelicula);
             // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet1.Asiento' Puede moverla o quitarla según sea necesario.
-            this.asientoTableAdapter1.Fill(this.cINEBD2DataSet1.Asiento);
+            
             // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Sesion' Puede moverla o quitarla según sea necesario.
-            this.sesionTableAdapter1.Fill(this.cINEBD2DataSet.Sesion);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Sesion' Puede moverla o quitarla según sea necesario.
-            this.sesionTableAdapter1.Fill(this.cINEBD2DataSet.Sesion);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Transaccion_Asiento' Puede moverla o quitarla según sea necesario.
-            this.transaccion_AsientoTableAdapter1.Fill(this.cINEBD2DataSet.Transaccion_Asiento);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Asiento' Puede moverla o quitarla según sea necesario.
-            this.asientoTableAdapter1.Fill(this.cINEBD2DataSet.Asiento);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.SALA' Puede moverla o quitarla según sea necesario.
-            this.sALATableAdapter1.Fill(this.cINEBD2DataSet.SALA);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Sesion' Puede moverla o quitarla según sea necesario.
-            this.sesionTableAdapter1.Fill(this.cINEBD2DataSet.Sesion);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Pelicula' Puede moverla o quitarla según sea necesario.
-            this.peliculaTableAdapter1.Fill(this.cINEBD2DataSet.Pelicula);
+            
+            
+        
+            
 
         }
 

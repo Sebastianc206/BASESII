@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CINEGT2\\Controller",
-    "\\CINEGT2\\Model",
+    "\\Model",
     "\\View"
   ],
-  "SelectedNode": "\\View\\Compra.cs",
+  "SelectedNode": "\\Model\\DBCONTE.cs",
   "PreviewInSolutionExplorer": false
 }

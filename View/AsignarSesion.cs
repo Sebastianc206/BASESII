@@ -40,12 +40,7 @@ namespace CINEBD.View
             // TODO: esta línea de código carga datos en la tabla 'db_aadccb_cinebdDataSet.Pelicula' Puede moverla o quitarla según sea necesario.
             this.peliculaTableAdapter1.Fill(this.db_aadccb_cinebdDataSet.Pelicula);
             // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.SALA' Puede moverla o quitarla según sea necesario.
-            this.sALATableAdapter.Fill(this.cINEBD2DataSet.SALA);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Sesion' Puede moverla o quitarla según sea necesario.
-            this.sesionTableAdapter.Fill(this.cINEBD2DataSet.Sesion);
-            // TODO: esta línea de código carga datos en la tabla 'cINEBD2DataSet.Pelicula' Puede moverla o quitarla según sea necesario.
-            this.peliculaTableAdapter.Fill(this.cINEBD2DataSet.Pelicula);
-
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
