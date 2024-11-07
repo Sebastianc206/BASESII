@@ -64,13 +64,14 @@ namespace CINEBD.View
             else
             {
                 MessageBox.Show(resultado, "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Limpiar los campos después de crear la película
+                textBox1.Text = string.Empty;
+                textBox2.Text = string.Empty;
+                textBox3.Text = string.Empty;
+                listBox1.ClearSelected();
             }
 
-            // Limpiar los campos después de crear la película
-            textBox1.Text = string.Empty;
-            textBox2.Text = string.Empty;
-            textBox3.Text = string.Empty;
-            listBox1.ClearSelected();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

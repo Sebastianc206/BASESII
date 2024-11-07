@@ -390,7 +390,48 @@ namespace CINEBD.Model
             return dataTable;      
     }
 
+        // Método en el controlador para implementar el SP de cambio de boletos
+        public string CambiarBoletos(int idTransaccion, int idSesion, string asientosAntiguos, string nuevosAsientos)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    EstablecerContextoSesionUsuario(connection);
+
+                    SqlCommand command = new SqlCommand("sp_CambiarBoletos", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Agregar parámetros al procedimiento almacenado
+                    command.Parameters.AddWithValue("@idTransaccion", idTransaccion);
+                    command.Parameters.AddWithValue("@idSesion", idSesion);
+                    command.Parameters.AddWithValue("@asientosAntiguos", asientosAntiguos);
+                    command.Parameters.AddWithValue("@nuevosAsientos", nuevosAsientos);
+
+                    // Parámetro de salida para el mensaje de error
+                    SqlParameter mensajeErrorParam = new SqlParameter("@mensajeError", SqlDbType.NVarChar, -1)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    command.Parameters.Add(mensajeErrorParam);
+
+                    // Ejecutar el procedimiento almacenado
+                    command.ExecuteNonQuery();
+
+                    // Obtener el mensaje de error del parámetro de salida
+                    string mensajeError = mensajeErrorParam.Value == DBNull.Value ? string.Empty : mensajeErrorParam.Value.ToString();
+
+                    return mensajeError;
+                }
+                catch (Exception ex)
+                {
+                    // Captura errores generales no relacionados con SQL Server
+                    return $"Mensaje de error: {ex.Message}";
+                }
+            }
 
 
-    }
+        }
+        }
 }

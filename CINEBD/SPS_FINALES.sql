@@ -1,4 +1,3 @@
-
 -- SP PARA CAMBIO DE BOLETOS ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE OR ALTER PROCEDURE sp_CambiarBoletos
     @idTransaccion INT,
@@ -25,7 +24,7 @@ BEGIN
         SELECT SUBSTRING(s.value, 1, 1), CAST(SUBSTRING(s.value, 2, LEN(s.value) - 1) AS INT)
         FROM STRING_SPLIT(@nuevosAsientos, ',') AS s;
 
-        -- Verificar que la cantidad de asientos coincida
+        -- Verificar que la cantidad de asientos coincida entre los antiguos y los nuevos
         IF (SELECT COUNT(*) FROM @asientosAntiguosTemp) != (SELECT COUNT(*) FROM @nuevosAsientosTemp)
         BEGIN
             SET @mensajeError = 'ERROR: La cantidad de asientos antiguos no coincide con la cantidad de asientos nuevos.';
@@ -33,20 +32,20 @@ BEGIN
             RETURN;
         END;
 
-        -- Liberar los asientos anteriores específicos
+        -- Liberar solo los asientos indicados en @asientosAntiguosTemp
         UPDATE ta
         SET ta.Estado_Asignacion = 'Liberado', ta.Fecha_Hora_Asignacion = SYSDATETIME()
         FROM Transaccion_Asiento ta
         JOIN @asientosAntiguosTemp ant ON ta.Fila = ant.fila AND ta.Numero = ant.numero
         WHERE ta.ID_Transaccion = @idTransaccion AND ta.Estado_Asignacion = 'Asignado';
 
-        -- Obtener ID de sala con bloqueo compartido para evitar actualizaciones concurrentes
+        -- Obtener ID de sala para los nuevos asientos
         DECLARE @idSala INT;
         SELECT @idSala = ID_Sala 
         FROM Sesion WITH (HOLDLOCK, UPDLOCK)
         WHERE ID_Sesion = @idSesion;
 
-        -- Insertar en Transaccion_Asiento los nuevos asientos (el trigger valida)
+        -- Insertar los nuevos asientos en Transaccion_Asiento
         INSERT INTO Transaccion_Asiento (Estado_Asignacion, Fecha_Hora_Asignacion, ID_Transaccion, Fila, Numero, ID_Sala, ID_Sesion)
         SELECT 'Asignado', SYSDATETIME(), @idTransaccion, fila, numero, @idSala, @idSesion
         FROM @nuevosAsientosTemp;

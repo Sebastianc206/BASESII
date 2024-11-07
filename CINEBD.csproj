@@ -67,6 +67,7 @@
     </Compile>
     <Compile Include="Controller\AnulacionController.cs" />
     <Compile Include="Controller\AsientoController.cs" />
+    <Compile Include="Controller\CambioController.cs" />
     <Compile Include="Controller\DesactivarSesionController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\ObtenerSesionesController.cs" />

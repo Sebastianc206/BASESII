@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\view\\crearpelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:view\\crearpelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\view\\crearpelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:view\\crearpelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\model\\dbconte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:model\\dbconte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\view\\cambioasiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:view\\cambioasiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\view\\asignarsesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:view\\asignarsesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\view\\comprarentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:view\\comprarentrada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|c:\\users\\usuario\\onedrive - universidad rafael landivar\\escritorio\\basesii\\view\\desactivarsesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D999CF2D-58FC-4DF7-A6AA-55844D9B406C}|CINEBD.csproj|solutionrelative:view\\desactivarsesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "DBCONTE.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\Model\\DBCONTE.cs",
               "RelativeDocumentMoniker": "Model\\DBCONTE.cs",
               "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\Model\\DBCONTE.cs",
               "RelativeToolTip": "Model\\DBCONTE.cs",
-              "ViewState": "AgIAADYBAAAAAAAAAAAmwE4BAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAIIBAAAAAAAAAAAYwIkBAAB0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T02:08:25.844Z",
               "IsPinned": true,
@@ -48,50 +40,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DesactivarSesion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\DesactivarSesion.cs",
-              "RelativeDocumentMoniker": "View\\DesactivarSesion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\DesactivarSesion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "View\\DesactivarSesion.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "CrearPelicula.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\CrearPelicula.cs",
+              "RelativeDocumentMoniker": "View\\CrearPelicula.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\CrearPelicula.cs",
+              "RelativeToolTip": "View\\CrearPelicula.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAawEkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T03:29:00.397Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ComprarEntrada.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\ComprarEntrada.cs",
-              "RelativeDocumentMoniker": "View\\ComprarEntrada.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\ComprarEntrada.cs [Dise\u00F1o]",
-              "RelativeToolTip": "View\\ComprarEntrada.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T03:28:57.338Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AsignarSesion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\AsignarSesion.cs",
-              "RelativeDocumentMoniker": "View\\AsignarSesion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\AsignarSesion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "View\\AsignarSesion.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T03:28:53.953Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-11-07T06:43:53.301Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CambioAsiento.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\CambioAsiento.cs",
-              "RelativeDocumentMoniker": "View\\CambioAsiento.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\CambioAsiento.cs [Dise\u00F1o]",
-              "RelativeToolTip": "View\\CambioAsiento.cs [Dise\u00F1o]",
+              "Title": "CrearPelicula.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\CrearPelicula.cs",
+              "RelativeDocumentMoniker": "View\\CrearPelicula.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive - Universidad Rafael Landivar\\Escritorio\\BASESII\\View\\CrearPelicula.cs [Dise\u00F1o]",
+              "RelativeToolTip": "View\\CrearPelicula.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T00:25:30.195Z",
+              "WhenOpened": "2024-11-07T06:43:51.814Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

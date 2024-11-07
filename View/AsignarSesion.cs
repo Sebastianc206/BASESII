@@ -21,6 +21,8 @@ namespace CINEBD.View
             sesionController = new SesionController();
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd/MM/yyyy HH:mm";
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -81,6 +83,10 @@ namespace CINEBD.View
                 // Mostrar la duración en el TextBox
                 textBox1.Text = duracion.ToString();
             }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

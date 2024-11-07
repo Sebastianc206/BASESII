@@ -394,3 +394,152 @@ END;
 
 go
 --TRIGGER PARA CAMBIO DE BOLETOS
+CREATE OR ALTER TRIGGER trg_ValidarCambioBoletos
+ON Transaccion_Asiento
+INSTEAD OF INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @idTransaccion INT, @idSesion INT, @fechaInicioNuevaSesion DATETIME, @fechaInicioSesionActual DATETIME, @estadoSesion NVARCHAR(20);
+    DECLARE @mensajeError NVARCHAR(MAX);
+
+    -- Asignación de valores de la nueva inserción
+    SELECT TOP 1 @idTransaccion = ID_Transaccion, @idSesion = ID_Sesion FROM inserted;
+
+    -- Verificar que la sesión de destino esté activa
+    SELECT @estadoSesion = Estado, @fechaInicioNuevaSesion = Fecha_Inicio 
+    FROM Sesion 
+    WHERE ID_Sesion = @idSesion;
+
+    IF @estadoSesion <> 'Activa'
+    BEGIN
+        SET @mensajeError = 'ERROR: La sesión de destino no está activa.';
+        THROW 50006, @mensajeError, 1;
+        RETURN;
+    END;
+
+    -- Obtener la fecha de inicio de la sesión actual de los asientos originales
+    SELECT @fechaInicioSesionActual = S.Fecha_Inicio
+    FROM Transaccion_Asiento TA
+    JOIN Sesion S ON TA.ID_Sesion = S.ID_Sesion
+    WHERE TA.ID_Transaccion = @idTransaccion AND TA.Estado_Asignacion = 'Asignado';
+
+    -- Verificar duplicados en los nuevos asientos
+    IF EXISTS (
+        SELECT Fila, Numero
+        FROM inserted
+        GROUP BY Fila, Numero
+        HAVING COUNT(*) > 1
+    )
+    BEGIN
+        SET @mensajeError = 'ERROR: Los nuevos asientos contienen duplicados.';
+        THROW 50001, @mensajeError, 1;
+        RETURN;
+    END;
+
+    -- Verificar disponibilidad de los nuevos asientos en la nueva sesión
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        JOIN Transaccion_Asiento ta WITH (UPDLOCK, HOLDLOCK) ON ta.ID_Sesion = @idSesion
+            AND ta.Fila = i.Fila
+            AND ta.Numero = i.Numero
+            AND ta.Estado_Asignacion = 'Asignado'
+    )
+    BEGIN
+        SET @mensajeError = 'ERROR: Estos asientos no están disponibles en la nueva sesión.';
+        THROW 50002, @mensajeError, 1;
+        RETURN;
+    END;
+
+    -- Verificar si se está intentando cambiar al mismo asiento actual
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        JOIN Transaccion_Asiento ta ON ta.ID_Transaccion = @idTransaccion
+        WHERE ta.Fila = i.Fila AND ta.Numero = i.Numero AND ta.Estado_Asignacion = 'Asignado'
+    )
+    BEGIN
+        SET @mensajeError = 'ERROR: No puede cambiar al mismo asiento en el que ya está.';
+        THROW 50003, @mensajeError, 1;
+        RETURN;
+    END;
+
+    -- Verificar que la sesión nueva no haya comenzado
+    IF @fechaInicioNuevaSesion <= GETDATE()
+    BEGIN
+        SET @mensajeError = 'ERROR: No se puede cambiar a la nueva sesión porque ya ha comenzado.';
+        THROW 50004, @mensajeError, 1;
+        RETURN;
+    END;
+
+    -- Verificar que la sesión actual no haya comenzado
+    IF @fechaInicioSesionActual <= GETDATE()
+    BEGIN
+        SET @mensajeError = 'ERROR: No se puede cambiar de la sesión actual porque ya ha comenzado.';
+        THROW 50005, @mensajeError, 1;
+        RETURN;
+    END;
+
+    -- Si todas las condiciones se cumplen, realizar la inserción
+    INSERT INTO Transaccion_Asiento (Estado_Asignacion, Fecha_Hora_Asignacion, ID_Transaccion, Fila, Numero, ID_Sala, ID_Sesion)
+    SELECT Estado_Asignacion, Fecha_Hora_Asignacion, ID_Transaccion, Fila, Numero, ID_Sala, ID_Sesion
+    FROM inserted;
+END;
+GO
+
+--TRIGGER REGISTRAR TABLA LOGS CAMBIO DE ASIENTO
+CREATE OR ALTER TRIGGER trg_AfterUpdateTransaccionCambio
+ON Transaccion_Asiento
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @Operacion VARCHAR(20), @DatosAnteriores NVARCHAR(MAX), @DatosNuevos NVARCHAR(MAX), @Descripcion NVARCHAR(MAX);
+    DECLARE @ID_Operacion INT, @Usuario VARCHAR(50);
+    DECLARE @EstadoAnterior VARCHAR(20), @EstadoNuevo VARCHAR(20);
+
+    -- Obtener el usuario del contexto de la sesión
+    SET @Usuario = CAST(SESSION_CONTEXT(N'Usuario') AS VARCHAR(50));
+
+    -- Identificar el cambio de asignación de asiento
+    SELECT 
+        @ID_Operacion = i.ID_Transaccion, 
+        @EstadoAnterior = d.Estado_Asignacion,
+        @EstadoNuevo = i.Estado_Asignacion
+    FROM inserted i
+    JOIN deleted d ON i.ID_AsientoTransaccion = d.ID_AsientoTransaccion;
+
+    -- Verificar que el estado haya cambiado, lo cual implica un cambio de asiento
+    IF @EstadoAnterior <> @EstadoNuevo
+    BEGIN
+        SET @Operacion = 'CambioAsiento';
+        SET @DatosAnteriores = (SELECT * FROM deleted FOR JSON AUTO);
+        SET @DatosNuevos = (SELECT * FROM inserted FOR JSON AUTO);
+        SET @Descripcion = CONCAT('Cambio de asiento de ', @EstadoAnterior, ' a ', @EstadoNuevo);
+
+        -- Insertar en Log_Transaccion para registrar el cambio de asiento
+        INSERT INTO Log_Transaccion (
+            Fecha_Hora, 
+            Usuario, 
+            Accion, 
+            ID_Operacion, 
+            Tabla_Cambio, 
+            Datos_Anteriores, 
+            Datos_Nuevos, 
+            Descripcion
+        )
+        VALUES (
+            GETDATE(), 
+            @Usuario, 
+            @Operacion, 
+            @ID_Operacion, 
+            'Transaccion_Asiento', 
+            @DatosAnteriores, 
+            @DatosNuevos, 
+            @Descripcion
+        );
+    END
+END;
