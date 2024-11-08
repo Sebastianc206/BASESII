@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -69,11 +87,16 @@
     <Compile Include="Controller\AsientoController.cs" />
     <Compile Include="Controller\CambioController.cs" />
     <Compile Include="Controller\DesactivarSesionController.cs" />
+    <Compile Include="Controller\ListadoTransaccionesConAsientos.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\ObtenerSesionesController.cs" />
     <Compile Include="Controller\ObtenerTranController.cs" />
     <Compile Include="Controller\PeliculaController.cs" />
+    <Compile Include="Controller\PromedioAsientosOcupadosYCantidadSesiones.cs" />
     <Compile Include="Controller\SesionController.cs" />
+    <Compile Include="Controller\SesionesAsientosOcupadosBajoPorcentaje.cs" />
+    <Compile Include="Controller\sp_LogTransacciones_RangoFecha.cs" />
+    <Compile Include="Controller\Top5PeliculasMayorPromedioAsientosVendidos.cs" />
     <Compile Include="Controller\VentaController.cs" />
     <Compile Include="Controller\VerAsientosController.cs" />
     <Compile Include="db_aadccb_cinebdDataSet.Designer.cs">
@@ -81,7 +104,44 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_aadccb_cinebdDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\SesionContext.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="View\AnularTransaccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +187,48 @@
     <Compile Include="Model\DBCONTE.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Rep1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Rep1.Designer.cs">
+      <DependentUpon>Rep1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Rep2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Rep2.Designer.cs">
+      <DependentUpon>Rep2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Rep3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Rep3.Designer.cs">
+      <DependentUpon>Rep3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Rep4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Rep4.Designer.cs">
+      <DependentUpon>Rep4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Rep5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Rep5.Designer.cs">
+      <DependentUpon>Rep5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Rep6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Rep6.Designer.cs">
+      <DependentUpon>Rep6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\SeleccionCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +241,24 @@
     <Compile Include="View\Submenu.Designer.cs">
       <DependentUpon>Submenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AnularTransaccion.resx">
       <DependentUpon>AnularTransaccion.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +289,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Rep1.resx">
+      <DependentUpon>Rep1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Rep2.resx">
+      <DependentUpon>Rep2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Rep3.resx">
+      <DependentUpon>Rep3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Rep4.resx">
+      <DependentUpon>Rep4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Rep5.resx">
+      <DependentUpon>Rep5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Rep6.resx">
+      <DependentUpon>Rep6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\SeleccionCompra.resx">
       <DependentUpon>SeleccionCompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +374,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

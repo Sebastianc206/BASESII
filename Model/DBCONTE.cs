@@ -432,6 +432,135 @@ namespace CINEBD.Model
             }
 
 
+
         }
+
+        public DataTable ListadoSesionesConAsientosOcupados(DateTime FechaInicio, DateTime FechaFinalizacion)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                    connection.Open();
+                    EstablecerContextoSesionUsuario(connection);
+
+                    using (SqlCommand command = new SqlCommand("ListadoSesionesConAsientosOcupados", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        // Agregar parámetros al procedimiento almacenado
+                        command.Parameters.AddWithValue("@FechaInicio", FechaInicio);
+                        command.Parameters.AddWithValue("@FechaFin", FechaFinalizacion);
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        adapter.Fill(dataTable);
+                    }
+                       
+            }
+            return dataTable;
         }
+
+
+        public DataTable ListadoTransaccionesConAsientos(DateTime FechaInicio, DateTime FechaFinalizacion)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("ListadoTransaccionesConAsientos", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    // Agregar parámetros al procedimiento almacenado
+                    command.Parameters.AddWithValue("@FechaInicio", FechaInicio);
+                    command.Parameters.AddWithValue("@FechaFin", FechaFinalizacion);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(dataTable);
+                }
+
+            }
+            return dataTable;
+        }
+
+        public DataTable PromedioAsientosOcupadosYCantidadSesiones(string NumSala)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("PromedioAsientosOcupadosYCantidadSesiones", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    // Agregar parámetros al procedimiento almacenado
+                    command.Parameters.AddWithValue("@ID_Sala", NumSala);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(dataTable);
+                }
+
+            }
+            return dataTable;
+        }
+
+
+        public DataTable SesionesAsientosOcupadosBajoPorcentaje(string NumSala, string Porcentaje)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("SesionesAsientosOcupadosBajoPorcentaje", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    // Agregar parámetros al procedimiento almacenado
+                    command.Parameters.AddWithValue("@ID_Sala", NumSala);
+                    command.Parameters.AddWithValue("@Porcentaje", Porcentaje);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(dataTable);
+                }
+
+            }
+            return dataTable;
+        }
+
+
+        public DataTable Top5PeliculasMayorPromedioAsientosVendidos()
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("Top5PeliculasMayorPromedioAsientosVendidos", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(dataTable);
+                }
+
+            }
+            return dataTable;
+        }
+
+
+        public DataTable sp_LogTransacciones_RangoFecha(DateTime FechaInicio, DateTime FechaFinalizacion)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("sp_LogTransacciones_RangoFecha", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    // Agregar parámetros al procedimiento almacenado
+                    command.Parameters.AddWithValue("@FechaInicio", FechaInicio);
+                    command.Parameters.AddWithValue("@FechaFin", FechaFinalizacion);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(dataTable);
+                }
+
+            }
+            return dataTable;
+        }
+
+    }
 }

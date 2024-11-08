@@ -74,5 +74,11 @@ namespace CINEBD.View
             View.CambioAsiento cambioAsiento = new View.CambioAsiento();    
             cambioAsiento.Show();
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            View.Reportes reportes = new View.Reportes();
+            reportes.Show();
+        }
     }
 }

@@ -42,6 +42,26 @@ namespace CINEBD {
         
         private UsuariosDataTable tableUsuarios;
         
+        private ListadoSesionesConAsientosOcupadosDataTable tableListadoSesionesConAsientosOcupados;
+        
+        private sp_ObtenerAsientosDisponiblesDataTable tablesp_ObtenerAsientosDisponibles;
+        
+        private sp_ObtenerAsientosPorSesionYTransaccionDataTable tablesp_ObtenerAsientosPorSesionYTransaccion;
+        
+        private sp_ObtenerAsignacionesDataTable tablesp_ObtenerAsignaciones;
+        
+        private sp_ObtenerSesionPorPeliculaYSalaDataTable tablesp_ObtenerSesionPorPeliculaYSala;
+        
+        private ListadoTransaccionesConAsientosDataTable tableListadoTransaccionesConAsientos;
+        
+        private PromedioAsientosOcupadosYCantidadSesionesDataTable tablePromedioAsientosOcupadosYCantidadSesiones;
+        
+        private SesionesAsientosOcupadosBajoPorcentajeDataTable tableSesionesAsientosOcupadosBajoPorcentaje;
+        
+        private sp_LogTransacciones_RangoFechaDataTable tablesp_LogTransacciones_RangoFecha;
+        
+        private Top5PeliculasMayorPromedioAsientosVendidosDataTable tableTop5PeliculasMayorPromedioAsientosVendidos;
+        
         private global::System.Data.DataRelation relationFK__Asiento__ID_Sala__3B75D760;
         
         private global::System.Data.DataRelation relationFK__Sesion__ID_Pelic__4316F928;
@@ -112,6 +132,36 @@ namespace CINEBD {
                 }
                 if ((ds.Tables["Usuarios"] != null)) {
                     base.Tables.Add(new UsuariosDataTable(ds.Tables["Usuarios"]));
+                }
+                if ((ds.Tables["ListadoSesionesConAsientosOcupados"] != null)) {
+                    base.Tables.Add(new ListadoSesionesConAsientosOcupadosDataTable(ds.Tables["ListadoSesionesConAsientosOcupados"]));
+                }
+                if ((ds.Tables["sp_ObtenerAsientosDisponibles"] != null)) {
+                    base.Tables.Add(new sp_ObtenerAsientosDisponiblesDataTable(ds.Tables["sp_ObtenerAsientosDisponibles"]));
+                }
+                if ((ds.Tables["sp_ObtenerAsientosPorSesionYTransaccion"] != null)) {
+                    base.Tables.Add(new sp_ObtenerAsientosPorSesionYTransaccionDataTable(ds.Tables["sp_ObtenerAsientosPorSesionYTransaccion"]));
+                }
+                if ((ds.Tables["sp_ObtenerAsignaciones"] != null)) {
+                    base.Tables.Add(new sp_ObtenerAsignacionesDataTable(ds.Tables["sp_ObtenerAsignaciones"]));
+                }
+                if ((ds.Tables["sp_ObtenerSesionPorPeliculaYSala"] != null)) {
+                    base.Tables.Add(new sp_ObtenerSesionPorPeliculaYSalaDataTable(ds.Tables["sp_ObtenerSesionPorPeliculaYSala"]));
+                }
+                if ((ds.Tables["ListadoTransaccionesConAsientos"] != null)) {
+                    base.Tables.Add(new ListadoTransaccionesConAsientosDataTable(ds.Tables["ListadoTransaccionesConAsientos"]));
+                }
+                if ((ds.Tables["PromedioAsientosOcupadosYCantidadSesiones"] != null)) {
+                    base.Tables.Add(new PromedioAsientosOcupadosYCantidadSesionesDataTable(ds.Tables["PromedioAsientosOcupadosYCantidadSesiones"]));
+                }
+                if ((ds.Tables["SesionesAsientosOcupadosBajoPorcentaje"] != null)) {
+                    base.Tables.Add(new SesionesAsientosOcupadosBajoPorcentajeDataTable(ds.Tables["SesionesAsientosOcupadosBajoPorcentaje"]));
+                }
+                if ((ds.Tables["sp_LogTransacciones_RangoFecha"] != null)) {
+                    base.Tables.Add(new sp_LogTransacciones_RangoFechaDataTable(ds.Tables["sp_LogTransacciones_RangoFecha"]));
+                }
+                if ((ds.Tables["Top5PeliculasMayorPromedioAsientosVendidos"] != null)) {
+                    base.Tables.Add(new Top5PeliculasMayorPromedioAsientosVendidosDataTable(ds.Tables["Top5PeliculasMayorPromedioAsientosVendidos"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -223,6 +273,106 @@ namespace CINEBD {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ListadoSesionesConAsientosOcupadosDataTable ListadoSesionesConAsientosOcupados {
+            get {
+                return this.tableListadoSesionesConAsientosOcupados;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sp_ObtenerAsientosDisponiblesDataTable sp_ObtenerAsientosDisponibles {
+            get {
+                return this.tablesp_ObtenerAsientosDisponibles;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sp_ObtenerAsientosPorSesionYTransaccionDataTable sp_ObtenerAsientosPorSesionYTransaccion {
+            get {
+                return this.tablesp_ObtenerAsientosPorSesionYTransaccion;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sp_ObtenerAsignacionesDataTable sp_ObtenerAsignaciones {
+            get {
+                return this.tablesp_ObtenerAsignaciones;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sp_ObtenerSesionPorPeliculaYSalaDataTable sp_ObtenerSesionPorPeliculaYSala {
+            get {
+                return this.tablesp_ObtenerSesionPorPeliculaYSala;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ListadoTransaccionesConAsientosDataTable ListadoTransaccionesConAsientos {
+            get {
+                return this.tableListadoTransaccionesConAsientos;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public PromedioAsientosOcupadosYCantidadSesionesDataTable PromedioAsientosOcupadosYCantidadSesiones {
+            get {
+                return this.tablePromedioAsientosOcupadosYCantidadSesiones;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public SesionesAsientosOcupadosBajoPorcentajeDataTable SesionesAsientosOcupadosBajoPorcentaje {
+            get {
+                return this.tableSesionesAsientosOcupadosBajoPorcentaje;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sp_LogTransacciones_RangoFechaDataTable sp_LogTransacciones_RangoFecha {
+            get {
+                return this.tablesp_LogTransacciones_RangoFecha;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Top5PeliculasMayorPromedioAsientosVendidosDataTable Top5PeliculasMayorPromedioAsientosVendidos {
+            get {
+                return this.tableTop5PeliculasMayorPromedioAsientosVendidos;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -315,6 +465,36 @@ namespace CINEBD {
                 if ((ds.Tables["Usuarios"] != null)) {
                     base.Tables.Add(new UsuariosDataTable(ds.Tables["Usuarios"]));
                 }
+                if ((ds.Tables["ListadoSesionesConAsientosOcupados"] != null)) {
+                    base.Tables.Add(new ListadoSesionesConAsientosOcupadosDataTable(ds.Tables["ListadoSesionesConAsientosOcupados"]));
+                }
+                if ((ds.Tables["sp_ObtenerAsientosDisponibles"] != null)) {
+                    base.Tables.Add(new sp_ObtenerAsientosDisponiblesDataTable(ds.Tables["sp_ObtenerAsientosDisponibles"]));
+                }
+                if ((ds.Tables["sp_ObtenerAsientosPorSesionYTransaccion"] != null)) {
+                    base.Tables.Add(new sp_ObtenerAsientosPorSesionYTransaccionDataTable(ds.Tables["sp_ObtenerAsientosPorSesionYTransaccion"]));
+                }
+                if ((ds.Tables["sp_ObtenerAsignaciones"] != null)) {
+                    base.Tables.Add(new sp_ObtenerAsignacionesDataTable(ds.Tables["sp_ObtenerAsignaciones"]));
+                }
+                if ((ds.Tables["sp_ObtenerSesionPorPeliculaYSala"] != null)) {
+                    base.Tables.Add(new sp_ObtenerSesionPorPeliculaYSalaDataTable(ds.Tables["sp_ObtenerSesionPorPeliculaYSala"]));
+                }
+                if ((ds.Tables["ListadoTransaccionesConAsientos"] != null)) {
+                    base.Tables.Add(new ListadoTransaccionesConAsientosDataTable(ds.Tables["ListadoTransaccionesConAsientos"]));
+                }
+                if ((ds.Tables["PromedioAsientosOcupadosYCantidadSesiones"] != null)) {
+                    base.Tables.Add(new PromedioAsientosOcupadosYCantidadSesionesDataTable(ds.Tables["PromedioAsientosOcupadosYCantidadSesiones"]));
+                }
+                if ((ds.Tables["SesionesAsientosOcupadosBajoPorcentaje"] != null)) {
+                    base.Tables.Add(new SesionesAsientosOcupadosBajoPorcentajeDataTable(ds.Tables["SesionesAsientosOcupadosBajoPorcentaje"]));
+                }
+                if ((ds.Tables["sp_LogTransacciones_RangoFecha"] != null)) {
+                    base.Tables.Add(new sp_LogTransacciones_RangoFechaDataTable(ds.Tables["sp_LogTransacciones_RangoFecha"]));
+                }
+                if ((ds.Tables["Top5PeliculasMayorPromedioAsientosVendidos"] != null)) {
+                    base.Tables.Add(new Top5PeliculasMayorPromedioAsientosVendidosDataTable(ds.Tables["Top5PeliculasMayorPromedioAsientosVendidos"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -402,6 +582,66 @@ namespace CINEBD {
                     this.tableUsuarios.InitVars();
                 }
             }
+            this.tableListadoSesionesConAsientosOcupados = ((ListadoSesionesConAsientosOcupadosDataTable)(base.Tables["ListadoSesionesConAsientosOcupados"]));
+            if ((initTable == true)) {
+                if ((this.tableListadoSesionesConAsientosOcupados != null)) {
+                    this.tableListadoSesionesConAsientosOcupados.InitVars();
+                }
+            }
+            this.tablesp_ObtenerAsientosDisponibles = ((sp_ObtenerAsientosDisponiblesDataTable)(base.Tables["sp_ObtenerAsientosDisponibles"]));
+            if ((initTable == true)) {
+                if ((this.tablesp_ObtenerAsientosDisponibles != null)) {
+                    this.tablesp_ObtenerAsientosDisponibles.InitVars();
+                }
+            }
+            this.tablesp_ObtenerAsientosPorSesionYTransaccion = ((sp_ObtenerAsientosPorSesionYTransaccionDataTable)(base.Tables["sp_ObtenerAsientosPorSesionYTransaccion"]));
+            if ((initTable == true)) {
+                if ((this.tablesp_ObtenerAsientosPorSesionYTransaccion != null)) {
+                    this.tablesp_ObtenerAsientosPorSesionYTransaccion.InitVars();
+                }
+            }
+            this.tablesp_ObtenerAsignaciones = ((sp_ObtenerAsignacionesDataTable)(base.Tables["sp_ObtenerAsignaciones"]));
+            if ((initTable == true)) {
+                if ((this.tablesp_ObtenerAsignaciones != null)) {
+                    this.tablesp_ObtenerAsignaciones.InitVars();
+                }
+            }
+            this.tablesp_ObtenerSesionPorPeliculaYSala = ((sp_ObtenerSesionPorPeliculaYSalaDataTable)(base.Tables["sp_ObtenerSesionPorPeliculaYSala"]));
+            if ((initTable == true)) {
+                if ((this.tablesp_ObtenerSesionPorPeliculaYSala != null)) {
+                    this.tablesp_ObtenerSesionPorPeliculaYSala.InitVars();
+                }
+            }
+            this.tableListadoTransaccionesConAsientos = ((ListadoTransaccionesConAsientosDataTable)(base.Tables["ListadoTransaccionesConAsientos"]));
+            if ((initTable == true)) {
+                if ((this.tableListadoTransaccionesConAsientos != null)) {
+                    this.tableListadoTransaccionesConAsientos.InitVars();
+                }
+            }
+            this.tablePromedioAsientosOcupadosYCantidadSesiones = ((PromedioAsientosOcupadosYCantidadSesionesDataTable)(base.Tables["PromedioAsientosOcupadosYCantidadSesiones"]));
+            if ((initTable == true)) {
+                if ((this.tablePromedioAsientosOcupadosYCantidadSesiones != null)) {
+                    this.tablePromedioAsientosOcupadosYCantidadSesiones.InitVars();
+                }
+            }
+            this.tableSesionesAsientosOcupadosBajoPorcentaje = ((SesionesAsientosOcupadosBajoPorcentajeDataTable)(base.Tables["SesionesAsientosOcupadosBajoPorcentaje"]));
+            if ((initTable == true)) {
+                if ((this.tableSesionesAsientosOcupadosBajoPorcentaje != null)) {
+                    this.tableSesionesAsientosOcupadosBajoPorcentaje.InitVars();
+                }
+            }
+            this.tablesp_LogTransacciones_RangoFecha = ((sp_LogTransacciones_RangoFechaDataTable)(base.Tables["sp_LogTransacciones_RangoFecha"]));
+            if ((initTable == true)) {
+                if ((this.tablesp_LogTransacciones_RangoFecha != null)) {
+                    this.tablesp_LogTransacciones_RangoFecha.InitVars();
+                }
+            }
+            this.tableTop5PeliculasMayorPromedioAsientosVendidos = ((Top5PeliculasMayorPromedioAsientosVendidosDataTable)(base.Tables["Top5PeliculasMayorPromedioAsientosVendidos"]));
+            if ((initTable == true)) {
+                if ((this.tableTop5PeliculasMayorPromedioAsientosVendidos != null)) {
+                    this.tableTop5PeliculasMayorPromedioAsientosVendidos.InitVars();
+                }
+            }
             this.relationFK__Asiento__ID_Sala__3B75D760 = this.Relations["FK__Asiento__ID_Sala__3B75D760"];
             this.relationFK__Sesion__ID_Pelic__4316F928 = this.Relations["FK__Sesion__ID_Pelic__4316F928"];
             this.relationFK__Sesion__ID_Sala__4222D4EF = this.Relations["FK__Sesion__ID_Sala__4222D4EF"];
@@ -438,6 +678,26 @@ namespace CINEBD {
             base.Tables.Add(this.tableTransaccion_Asiento);
             this.tableUsuarios = new UsuariosDataTable();
             base.Tables.Add(this.tableUsuarios);
+            this.tableListadoSesionesConAsientosOcupados = new ListadoSesionesConAsientosOcupadosDataTable();
+            base.Tables.Add(this.tableListadoSesionesConAsientosOcupados);
+            this.tablesp_ObtenerAsientosDisponibles = new sp_ObtenerAsientosDisponiblesDataTable();
+            base.Tables.Add(this.tablesp_ObtenerAsientosDisponibles);
+            this.tablesp_ObtenerAsientosPorSesionYTransaccion = new sp_ObtenerAsientosPorSesionYTransaccionDataTable();
+            base.Tables.Add(this.tablesp_ObtenerAsientosPorSesionYTransaccion);
+            this.tablesp_ObtenerAsignaciones = new sp_ObtenerAsignacionesDataTable();
+            base.Tables.Add(this.tablesp_ObtenerAsignaciones);
+            this.tablesp_ObtenerSesionPorPeliculaYSala = new sp_ObtenerSesionPorPeliculaYSalaDataTable();
+            base.Tables.Add(this.tablesp_ObtenerSesionPorPeliculaYSala);
+            this.tableListadoTransaccionesConAsientos = new ListadoTransaccionesConAsientosDataTable();
+            base.Tables.Add(this.tableListadoTransaccionesConAsientos);
+            this.tablePromedioAsientosOcupadosYCantidadSesiones = new PromedioAsientosOcupadosYCantidadSesionesDataTable();
+            base.Tables.Add(this.tablePromedioAsientosOcupadosYCantidadSesiones);
+            this.tableSesionesAsientosOcupadosBajoPorcentaje = new SesionesAsientosOcupadosBajoPorcentajeDataTable();
+            base.Tables.Add(this.tableSesionesAsientosOcupadosBajoPorcentaje);
+            this.tablesp_LogTransacciones_RangoFecha = new sp_LogTransacciones_RangoFechaDataTable();
+            base.Tables.Add(this.tablesp_LogTransacciones_RangoFecha);
+            this.tableTop5PeliculasMayorPromedioAsientosVendidos = new Top5PeliculasMayorPromedioAsientosVendidosDataTable();
+            base.Tables.Add(this.tableTop5PeliculasMayorPromedioAsientosVendidos);
             this.relationFK__Asiento__ID_Sala__3B75D760 = new global::System.Data.DataRelation("FK__Asiento__ID_Sala__3B75D760", new global::System.Data.DataColumn[] {
                         this.tableSALA.ID_SalaColumn}, new global::System.Data.DataColumn[] {
                         this.tableAsiento.ID_SalaColumn}, false);
@@ -532,6 +792,66 @@ namespace CINEBD {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeListadoSesionesConAsientosOcupados() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializesp_ObtenerAsientosDisponibles() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializesp_ObtenerAsientosPorSesionYTransaccion() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializesp_ObtenerAsignaciones() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializesp_ObtenerSesionPorPeliculaYSala() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeListadoTransaccionesConAsientos() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializePromedioAsientosOcupadosYCantidadSesiones() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeSesionesAsientosOcupadosBajoPorcentaje() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializesp_LogTransacciones_RangoFecha() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeTop5PeliculasMayorPromedioAsientosVendidos() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -611,6 +931,36 @@ namespace CINEBD {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void UsuariosRowChangeEventHandler(object sender, UsuariosRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void ListadoSesionesConAsientosOcupadosRowChangeEventHandler(object sender, ListadoSesionesConAsientosOcupadosRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void sp_ObtenerAsientosDisponiblesRowChangeEventHandler(object sender, sp_ObtenerAsientosDisponiblesRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void sp_ObtenerAsientosPorSesionYTransaccionRowChangeEventHandler(object sender, sp_ObtenerAsientosPorSesionYTransaccionRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void sp_ObtenerAsignacionesRowChangeEventHandler(object sender, sp_ObtenerAsignacionesRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void sp_ObtenerSesionPorPeliculaYSalaRowChangeEventHandler(object sender, sp_ObtenerSesionPorPeliculaYSalaRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void ListadoTransaccionesConAsientosRowChangeEventHandler(object sender, ListadoTransaccionesConAsientosRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void PromedioAsientosOcupadosYCantidadSesionesRowChangeEventHandler(object sender, PromedioAsientosOcupadosYCantidadSesionesRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void SesionesAsientosOcupadosBajoPorcentajeRowChangeEventHandler(object sender, SesionesAsientosOcupadosBajoPorcentajeRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void sp_LogTransacciones_RangoFechaRowChangeEventHandler(object sender, sp_LogTransacciones_RangoFechaRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void Top5PeliculasMayorPromedioAsientosVendidosRowChangeEventHandler(object sender, Top5PeliculasMayorPromedioAsientosVendidosRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3576,6 +3926,3853 @@ namespace CINEBD {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ListadoSesionesConAsientosOcupadosDataTable : global::System.Data.TypedTableBase<ListadoSesionesConAsientosOcupadosRow> {
+            
+            private global::System.Data.DataColumn columnID_Sesion;
+            
+            private global::System.Data.DataColumn columnFecha_Inicio;
+            
+            private global::System.Data.DataColumn columnFecha_Fin;
+            
+            private global::System.Data.DataColumn columnEstado;
+            
+            private global::System.Data.DataColumn columnID_Sala;
+            
+            private global::System.Data.DataColumn columnID_Pelicula;
+            
+            private global::System.Data.DataColumn columnNombre_Pelicula;
+            
+            private global::System.Data.DataColumn columnClasificacion;
+            
+            private global::System.Data.DataColumn columnDuracion;
+            
+            private global::System.Data.DataColumn columnDescripcion;
+            
+            private global::System.Data.DataColumn columnCapacidad;
+            
+            private global::System.Data.DataColumn columnAsientos_Ocupados;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoSesionesConAsientosOcupadosDataTable() {
+                this.TableName = "ListadoSesionesConAsientosOcupados";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal ListadoSesionesConAsientosOcupadosDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected ListadoSesionesConAsientosOcupadosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_SesionColumn {
+                get {
+                    return this.columnID_Sesion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Fecha_InicioColumn {
+                get {
+                    return this.columnFecha_Inicio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Fecha_FinColumn {
+                get {
+                    return this.columnFecha_Fin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EstadoColumn {
+                get {
+                    return this.columnEstado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_SalaColumn {
+                get {
+                    return this.columnID_Sala;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_PeliculaColumn {
+                get {
+                    return this.columnID_Pelicula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Nombre_PeliculaColumn {
+                get {
+                    return this.columnNombre_Pelicula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ClasificacionColumn {
+                get {
+                    return this.columnClasificacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DuracionColumn {
+                get {
+                    return this.columnDuracion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DescripcionColumn {
+                get {
+                    return this.columnDescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CapacidadColumn {
+                get {
+                    return this.columnCapacidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Asientos_OcupadosColumn {
+                get {
+                    return this.columnAsientos_Ocupados;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoSesionesConAsientosOcupadosRow this[int index] {
+                get {
+                    return ((ListadoSesionesConAsientosOcupadosRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ListadoSesionesConAsientosOcupadosRowChangeEventHandler ListadoSesionesConAsientosOcupadosRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ListadoSesionesConAsientosOcupadosRowChangeEventHandler ListadoSesionesConAsientosOcupadosRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ListadoSesionesConAsientosOcupadosRowChangeEventHandler ListadoSesionesConAsientosOcupadosRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ListadoSesionesConAsientosOcupadosRowChangeEventHandler ListadoSesionesConAsientosOcupadosRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddListadoSesionesConAsientosOcupadosRow(ListadoSesionesConAsientosOcupadosRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoSesionesConAsientosOcupadosRow AddListadoSesionesConAsientosOcupadosRow(System.DateTime Fecha_Inicio, System.DateTime Fecha_Fin, string Estado, int ID_Sala, int ID_Pelicula, string Nombre_Pelicula, string Clasificacion, int Duracion, string Descripcion, int Capacidad, int Asientos_Ocupados) {
+                ListadoSesionesConAsientosOcupadosRow rowListadoSesionesConAsientosOcupadosRow = ((ListadoSesionesConAsientosOcupadosRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Fecha_Inicio,
+                        Fecha_Fin,
+                        Estado,
+                        ID_Sala,
+                        ID_Pelicula,
+                        Nombre_Pelicula,
+                        Clasificacion,
+                        Duracion,
+                        Descripcion,
+                        Capacidad,
+                        Asientos_Ocupados};
+                rowListadoSesionesConAsientosOcupadosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowListadoSesionesConAsientosOcupadosRow);
+                return rowListadoSesionesConAsientosOcupadosRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoSesionesConAsientosOcupadosRow FindByID_Sesion(int ID_Sesion) {
+                return ((ListadoSesionesConAsientosOcupadosRow)(this.Rows.Find(new object[] {
+                            ID_Sesion})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ListadoSesionesConAsientosOcupadosDataTable cln = ((ListadoSesionesConAsientosOcupadosDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ListadoSesionesConAsientosOcupadosDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Sesion = base.Columns["ID_Sesion"];
+                this.columnFecha_Inicio = base.Columns["Fecha_Inicio"];
+                this.columnFecha_Fin = base.Columns["Fecha_Fin"];
+                this.columnEstado = base.Columns["Estado"];
+                this.columnID_Sala = base.Columns["ID_Sala"];
+                this.columnID_Pelicula = base.Columns["ID_Pelicula"];
+                this.columnNombre_Pelicula = base.Columns["Nombre_Pelicula"];
+                this.columnClasificacion = base.Columns["Clasificacion"];
+                this.columnDuracion = base.Columns["Duracion"];
+                this.columnDescripcion = base.Columns["Descripcion"];
+                this.columnCapacidad = base.Columns["Capacidad"];
+                this.columnAsientos_Ocupados = base.Columns["Asientos_Ocupados"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnID_Sesion = new global::System.Data.DataColumn("ID_Sesion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Sesion);
+                this.columnFecha_Inicio = new global::System.Data.DataColumn("Fecha_Inicio", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Inicio);
+                this.columnFecha_Fin = new global::System.Data.DataColumn("Fecha_Fin", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Fin);
+                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado);
+                this.columnID_Sala = new global::System.Data.DataColumn("ID_Sala", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Sala);
+                this.columnID_Pelicula = new global::System.Data.DataColumn("ID_Pelicula", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Pelicula);
+                this.columnNombre_Pelicula = new global::System.Data.DataColumn("Nombre_Pelicula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre_Pelicula);
+                this.columnClasificacion = new global::System.Data.DataColumn("Clasificacion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClasificacion);
+                this.columnDuracion = new global::System.Data.DataColumn("Duracion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDuracion);
+                this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescripcion);
+                this.columnCapacidad = new global::System.Data.DataColumn("Capacidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCapacidad);
+                this.columnAsientos_Ocupados = new global::System.Data.DataColumn("Asientos_Ocupados", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAsientos_Ocupados);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Sesion}, true));
+                this.columnID_Sesion.AutoIncrement = true;
+                this.columnID_Sesion.AllowDBNull = false;
+                this.columnID_Sesion.ReadOnly = true;
+                this.columnID_Sesion.Unique = true;
+                this.columnFecha_Inicio.AllowDBNull = false;
+                this.columnFecha_Fin.AllowDBNull = false;
+                this.columnEstado.AllowDBNull = false;
+                this.columnEstado.MaxLength = 20;
+                this.columnID_Sala.AllowDBNull = false;
+                this.columnID_Pelicula.AllowDBNull = false;
+                this.columnNombre_Pelicula.AllowDBNull = false;
+                this.columnNombre_Pelicula.MaxLength = 100;
+                this.columnClasificacion.AllowDBNull = false;
+                this.columnClasificacion.MaxLength = 10;
+                this.columnDuracion.AllowDBNull = false;
+                this.columnDescripcion.MaxLength = 2147483647;
+                this.columnCapacidad.AllowDBNull = false;
+                this.columnAsientos_Ocupados.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoSesionesConAsientosOcupadosRow NewListadoSesionesConAsientosOcupadosRow() {
+                return ((ListadoSesionesConAsientosOcupadosRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ListadoSesionesConAsientosOcupadosRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ListadoSesionesConAsientosOcupadosRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ListadoSesionesConAsientosOcupadosRowChanged != null)) {
+                    this.ListadoSesionesConAsientosOcupadosRowChanged(this, new ListadoSesionesConAsientosOcupadosRowChangeEvent(((ListadoSesionesConAsientosOcupadosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ListadoSesionesConAsientosOcupadosRowChanging != null)) {
+                    this.ListadoSesionesConAsientosOcupadosRowChanging(this, new ListadoSesionesConAsientosOcupadosRowChangeEvent(((ListadoSesionesConAsientosOcupadosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ListadoSesionesConAsientosOcupadosRowDeleted != null)) {
+                    this.ListadoSesionesConAsientosOcupadosRowDeleted(this, new ListadoSesionesConAsientosOcupadosRowChangeEvent(((ListadoSesionesConAsientosOcupadosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ListadoSesionesConAsientosOcupadosRowDeleting != null)) {
+                    this.ListadoSesionesConAsientosOcupadosRowDeleting(this, new ListadoSesionesConAsientosOcupadosRowChangeEvent(((ListadoSesionesConAsientosOcupadosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveListadoSesionesConAsientosOcupadosRow(ListadoSesionesConAsientosOcupadosRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                db_aadccb_cinebdDataSet ds = new db_aadccb_cinebdDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ListadoSesionesConAsientosOcupadosDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sp_ObtenerAsientosDisponiblesDataTable : global::System.Data.TypedTableBase<sp_ObtenerAsientosDisponiblesRow> {
+            
+            private global::System.Data.DataColumn columnID_Sala;
+            
+            private global::System.Data.DataColumn columnFila;
+            
+            private global::System.Data.DataColumn columnNumero;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosDisponiblesDataTable() {
+                this.TableName = "sp_ObtenerAsientosDisponibles";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_ObtenerAsientosDisponiblesDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected sp_ObtenerAsientosDisponiblesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_SalaColumn {
+                get {
+                    return this.columnID_Sala;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FilaColumn {
+                get {
+                    return this.columnFila;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NumeroColumn {
+                get {
+                    return this.columnNumero;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosDisponiblesRow this[int index] {
+                get {
+                    return ((sp_ObtenerAsientosDisponiblesRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerAsientosDisponiblesRowChangeEventHandler sp_ObtenerAsientosDisponiblesRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerAsientosDisponiblesRowChangeEventHandler sp_ObtenerAsientosDisponiblesRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerAsientosDisponiblesRowChangeEventHandler sp_ObtenerAsientosDisponiblesRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerAsientosDisponiblesRowChangeEventHandler sp_ObtenerAsientosDisponiblesRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addsp_ObtenerAsientosDisponiblesRow(sp_ObtenerAsientosDisponiblesRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosDisponiblesRow Addsp_ObtenerAsientosDisponiblesRow(int ID_Sala, string Fila, int Numero) {
+                sp_ObtenerAsientosDisponiblesRow rowsp_ObtenerAsientosDisponiblesRow = ((sp_ObtenerAsientosDisponiblesRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ID_Sala,
+                        Fila,
+                        Numero};
+                rowsp_ObtenerAsientosDisponiblesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_ObtenerAsientosDisponiblesRow);
+                return rowsp_ObtenerAsientosDisponiblesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosDisponiblesRow FindByID_SalaFilaNumero(int ID_Sala, string Fila, int Numero) {
+                return ((sp_ObtenerAsientosDisponiblesRow)(this.Rows.Find(new object[] {
+                            ID_Sala,
+                            Fila,
+                            Numero})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sp_ObtenerAsientosDisponiblesDataTable cln = ((sp_ObtenerAsientosDisponiblesDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sp_ObtenerAsientosDisponiblesDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Sala = base.Columns["ID_Sala"];
+                this.columnFila = base.Columns["Fila"];
+                this.columnNumero = base.Columns["Numero"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnID_Sala = new global::System.Data.DataColumn("ID_Sala", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Sala);
+                this.columnFila = new global::System.Data.DataColumn("Fila", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFila);
+                this.columnNumero = new global::System.Data.DataColumn("Numero", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Sala,
+                                this.columnFila,
+                                this.columnNumero}, true));
+                this.columnID_Sala.AllowDBNull = false;
+                this.columnFila.AllowDBNull = false;
+                this.columnFila.MaxLength = 1;
+                this.columnNumero.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosDisponiblesRow Newsp_ObtenerAsientosDisponiblesRow() {
+                return ((sp_ObtenerAsientosDisponiblesRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sp_ObtenerAsientosDisponiblesRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sp_ObtenerAsientosDisponiblesRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sp_ObtenerAsientosDisponiblesRowChanged != null)) {
+                    this.sp_ObtenerAsientosDisponiblesRowChanged(this, new sp_ObtenerAsientosDisponiblesRowChangeEvent(((sp_ObtenerAsientosDisponiblesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sp_ObtenerAsientosDisponiblesRowChanging != null)) {
+                    this.sp_ObtenerAsientosDisponiblesRowChanging(this, new sp_ObtenerAsientosDisponiblesRowChangeEvent(((sp_ObtenerAsientosDisponiblesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sp_ObtenerAsientosDisponiblesRowDeleted != null)) {
+                    this.sp_ObtenerAsientosDisponiblesRowDeleted(this, new sp_ObtenerAsientosDisponiblesRowChangeEvent(((sp_ObtenerAsientosDisponiblesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sp_ObtenerAsientosDisponiblesRowDeleting != null)) {
+                    this.sp_ObtenerAsientosDisponiblesRowDeleting(this, new sp_ObtenerAsientosDisponiblesRowChangeEvent(((sp_ObtenerAsientosDisponiblesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removesp_ObtenerAsientosDisponiblesRow(sp_ObtenerAsientosDisponiblesRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                db_aadccb_cinebdDataSet ds = new db_aadccb_cinebdDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sp_ObtenerAsientosDisponiblesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sp_ObtenerAsientosPorSesionYTransaccionDataTable : global::System.Data.TypedTableBase<sp_ObtenerAsientosPorSesionYTransaccionRow> {
+            
+            private global::System.Data.DataColumn columnFila;
+            
+            private global::System.Data.DataColumn columnNumero;
+            
+            private global::System.Data.DataColumn columnID_Sala;
+            
+            private global::System.Data.DataColumn columnEstado_Asignacion;
+            
+            private global::System.Data.DataColumn columnFecha_Hora_Asignacion;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosPorSesionYTransaccionDataTable() {
+                this.TableName = "sp_ObtenerAsientosPorSesionYTransaccion";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_ObtenerAsientosPorSesionYTransaccionDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected sp_ObtenerAsientosPorSesionYTransaccionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FilaColumn {
+                get {
+                    return this.columnFila;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NumeroColumn {
+                get {
+                    return this.columnNumero;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_SalaColumn {
+                get {
+                    return this.columnID_Sala;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Estado_AsignacionColumn {
+                get {
+                    return this.columnEstado_Asignacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Fecha_Hora_AsignacionColumn {
+                get {
+                    return this.columnFecha_Hora_Asignacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosPorSesionYTransaccionRow this[int index] {
+                get {
+                    return ((sp_ObtenerAsientosPorSesionYTransaccionRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerAsientosPorSesionYTransaccionRowChangeEventHandler sp_ObtenerAsientosPorSesionYTransaccionRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerAsientosPorSesionYTransaccionRowChangeEventHandler sp_ObtenerAsientosPorSesionYTransaccionRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerAsientosPorSesionYTransaccionRowChangeEventHandler sp_ObtenerAsientosPorSesionYTransaccionRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerAsientosPorSesionYTransaccionRowChangeEventHandler sp_ObtenerAsientosPorSesionYTransaccionRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addsp_ObtenerAsientosPorSesionYTransaccionRow(sp_ObtenerAsientosPorSesionYTransaccionRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosPorSesionYTransaccionRow Addsp_ObtenerAsientosPorSesionYTransaccionRow(string Fila, int Numero, int ID_Sala, string Estado_Asignacion, System.DateTime Fecha_Hora_Asignacion) {
+                sp_ObtenerAsientosPorSesionYTransaccionRow rowsp_ObtenerAsientosPorSesionYTransaccionRow = ((sp_ObtenerAsientosPorSesionYTransaccionRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Fila,
+                        Numero,
+                        ID_Sala,
+                        Estado_Asignacion,
+                        Fecha_Hora_Asignacion};
+                rowsp_ObtenerAsientosPorSesionYTransaccionRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_ObtenerAsientosPorSesionYTransaccionRow);
+                return rowsp_ObtenerAsientosPorSesionYTransaccionRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sp_ObtenerAsientosPorSesionYTransaccionDataTable cln = ((sp_ObtenerAsientosPorSesionYTransaccionDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sp_ObtenerAsientosPorSesionYTransaccionDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnFila = base.Columns["Fila"];
+                this.columnNumero = base.Columns["Numero"];
+                this.columnID_Sala = base.Columns["ID_Sala"];
+                this.columnEstado_Asignacion = base.Columns["Estado_Asignacion"];
+                this.columnFecha_Hora_Asignacion = base.Columns["Fecha_Hora_Asignacion"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnFila = new global::System.Data.DataColumn("Fila", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFila);
+                this.columnNumero = new global::System.Data.DataColumn("Numero", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero);
+                this.columnID_Sala = new global::System.Data.DataColumn("ID_Sala", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Sala);
+                this.columnEstado_Asignacion = new global::System.Data.DataColumn("Estado_Asignacion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado_Asignacion);
+                this.columnFecha_Hora_Asignacion = new global::System.Data.DataColumn("Fecha_Hora_Asignacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Hora_Asignacion);
+                this.columnFila.AllowDBNull = false;
+                this.columnFila.MaxLength = 1;
+                this.columnNumero.AllowDBNull = false;
+                this.columnID_Sala.AllowDBNull = false;
+                this.columnEstado_Asignacion.AllowDBNull = false;
+                this.columnEstado_Asignacion.MaxLength = 20;
+                this.columnFecha_Hora_Asignacion.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosPorSesionYTransaccionRow Newsp_ObtenerAsientosPorSesionYTransaccionRow() {
+                return ((sp_ObtenerAsientosPorSesionYTransaccionRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sp_ObtenerAsientosPorSesionYTransaccionRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sp_ObtenerAsientosPorSesionYTransaccionRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sp_ObtenerAsientosPorSesionYTransaccionRowChanged != null)) {
+                    this.sp_ObtenerAsientosPorSesionYTransaccionRowChanged(this, new sp_ObtenerAsientosPorSesionYTransaccionRowChangeEvent(((sp_ObtenerAsientosPorSesionYTransaccionRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sp_ObtenerAsientosPorSesionYTransaccionRowChanging != null)) {
+                    this.sp_ObtenerAsientosPorSesionYTransaccionRowChanging(this, new sp_ObtenerAsientosPorSesionYTransaccionRowChangeEvent(((sp_ObtenerAsientosPorSesionYTransaccionRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sp_ObtenerAsientosPorSesionYTransaccionRowDeleted != null)) {
+                    this.sp_ObtenerAsientosPorSesionYTransaccionRowDeleted(this, new sp_ObtenerAsientosPorSesionYTransaccionRowChangeEvent(((sp_ObtenerAsientosPorSesionYTransaccionRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sp_ObtenerAsientosPorSesionYTransaccionRowDeleting != null)) {
+                    this.sp_ObtenerAsientosPorSesionYTransaccionRowDeleting(this, new sp_ObtenerAsientosPorSesionYTransaccionRowChangeEvent(((sp_ObtenerAsientosPorSesionYTransaccionRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removesp_ObtenerAsientosPorSesionYTransaccionRow(sp_ObtenerAsientosPorSesionYTransaccionRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                db_aadccb_cinebdDataSet ds = new db_aadccb_cinebdDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sp_ObtenerAsientosPorSesionYTransaccionDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sp_ObtenerAsignacionesDataTable : global::System.Data.TypedTableBase<sp_ObtenerAsignacionesRow> {
+            
+            private global::System.Data.DataColumn columnID_Transaccion;
+            
+            private global::System.Data.DataColumn columnEstado_Asignacion;
+            
+            private global::System.Data.DataColumn columnFecha_Hora_Asignacion;
+            
+            private global::System.Data.DataColumn columnFila;
+            
+            private global::System.Data.DataColumn columnNumero;
+            
+            private global::System.Data.DataColumn columnID_Sala;
+            
+            private global::System.Data.DataColumn columnUsuario;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsignacionesDataTable() {
+                this.TableName = "sp_ObtenerAsignaciones";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_ObtenerAsignacionesDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected sp_ObtenerAsignacionesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_TransaccionColumn {
+                get {
+                    return this.columnID_Transaccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Estado_AsignacionColumn {
+                get {
+                    return this.columnEstado_Asignacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Fecha_Hora_AsignacionColumn {
+                get {
+                    return this.columnFecha_Hora_Asignacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FilaColumn {
+                get {
+                    return this.columnFila;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NumeroColumn {
+                get {
+                    return this.columnNumero;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_SalaColumn {
+                get {
+                    return this.columnID_Sala;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UsuarioColumn {
+                get {
+                    return this.columnUsuario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsignacionesRow this[int index] {
+                get {
+                    return ((sp_ObtenerAsignacionesRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerAsignacionesRowChangeEventHandler sp_ObtenerAsignacionesRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerAsignacionesRowChangeEventHandler sp_ObtenerAsignacionesRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerAsignacionesRowChangeEventHandler sp_ObtenerAsignacionesRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerAsignacionesRowChangeEventHandler sp_ObtenerAsignacionesRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addsp_ObtenerAsignacionesRow(sp_ObtenerAsignacionesRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsignacionesRow Addsp_ObtenerAsignacionesRow(int ID_Transaccion, string Estado_Asignacion, System.DateTime Fecha_Hora_Asignacion, string Fila, int Numero, int ID_Sala, string Usuario) {
+                sp_ObtenerAsignacionesRow rowsp_ObtenerAsignacionesRow = ((sp_ObtenerAsignacionesRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ID_Transaccion,
+                        Estado_Asignacion,
+                        Fecha_Hora_Asignacion,
+                        Fila,
+                        Numero,
+                        ID_Sala,
+                        Usuario};
+                rowsp_ObtenerAsignacionesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_ObtenerAsignacionesRow);
+                return rowsp_ObtenerAsignacionesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sp_ObtenerAsignacionesDataTable cln = ((sp_ObtenerAsignacionesDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sp_ObtenerAsignacionesDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Transaccion = base.Columns["ID_Transaccion"];
+                this.columnEstado_Asignacion = base.Columns["Estado_Asignacion"];
+                this.columnFecha_Hora_Asignacion = base.Columns["Fecha_Hora_Asignacion"];
+                this.columnFila = base.Columns["Fila"];
+                this.columnNumero = base.Columns["Numero"];
+                this.columnID_Sala = base.Columns["ID_Sala"];
+                this.columnUsuario = base.Columns["Usuario"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnID_Transaccion = new global::System.Data.DataColumn("ID_Transaccion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Transaccion);
+                this.columnEstado_Asignacion = new global::System.Data.DataColumn("Estado_Asignacion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado_Asignacion);
+                this.columnFecha_Hora_Asignacion = new global::System.Data.DataColumn("Fecha_Hora_Asignacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Hora_Asignacion);
+                this.columnFila = new global::System.Data.DataColumn("Fila", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFila);
+                this.columnNumero = new global::System.Data.DataColumn("Numero", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero);
+                this.columnID_Sala = new global::System.Data.DataColumn("ID_Sala", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Sala);
+                this.columnUsuario = new global::System.Data.DataColumn("Usuario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUsuario);
+                this.columnID_Transaccion.AllowDBNull = false;
+                this.columnEstado_Asignacion.AllowDBNull = false;
+                this.columnEstado_Asignacion.MaxLength = 20;
+                this.columnFecha_Hora_Asignacion.AllowDBNull = false;
+                this.columnFila.AllowDBNull = false;
+                this.columnFila.MaxLength = 1;
+                this.columnNumero.AllowDBNull = false;
+                this.columnID_Sala.AllowDBNull = false;
+                this.columnUsuario.AllowDBNull = false;
+                this.columnUsuario.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsignacionesRow Newsp_ObtenerAsignacionesRow() {
+                return ((sp_ObtenerAsignacionesRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sp_ObtenerAsignacionesRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sp_ObtenerAsignacionesRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sp_ObtenerAsignacionesRowChanged != null)) {
+                    this.sp_ObtenerAsignacionesRowChanged(this, new sp_ObtenerAsignacionesRowChangeEvent(((sp_ObtenerAsignacionesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sp_ObtenerAsignacionesRowChanging != null)) {
+                    this.sp_ObtenerAsignacionesRowChanging(this, new sp_ObtenerAsignacionesRowChangeEvent(((sp_ObtenerAsignacionesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sp_ObtenerAsignacionesRowDeleted != null)) {
+                    this.sp_ObtenerAsignacionesRowDeleted(this, new sp_ObtenerAsignacionesRowChangeEvent(((sp_ObtenerAsignacionesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sp_ObtenerAsignacionesRowDeleting != null)) {
+                    this.sp_ObtenerAsignacionesRowDeleting(this, new sp_ObtenerAsignacionesRowChangeEvent(((sp_ObtenerAsignacionesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removesp_ObtenerAsignacionesRow(sp_ObtenerAsignacionesRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                db_aadccb_cinebdDataSet ds = new db_aadccb_cinebdDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sp_ObtenerAsignacionesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sp_ObtenerSesionPorPeliculaYSalaDataTable : global::System.Data.TypedTableBase<sp_ObtenerSesionPorPeliculaYSalaRow> {
+            
+            private global::System.Data.DataColumn columnID_Sesion;
+            
+            private global::System.Data.DataColumn columnFecha_Inicio;
+            
+            private global::System.Data.DataColumn columnFecha_Fin;
+            
+            private global::System.Data.DataColumn columnEstado;
+            
+            private global::System.Data.DataColumn columnID_Sala;
+            
+            private global::System.Data.DataColumn columnNombrePelicula;
+            
+            private global::System.Data.DataColumn columnClasificacion;
+            
+            private global::System.Data.DataColumn columnDuracion;
+            
+            private global::System.Data.DataColumn columnDescripcion;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerSesionPorPeliculaYSalaDataTable() {
+                this.TableName = "sp_ObtenerSesionPorPeliculaYSala";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_ObtenerSesionPorPeliculaYSalaDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected sp_ObtenerSesionPorPeliculaYSalaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_SesionColumn {
+                get {
+                    return this.columnID_Sesion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Fecha_InicioColumn {
+                get {
+                    return this.columnFecha_Inicio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Fecha_FinColumn {
+                get {
+                    return this.columnFecha_Fin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EstadoColumn {
+                get {
+                    return this.columnEstado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_SalaColumn {
+                get {
+                    return this.columnID_Sala;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NombrePeliculaColumn {
+                get {
+                    return this.columnNombrePelicula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ClasificacionColumn {
+                get {
+                    return this.columnClasificacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DuracionColumn {
+                get {
+                    return this.columnDuracion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DescripcionColumn {
+                get {
+                    return this.columnDescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerSesionPorPeliculaYSalaRow this[int index] {
+                get {
+                    return ((sp_ObtenerSesionPorPeliculaYSalaRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerSesionPorPeliculaYSalaRowChangeEventHandler sp_ObtenerSesionPorPeliculaYSalaRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerSesionPorPeliculaYSalaRowChangeEventHandler sp_ObtenerSesionPorPeliculaYSalaRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerSesionPorPeliculaYSalaRowChangeEventHandler sp_ObtenerSesionPorPeliculaYSalaRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ObtenerSesionPorPeliculaYSalaRowChangeEventHandler sp_ObtenerSesionPorPeliculaYSalaRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addsp_ObtenerSesionPorPeliculaYSalaRow(sp_ObtenerSesionPorPeliculaYSalaRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerSesionPorPeliculaYSalaRow Addsp_ObtenerSesionPorPeliculaYSalaRow(System.DateTime Fecha_Inicio, System.DateTime Fecha_Fin, string Estado, int ID_Sala, string NombrePelicula, string Clasificacion, int Duracion, string Descripcion) {
+                sp_ObtenerSesionPorPeliculaYSalaRow rowsp_ObtenerSesionPorPeliculaYSalaRow = ((sp_ObtenerSesionPorPeliculaYSalaRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Fecha_Inicio,
+                        Fecha_Fin,
+                        Estado,
+                        ID_Sala,
+                        NombrePelicula,
+                        Clasificacion,
+                        Duracion,
+                        Descripcion};
+                rowsp_ObtenerSesionPorPeliculaYSalaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_ObtenerSesionPorPeliculaYSalaRow);
+                return rowsp_ObtenerSesionPorPeliculaYSalaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerSesionPorPeliculaYSalaRow FindByID_Sesion(int ID_Sesion) {
+                return ((sp_ObtenerSesionPorPeliculaYSalaRow)(this.Rows.Find(new object[] {
+                            ID_Sesion})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sp_ObtenerSesionPorPeliculaYSalaDataTable cln = ((sp_ObtenerSesionPorPeliculaYSalaDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sp_ObtenerSesionPorPeliculaYSalaDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Sesion = base.Columns["ID_Sesion"];
+                this.columnFecha_Inicio = base.Columns["Fecha_Inicio"];
+                this.columnFecha_Fin = base.Columns["Fecha_Fin"];
+                this.columnEstado = base.Columns["Estado"];
+                this.columnID_Sala = base.Columns["ID_Sala"];
+                this.columnNombrePelicula = base.Columns["NombrePelicula"];
+                this.columnClasificacion = base.Columns["Clasificacion"];
+                this.columnDuracion = base.Columns["Duracion"];
+                this.columnDescripcion = base.Columns["Descripcion"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnID_Sesion = new global::System.Data.DataColumn("ID_Sesion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Sesion);
+                this.columnFecha_Inicio = new global::System.Data.DataColumn("Fecha_Inicio", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Inicio);
+                this.columnFecha_Fin = new global::System.Data.DataColumn("Fecha_Fin", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Fin);
+                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado);
+                this.columnID_Sala = new global::System.Data.DataColumn("ID_Sala", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Sala);
+                this.columnNombrePelicula = new global::System.Data.DataColumn("NombrePelicula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombrePelicula);
+                this.columnClasificacion = new global::System.Data.DataColumn("Clasificacion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClasificacion);
+                this.columnDuracion = new global::System.Data.DataColumn("Duracion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDuracion);
+                this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescripcion);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Sesion}, true));
+                this.columnID_Sesion.AutoIncrement = true;
+                this.columnID_Sesion.AllowDBNull = false;
+                this.columnID_Sesion.ReadOnly = true;
+                this.columnID_Sesion.Unique = true;
+                this.columnFecha_Inicio.AllowDBNull = false;
+                this.columnFecha_Fin.AllowDBNull = false;
+                this.columnEstado.AllowDBNull = false;
+                this.columnEstado.MaxLength = 20;
+                this.columnID_Sala.AllowDBNull = false;
+                this.columnNombrePelicula.AllowDBNull = false;
+                this.columnNombrePelicula.MaxLength = 100;
+                this.columnClasificacion.AllowDBNull = false;
+                this.columnClasificacion.MaxLength = 10;
+                this.columnDuracion.AllowDBNull = false;
+                this.columnDescripcion.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerSesionPorPeliculaYSalaRow Newsp_ObtenerSesionPorPeliculaYSalaRow() {
+                return ((sp_ObtenerSesionPorPeliculaYSalaRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sp_ObtenerSesionPorPeliculaYSalaRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sp_ObtenerSesionPorPeliculaYSalaRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sp_ObtenerSesionPorPeliculaYSalaRowChanged != null)) {
+                    this.sp_ObtenerSesionPorPeliculaYSalaRowChanged(this, new sp_ObtenerSesionPorPeliculaYSalaRowChangeEvent(((sp_ObtenerSesionPorPeliculaYSalaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sp_ObtenerSesionPorPeliculaYSalaRowChanging != null)) {
+                    this.sp_ObtenerSesionPorPeliculaYSalaRowChanging(this, new sp_ObtenerSesionPorPeliculaYSalaRowChangeEvent(((sp_ObtenerSesionPorPeliculaYSalaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sp_ObtenerSesionPorPeliculaYSalaRowDeleted != null)) {
+                    this.sp_ObtenerSesionPorPeliculaYSalaRowDeleted(this, new sp_ObtenerSesionPorPeliculaYSalaRowChangeEvent(((sp_ObtenerSesionPorPeliculaYSalaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sp_ObtenerSesionPorPeliculaYSalaRowDeleting != null)) {
+                    this.sp_ObtenerSesionPorPeliculaYSalaRowDeleting(this, new sp_ObtenerSesionPorPeliculaYSalaRowChangeEvent(((sp_ObtenerSesionPorPeliculaYSalaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removesp_ObtenerSesionPorPeliculaYSalaRow(sp_ObtenerSesionPorPeliculaYSalaRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                db_aadccb_cinebdDataSet ds = new db_aadccb_cinebdDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sp_ObtenerSesionPorPeliculaYSalaDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ListadoTransaccionesConAsientosDataTable : global::System.Data.TypedTableBase<ListadoTransaccionesConAsientosRow> {
+            
+            private global::System.Data.DataColumn columnID_Transaccion;
+            
+            private global::System.Data.DataColumn columnFecha_Compra;
+            
+            private global::System.Data.DataColumn columnTipo_Transaccion;
+            
+            private global::System.Data.DataColumn columnCantidad_Asientos;
+            
+            private global::System.Data.DataColumn columnEstado_Transaccion;
+            
+            private global::System.Data.DataColumn columnNombre_Usuario;
+            
+            private global::System.Data.DataColumn columnID_Sesion;
+            
+            private global::System.Data.DataColumn columnFecha_Sesion;
+            
+            private global::System.Data.DataColumn columnFecha_Fin_Sesion;
+            
+            private global::System.Data.DataColumn columnEstado_Sesion;
+            
+            private global::System.Data.DataColumn columnNombre_Pelicula;
+            
+            private global::System.Data.DataColumn columnClasificacion;
+            
+            private global::System.Data.DataColumn columnDuracion;
+            
+            private global::System.Data.DataColumn columnDescripcion_Pelicula;
+            
+            private global::System.Data.DataColumn columnCapacidad_Sala;
+            
+            private global::System.Data.DataColumn columnAsientos_Asignados;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoTransaccionesConAsientosDataTable() {
+                this.TableName = "ListadoTransaccionesConAsientos";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal ListadoTransaccionesConAsientosDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected ListadoTransaccionesConAsientosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_TransaccionColumn {
+                get {
+                    return this.columnID_Transaccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Fecha_CompraColumn {
+                get {
+                    return this.columnFecha_Compra;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Tipo_TransaccionColumn {
+                get {
+                    return this.columnTipo_Transaccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Cantidad_AsientosColumn {
+                get {
+                    return this.columnCantidad_Asientos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Estado_TransaccionColumn {
+                get {
+                    return this.columnEstado_Transaccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Nombre_UsuarioColumn {
+                get {
+                    return this.columnNombre_Usuario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_SesionColumn {
+                get {
+                    return this.columnID_Sesion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Fecha_SesionColumn {
+                get {
+                    return this.columnFecha_Sesion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Fecha_Fin_SesionColumn {
+                get {
+                    return this.columnFecha_Fin_Sesion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Estado_SesionColumn {
+                get {
+                    return this.columnEstado_Sesion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Nombre_PeliculaColumn {
+                get {
+                    return this.columnNombre_Pelicula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ClasificacionColumn {
+                get {
+                    return this.columnClasificacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DuracionColumn {
+                get {
+                    return this.columnDuracion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Descripcion_PeliculaColumn {
+                get {
+                    return this.columnDescripcion_Pelicula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Capacidad_SalaColumn {
+                get {
+                    return this.columnCapacidad_Sala;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Asientos_AsignadosColumn {
+                get {
+                    return this.columnAsientos_Asignados;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoTransaccionesConAsientosRow this[int index] {
+                get {
+                    return ((ListadoTransaccionesConAsientosRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ListadoTransaccionesConAsientosRowChangeEventHandler ListadoTransaccionesConAsientosRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ListadoTransaccionesConAsientosRowChangeEventHandler ListadoTransaccionesConAsientosRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ListadoTransaccionesConAsientosRowChangeEventHandler ListadoTransaccionesConAsientosRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ListadoTransaccionesConAsientosRowChangeEventHandler ListadoTransaccionesConAsientosRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddListadoTransaccionesConAsientosRow(ListadoTransaccionesConAsientosRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoTransaccionesConAsientosRow AddListadoTransaccionesConAsientosRow(System.DateTime Fecha_Compra, string Tipo_Transaccion, int Cantidad_Asientos, string Estado_Transaccion, string Nombre_Usuario, System.DateTime Fecha_Sesion, System.DateTime Fecha_Fin_Sesion, string Estado_Sesion, string Nombre_Pelicula, string Clasificacion, int Duracion, string Descripcion_Pelicula, int Capacidad_Sala, int Asientos_Asignados) {
+                ListadoTransaccionesConAsientosRow rowListadoTransaccionesConAsientosRow = ((ListadoTransaccionesConAsientosRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Fecha_Compra,
+                        Tipo_Transaccion,
+                        Cantidad_Asientos,
+                        Estado_Transaccion,
+                        Nombre_Usuario,
+                        null,
+                        Fecha_Sesion,
+                        Fecha_Fin_Sesion,
+                        Estado_Sesion,
+                        Nombre_Pelicula,
+                        Clasificacion,
+                        Duracion,
+                        Descripcion_Pelicula,
+                        Capacidad_Sala,
+                        Asientos_Asignados};
+                rowListadoTransaccionesConAsientosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowListadoTransaccionesConAsientosRow);
+                return rowListadoTransaccionesConAsientosRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoTransaccionesConAsientosRow FindByID_TransaccionID_Sesion(int ID_Transaccion, int ID_Sesion) {
+                return ((ListadoTransaccionesConAsientosRow)(this.Rows.Find(new object[] {
+                            ID_Transaccion,
+                            ID_Sesion})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ListadoTransaccionesConAsientosDataTable cln = ((ListadoTransaccionesConAsientosDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ListadoTransaccionesConAsientosDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Transaccion = base.Columns["ID_Transaccion"];
+                this.columnFecha_Compra = base.Columns["Fecha_Compra"];
+                this.columnTipo_Transaccion = base.Columns["Tipo_Transaccion"];
+                this.columnCantidad_Asientos = base.Columns["Cantidad_Asientos"];
+                this.columnEstado_Transaccion = base.Columns["Estado_Transaccion"];
+                this.columnNombre_Usuario = base.Columns["Nombre_Usuario"];
+                this.columnID_Sesion = base.Columns["ID_Sesion"];
+                this.columnFecha_Sesion = base.Columns["Fecha_Sesion"];
+                this.columnFecha_Fin_Sesion = base.Columns["Fecha_Fin_Sesion"];
+                this.columnEstado_Sesion = base.Columns["Estado_Sesion"];
+                this.columnNombre_Pelicula = base.Columns["Nombre_Pelicula"];
+                this.columnClasificacion = base.Columns["Clasificacion"];
+                this.columnDuracion = base.Columns["Duracion"];
+                this.columnDescripcion_Pelicula = base.Columns["Descripcion_Pelicula"];
+                this.columnCapacidad_Sala = base.Columns["Capacidad_Sala"];
+                this.columnAsientos_Asignados = base.Columns["Asientos_Asignados"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnID_Transaccion = new global::System.Data.DataColumn("ID_Transaccion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Transaccion);
+                this.columnFecha_Compra = new global::System.Data.DataColumn("Fecha_Compra", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Compra);
+                this.columnTipo_Transaccion = new global::System.Data.DataColumn("Tipo_Transaccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipo_Transaccion);
+                this.columnCantidad_Asientos = new global::System.Data.DataColumn("Cantidad_Asientos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCantidad_Asientos);
+                this.columnEstado_Transaccion = new global::System.Data.DataColumn("Estado_Transaccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado_Transaccion);
+                this.columnNombre_Usuario = new global::System.Data.DataColumn("Nombre_Usuario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre_Usuario);
+                this.columnID_Sesion = new global::System.Data.DataColumn("ID_Sesion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Sesion);
+                this.columnFecha_Sesion = new global::System.Data.DataColumn("Fecha_Sesion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Sesion);
+                this.columnFecha_Fin_Sesion = new global::System.Data.DataColumn("Fecha_Fin_Sesion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Fin_Sesion);
+                this.columnEstado_Sesion = new global::System.Data.DataColumn("Estado_Sesion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado_Sesion);
+                this.columnNombre_Pelicula = new global::System.Data.DataColumn("Nombre_Pelicula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre_Pelicula);
+                this.columnClasificacion = new global::System.Data.DataColumn("Clasificacion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClasificacion);
+                this.columnDuracion = new global::System.Data.DataColumn("Duracion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDuracion);
+                this.columnDescripcion_Pelicula = new global::System.Data.DataColumn("Descripcion_Pelicula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescripcion_Pelicula);
+                this.columnCapacidad_Sala = new global::System.Data.DataColumn("Capacidad_Sala", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCapacidad_Sala);
+                this.columnAsientos_Asignados = new global::System.Data.DataColumn("Asientos_Asignados", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAsientos_Asignados);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Transaccion,
+                                this.columnID_Sesion}, true));
+                this.columnID_Transaccion.AutoIncrement = true;
+                this.columnID_Transaccion.AllowDBNull = false;
+                this.columnID_Transaccion.ReadOnly = true;
+                this.columnFecha_Compra.AllowDBNull = false;
+                this.columnTipo_Transaccion.AllowDBNull = false;
+                this.columnTipo_Transaccion.MaxLength = 20;
+                this.columnCantidad_Asientos.AllowDBNull = false;
+                this.columnEstado_Transaccion.AllowDBNull = false;
+                this.columnEstado_Transaccion.MaxLength = 20;
+                this.columnNombre_Usuario.AllowDBNull = false;
+                this.columnNombre_Usuario.MaxLength = 100;
+                this.columnID_Sesion.AutoIncrement = true;
+                this.columnID_Sesion.AllowDBNull = false;
+                this.columnID_Sesion.ReadOnly = true;
+                this.columnFecha_Sesion.AllowDBNull = false;
+                this.columnFecha_Fin_Sesion.AllowDBNull = false;
+                this.columnEstado_Sesion.AllowDBNull = false;
+                this.columnEstado_Sesion.MaxLength = 20;
+                this.columnNombre_Pelicula.AllowDBNull = false;
+                this.columnNombre_Pelicula.MaxLength = 100;
+                this.columnClasificacion.AllowDBNull = false;
+                this.columnClasificacion.MaxLength = 10;
+                this.columnDuracion.AllowDBNull = false;
+                this.columnDescripcion_Pelicula.MaxLength = 2147483647;
+                this.columnCapacidad_Sala.AllowDBNull = false;
+                this.columnAsientos_Asignados.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoTransaccionesConAsientosRow NewListadoTransaccionesConAsientosRow() {
+                return ((ListadoTransaccionesConAsientosRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ListadoTransaccionesConAsientosRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ListadoTransaccionesConAsientosRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ListadoTransaccionesConAsientosRowChanged != null)) {
+                    this.ListadoTransaccionesConAsientosRowChanged(this, new ListadoTransaccionesConAsientosRowChangeEvent(((ListadoTransaccionesConAsientosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ListadoTransaccionesConAsientosRowChanging != null)) {
+                    this.ListadoTransaccionesConAsientosRowChanging(this, new ListadoTransaccionesConAsientosRowChangeEvent(((ListadoTransaccionesConAsientosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ListadoTransaccionesConAsientosRowDeleted != null)) {
+                    this.ListadoTransaccionesConAsientosRowDeleted(this, new ListadoTransaccionesConAsientosRowChangeEvent(((ListadoTransaccionesConAsientosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ListadoTransaccionesConAsientosRowDeleting != null)) {
+                    this.ListadoTransaccionesConAsientosRowDeleting(this, new ListadoTransaccionesConAsientosRowChangeEvent(((ListadoTransaccionesConAsientosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveListadoTransaccionesConAsientosRow(ListadoTransaccionesConAsientosRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                db_aadccb_cinebdDataSet ds = new db_aadccb_cinebdDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ListadoTransaccionesConAsientosDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class PromedioAsientosOcupadosYCantidadSesionesDataTable : global::System.Data.TypedTableBase<PromedioAsientosOcupadosYCantidadSesionesRow> {
+            
+            private global::System.Data.DataColumn columnAño;
+            
+            private global::System.Data.DataColumn columnMes;
+            
+            private global::System.Data.DataColumn columnCantidad_Sesiones;
+            
+            private global::System.Data.DataColumn columnPromedio_Asientos_Ocupados;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PromedioAsientosOcupadosYCantidadSesionesDataTable() {
+                this.TableName = "PromedioAsientosOcupadosYCantidadSesiones";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal PromedioAsientosOcupadosYCantidadSesionesDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected PromedioAsientosOcupadosYCantidadSesionesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AñoColumn {
+                get {
+                    return this.columnAño;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MesColumn {
+                get {
+                    return this.columnMes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Cantidad_SesionesColumn {
+                get {
+                    return this.columnCantidad_Sesiones;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Promedio_Asientos_OcupadosColumn {
+                get {
+                    return this.columnPromedio_Asientos_Ocupados;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PromedioAsientosOcupadosYCantidadSesionesRow this[int index] {
+                get {
+                    return ((PromedioAsientosOcupadosYCantidadSesionesRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event PromedioAsientosOcupadosYCantidadSesionesRowChangeEventHandler PromedioAsientosOcupadosYCantidadSesionesRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event PromedioAsientosOcupadosYCantidadSesionesRowChangeEventHandler PromedioAsientosOcupadosYCantidadSesionesRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event PromedioAsientosOcupadosYCantidadSesionesRowChangeEventHandler PromedioAsientosOcupadosYCantidadSesionesRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event PromedioAsientosOcupadosYCantidadSesionesRowChangeEventHandler PromedioAsientosOcupadosYCantidadSesionesRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddPromedioAsientosOcupadosYCantidadSesionesRow(PromedioAsientosOcupadosYCantidadSesionesRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PromedioAsientosOcupadosYCantidadSesionesRow AddPromedioAsientosOcupadosYCantidadSesionesRow(int Año, int Mes, int Cantidad_Sesiones, double Promedio_Asientos_Ocupados) {
+                PromedioAsientosOcupadosYCantidadSesionesRow rowPromedioAsientosOcupadosYCantidadSesionesRow = ((PromedioAsientosOcupadosYCantidadSesionesRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Año,
+                        Mes,
+                        Cantidad_Sesiones,
+                        Promedio_Asientos_Ocupados};
+                rowPromedioAsientosOcupadosYCantidadSesionesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPromedioAsientosOcupadosYCantidadSesionesRow);
+                return rowPromedioAsientosOcupadosYCantidadSesionesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                PromedioAsientosOcupadosYCantidadSesionesDataTable cln = ((PromedioAsientosOcupadosYCantidadSesionesDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new PromedioAsientosOcupadosYCantidadSesionesDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnAño = base.Columns["Año"];
+                this.columnMes = base.Columns["Mes"];
+                this.columnCantidad_Sesiones = base.Columns["Cantidad_Sesiones"];
+                this.columnPromedio_Asientos_Ocupados = base.Columns["Promedio_Asientos_Ocupados"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnAño = new global::System.Data.DataColumn("Año", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAño);
+                this.columnMes = new global::System.Data.DataColumn("Mes", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMes);
+                this.columnCantidad_Sesiones = new global::System.Data.DataColumn("Cantidad_Sesiones", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCantidad_Sesiones);
+                this.columnPromedio_Asientos_Ocupados = new global::System.Data.DataColumn("Promedio_Asientos_Ocupados", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPromedio_Asientos_Ocupados);
+                this.columnAño.ReadOnly = true;
+                this.columnMes.ReadOnly = true;
+                this.columnCantidad_Sesiones.ReadOnly = true;
+                this.columnPromedio_Asientos_Ocupados.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PromedioAsientosOcupadosYCantidadSesionesRow NewPromedioAsientosOcupadosYCantidadSesionesRow() {
+                return ((PromedioAsientosOcupadosYCantidadSesionesRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new PromedioAsientosOcupadosYCantidadSesionesRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(PromedioAsientosOcupadosYCantidadSesionesRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.PromedioAsientosOcupadosYCantidadSesionesRowChanged != null)) {
+                    this.PromedioAsientosOcupadosYCantidadSesionesRowChanged(this, new PromedioAsientosOcupadosYCantidadSesionesRowChangeEvent(((PromedioAsientosOcupadosYCantidadSesionesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.PromedioAsientosOcupadosYCantidadSesionesRowChanging != null)) {
+                    this.PromedioAsientosOcupadosYCantidadSesionesRowChanging(this, new PromedioAsientosOcupadosYCantidadSesionesRowChangeEvent(((PromedioAsientosOcupadosYCantidadSesionesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.PromedioAsientosOcupadosYCantidadSesionesRowDeleted != null)) {
+                    this.PromedioAsientosOcupadosYCantidadSesionesRowDeleted(this, new PromedioAsientosOcupadosYCantidadSesionesRowChangeEvent(((PromedioAsientosOcupadosYCantidadSesionesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.PromedioAsientosOcupadosYCantidadSesionesRowDeleting != null)) {
+                    this.PromedioAsientosOcupadosYCantidadSesionesRowDeleting(this, new PromedioAsientosOcupadosYCantidadSesionesRowChangeEvent(((PromedioAsientosOcupadosYCantidadSesionesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemovePromedioAsientosOcupadosYCantidadSesionesRow(PromedioAsientosOcupadosYCantidadSesionesRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                db_aadccb_cinebdDataSet ds = new db_aadccb_cinebdDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "PromedioAsientosOcupadosYCantidadSesionesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SesionesAsientosOcupadosBajoPorcentajeDataTable : global::System.Data.TypedTableBase<SesionesAsientosOcupadosBajoPorcentajeRow> {
+            
+            private global::System.Data.DataColumn columnID_Sesion;
+            
+            private global::System.Data.DataColumn columnFecha_Inicio;
+            
+            private global::System.Data.DataColumn columnFecha_Fin;
+            
+            private global::System.Data.DataColumn columnAsientos_Ocupados;
+            
+            private global::System.Data.DataColumn columnCapacidad;
+            
+            private global::System.Data.DataColumn columnPorcentaje_Ocupacion;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SesionesAsientosOcupadosBajoPorcentajeDataTable() {
+                this.TableName = "SesionesAsientosOcupadosBajoPorcentaje";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal SesionesAsientosOcupadosBajoPorcentajeDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected SesionesAsientosOcupadosBajoPorcentajeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_SesionColumn {
+                get {
+                    return this.columnID_Sesion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Fecha_InicioColumn {
+                get {
+                    return this.columnFecha_Inicio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Fecha_FinColumn {
+                get {
+                    return this.columnFecha_Fin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Asientos_OcupadosColumn {
+                get {
+                    return this.columnAsientos_Ocupados;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CapacidadColumn {
+                get {
+                    return this.columnCapacidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Porcentaje_OcupacionColumn {
+                get {
+                    return this.columnPorcentaje_Ocupacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SesionesAsientosOcupadosBajoPorcentajeRow this[int index] {
+                get {
+                    return ((SesionesAsientosOcupadosBajoPorcentajeRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SesionesAsientosOcupadosBajoPorcentajeRowChangeEventHandler SesionesAsientosOcupadosBajoPorcentajeRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SesionesAsientosOcupadosBajoPorcentajeRowChangeEventHandler SesionesAsientosOcupadosBajoPorcentajeRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SesionesAsientosOcupadosBajoPorcentajeRowChangeEventHandler SesionesAsientosOcupadosBajoPorcentajeRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SesionesAsientosOcupadosBajoPorcentajeRowChangeEventHandler SesionesAsientosOcupadosBajoPorcentajeRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddSesionesAsientosOcupadosBajoPorcentajeRow(SesionesAsientosOcupadosBajoPorcentajeRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SesionesAsientosOcupadosBajoPorcentajeRow AddSesionesAsientosOcupadosBajoPorcentajeRow(System.DateTime Fecha_Inicio, System.DateTime Fecha_Fin, int Asientos_Ocupados, int Capacidad, decimal Porcentaje_Ocupacion) {
+                SesionesAsientosOcupadosBajoPorcentajeRow rowSesionesAsientosOcupadosBajoPorcentajeRow = ((SesionesAsientosOcupadosBajoPorcentajeRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Fecha_Inicio,
+                        Fecha_Fin,
+                        Asientos_Ocupados,
+                        Capacidad,
+                        Porcentaje_Ocupacion};
+                rowSesionesAsientosOcupadosBajoPorcentajeRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSesionesAsientosOcupadosBajoPorcentajeRow);
+                return rowSesionesAsientosOcupadosBajoPorcentajeRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SesionesAsientosOcupadosBajoPorcentajeRow FindByID_Sesion(int ID_Sesion) {
+                return ((SesionesAsientosOcupadosBajoPorcentajeRow)(this.Rows.Find(new object[] {
+                            ID_Sesion})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                SesionesAsientosOcupadosBajoPorcentajeDataTable cln = ((SesionesAsientosOcupadosBajoPorcentajeDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SesionesAsientosOcupadosBajoPorcentajeDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Sesion = base.Columns["ID_Sesion"];
+                this.columnFecha_Inicio = base.Columns["Fecha_Inicio"];
+                this.columnFecha_Fin = base.Columns["Fecha_Fin"];
+                this.columnAsientos_Ocupados = base.Columns["Asientos_Ocupados"];
+                this.columnCapacidad = base.Columns["Capacidad"];
+                this.columnPorcentaje_Ocupacion = base.Columns["Porcentaje_Ocupacion"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnID_Sesion = new global::System.Data.DataColumn("ID_Sesion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Sesion);
+                this.columnFecha_Inicio = new global::System.Data.DataColumn("Fecha_Inicio", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Inicio);
+                this.columnFecha_Fin = new global::System.Data.DataColumn("Fecha_Fin", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Fin);
+                this.columnAsientos_Ocupados = new global::System.Data.DataColumn("Asientos_Ocupados", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAsientos_Ocupados);
+                this.columnCapacidad = new global::System.Data.DataColumn("Capacidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCapacidad);
+                this.columnPorcentaje_Ocupacion = new global::System.Data.DataColumn("Porcentaje_Ocupacion", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPorcentaje_Ocupacion);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Sesion}, true));
+                this.columnID_Sesion.AutoIncrement = true;
+                this.columnID_Sesion.AllowDBNull = false;
+                this.columnID_Sesion.ReadOnly = true;
+                this.columnID_Sesion.Unique = true;
+                this.columnFecha_Inicio.AllowDBNull = false;
+                this.columnFecha_Fin.AllowDBNull = false;
+                this.columnAsientos_Ocupados.ReadOnly = true;
+                this.columnCapacidad.AllowDBNull = false;
+                this.columnPorcentaje_Ocupacion.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SesionesAsientosOcupadosBajoPorcentajeRow NewSesionesAsientosOcupadosBajoPorcentajeRow() {
+                return ((SesionesAsientosOcupadosBajoPorcentajeRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SesionesAsientosOcupadosBajoPorcentajeRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(SesionesAsientosOcupadosBajoPorcentajeRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SesionesAsientosOcupadosBajoPorcentajeRowChanged != null)) {
+                    this.SesionesAsientosOcupadosBajoPorcentajeRowChanged(this, new SesionesAsientosOcupadosBajoPorcentajeRowChangeEvent(((SesionesAsientosOcupadosBajoPorcentajeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SesionesAsientosOcupadosBajoPorcentajeRowChanging != null)) {
+                    this.SesionesAsientosOcupadosBajoPorcentajeRowChanging(this, new SesionesAsientosOcupadosBajoPorcentajeRowChangeEvent(((SesionesAsientosOcupadosBajoPorcentajeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SesionesAsientosOcupadosBajoPorcentajeRowDeleted != null)) {
+                    this.SesionesAsientosOcupadosBajoPorcentajeRowDeleted(this, new SesionesAsientosOcupadosBajoPorcentajeRowChangeEvent(((SesionesAsientosOcupadosBajoPorcentajeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SesionesAsientosOcupadosBajoPorcentajeRowDeleting != null)) {
+                    this.SesionesAsientosOcupadosBajoPorcentajeRowDeleting(this, new SesionesAsientosOcupadosBajoPorcentajeRowChangeEvent(((SesionesAsientosOcupadosBajoPorcentajeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveSesionesAsientosOcupadosBajoPorcentajeRow(SesionesAsientosOcupadosBajoPorcentajeRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                db_aadccb_cinebdDataSet ds = new db_aadccb_cinebdDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SesionesAsientosOcupadosBajoPorcentajeDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sp_LogTransacciones_RangoFechaDataTable : global::System.Data.TypedTableBase<sp_LogTransacciones_RangoFechaRow> {
+            
+            private global::System.Data.DataColumn columnID_Log;
+            
+            private global::System.Data.DataColumn columnFechaHoraLog;
+            
+            private global::System.Data.DataColumn columnUsuarioLog;
+            
+            private global::System.Data.DataColumn columnAccion;
+            
+            private global::System.Data.DataColumn columnID_Operacion;
+            
+            private global::System.Data.DataColumn columnTabla_Cambio;
+            
+            private global::System.Data.DataColumn columnDatos_Anteriores;
+            
+            private global::System.Data.DataColumn columnDatos_Nuevos;
+            
+            private global::System.Data.DataColumn columnDescripcion;
+            
+            private global::System.Data.DataColumn columnID_Transaccion;
+            
+            private global::System.Data.DataColumn columnFechaHoraTransaccion;
+            
+            private global::System.Data.DataColumn columnTipo_Transaccion;
+            
+            private global::System.Data.DataColumn columnCantidad_Asientos;
+            
+            private global::System.Data.DataColumn columnEstadoTransaccion;
+            
+            private global::System.Data.DataColumn columnID_Usuario;
+            
+            private global::System.Data.DataColumn columnID_Tipo_Asignacion;
+            
+            private global::System.Data.DataColumn columnID_Sesion;
+            
+            private global::System.Data.DataColumn columnFechaInicioSesion;
+            
+            private global::System.Data.DataColumn columnFechaFinSesion;
+            
+            private global::System.Data.DataColumn columnEstadoSesion;
+            
+            private global::System.Data.DataColumn columnID_Sala;
+            
+            private global::System.Data.DataColumn columnID_Pelicula;
+            
+            private global::System.Data.DataColumn columnNombrePelicula;
+            
+            private global::System.Data.DataColumn columnClasificacion;
+            
+            private global::System.Data.DataColumn columnDuracion;
+            
+            private global::System.Data.DataColumn columnDescripcionPelicula;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_LogTransacciones_RangoFechaDataTable() {
+                this.TableName = "sp_LogTransacciones_RangoFecha";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_LogTransacciones_RangoFechaDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected sp_LogTransacciones_RangoFechaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_LogColumn {
+                get {
+                    return this.columnID_Log;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FechaHoraLogColumn {
+                get {
+                    return this.columnFechaHoraLog;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UsuarioLogColumn {
+                get {
+                    return this.columnUsuarioLog;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AccionColumn {
+                get {
+                    return this.columnAccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_OperacionColumn {
+                get {
+                    return this.columnID_Operacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Tabla_CambioColumn {
+                get {
+                    return this.columnTabla_Cambio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Datos_AnterioresColumn {
+                get {
+                    return this.columnDatos_Anteriores;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Datos_NuevosColumn {
+                get {
+                    return this.columnDatos_Nuevos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DescripcionColumn {
+                get {
+                    return this.columnDescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_TransaccionColumn {
+                get {
+                    return this.columnID_Transaccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FechaHoraTransaccionColumn {
+                get {
+                    return this.columnFechaHoraTransaccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Tipo_TransaccionColumn {
+                get {
+                    return this.columnTipo_Transaccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Cantidad_AsientosColumn {
+                get {
+                    return this.columnCantidad_Asientos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EstadoTransaccionColumn {
+                get {
+                    return this.columnEstadoTransaccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_UsuarioColumn {
+                get {
+                    return this.columnID_Usuario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_Tipo_AsignacionColumn {
+                get {
+                    return this.columnID_Tipo_Asignacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_SesionColumn {
+                get {
+                    return this.columnID_Sesion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FechaInicioSesionColumn {
+                get {
+                    return this.columnFechaInicioSesion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FechaFinSesionColumn {
+                get {
+                    return this.columnFechaFinSesion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EstadoSesionColumn {
+                get {
+                    return this.columnEstadoSesion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_SalaColumn {
+                get {
+                    return this.columnID_Sala;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ID_PeliculaColumn {
+                get {
+                    return this.columnID_Pelicula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NombrePeliculaColumn {
+                get {
+                    return this.columnNombrePelicula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ClasificacionColumn {
+                get {
+                    return this.columnClasificacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DuracionColumn {
+                get {
+                    return this.columnDuracion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DescripcionPeliculaColumn {
+                get {
+                    return this.columnDescripcionPelicula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_LogTransacciones_RangoFechaRow this[int index] {
+                get {
+                    return ((sp_LogTransacciones_RangoFechaRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_LogTransacciones_RangoFechaRowChangeEventHandler sp_LogTransacciones_RangoFechaRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_LogTransacciones_RangoFechaRowChangeEventHandler sp_LogTransacciones_RangoFechaRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_LogTransacciones_RangoFechaRowChangeEventHandler sp_LogTransacciones_RangoFechaRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_LogTransacciones_RangoFechaRowChangeEventHandler sp_LogTransacciones_RangoFechaRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addsp_LogTransacciones_RangoFechaRow(sp_LogTransacciones_RangoFechaRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_LogTransacciones_RangoFechaRow Addsp_LogTransacciones_RangoFechaRow(
+                        System.DateTime FechaHoraLog, 
+                        string UsuarioLog, 
+                        string Accion, 
+                        int ID_Operacion, 
+                        string Tabla_Cambio, 
+                        string Datos_Anteriores, 
+                        string Datos_Nuevos, 
+                        string Descripcion, 
+                        System.DateTime FechaHoraTransaccion, 
+                        string Tipo_Transaccion, 
+                        int Cantidad_Asientos, 
+                        string EstadoTransaccion, 
+                        int ID_Usuario, 
+                        int ID_Tipo_Asignacion, 
+                        System.DateTime FechaInicioSesion, 
+                        System.DateTime FechaFinSesion, 
+                        string EstadoSesion, 
+                        int ID_Sala, 
+                        string NombrePelicula, 
+                        string Clasificacion, 
+                        int Duracion, 
+                        string DescripcionPelicula) {
+                sp_LogTransacciones_RangoFechaRow rowsp_LogTransacciones_RangoFechaRow = ((sp_LogTransacciones_RangoFechaRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        FechaHoraLog,
+                        UsuarioLog,
+                        Accion,
+                        ID_Operacion,
+                        Tabla_Cambio,
+                        Datos_Anteriores,
+                        Datos_Nuevos,
+                        Descripcion,
+                        null,
+                        FechaHoraTransaccion,
+                        Tipo_Transaccion,
+                        Cantidad_Asientos,
+                        EstadoTransaccion,
+                        ID_Usuario,
+                        ID_Tipo_Asignacion,
+                        null,
+                        FechaInicioSesion,
+                        FechaFinSesion,
+                        EstadoSesion,
+                        ID_Sala,
+                        null,
+                        NombrePelicula,
+                        Clasificacion,
+                        Duracion,
+                        DescripcionPelicula};
+                rowsp_LogTransacciones_RangoFechaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_LogTransacciones_RangoFechaRow);
+                return rowsp_LogTransacciones_RangoFechaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_LogTransacciones_RangoFechaRow FindByID_LogID_TransaccionID_SesionID_Pelicula(int ID_Log, int ID_Transaccion, int ID_Sesion, int ID_Pelicula) {
+                return ((sp_LogTransacciones_RangoFechaRow)(this.Rows.Find(new object[] {
+                            ID_Log,
+                            ID_Transaccion,
+                            ID_Sesion,
+                            ID_Pelicula})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sp_LogTransacciones_RangoFechaDataTable cln = ((sp_LogTransacciones_RangoFechaDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sp_LogTransacciones_RangoFechaDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Log = base.Columns["ID_Log"];
+                this.columnFechaHoraLog = base.Columns["FechaHoraLog"];
+                this.columnUsuarioLog = base.Columns["UsuarioLog"];
+                this.columnAccion = base.Columns["Accion"];
+                this.columnID_Operacion = base.Columns["ID_Operacion"];
+                this.columnTabla_Cambio = base.Columns["Tabla_Cambio"];
+                this.columnDatos_Anteriores = base.Columns["Datos_Anteriores"];
+                this.columnDatos_Nuevos = base.Columns["Datos_Nuevos"];
+                this.columnDescripcion = base.Columns["Descripcion"];
+                this.columnID_Transaccion = base.Columns["ID_Transaccion"];
+                this.columnFechaHoraTransaccion = base.Columns["FechaHoraTransaccion"];
+                this.columnTipo_Transaccion = base.Columns["Tipo_Transaccion"];
+                this.columnCantidad_Asientos = base.Columns["Cantidad_Asientos"];
+                this.columnEstadoTransaccion = base.Columns["EstadoTransaccion"];
+                this.columnID_Usuario = base.Columns["ID_Usuario"];
+                this.columnID_Tipo_Asignacion = base.Columns["ID_Tipo_Asignacion"];
+                this.columnID_Sesion = base.Columns["ID_Sesion"];
+                this.columnFechaInicioSesion = base.Columns["FechaInicioSesion"];
+                this.columnFechaFinSesion = base.Columns["FechaFinSesion"];
+                this.columnEstadoSesion = base.Columns["EstadoSesion"];
+                this.columnID_Sala = base.Columns["ID_Sala"];
+                this.columnID_Pelicula = base.Columns["ID_Pelicula"];
+                this.columnNombrePelicula = base.Columns["NombrePelicula"];
+                this.columnClasificacion = base.Columns["Clasificacion"];
+                this.columnDuracion = base.Columns["Duracion"];
+                this.columnDescripcionPelicula = base.Columns["DescripcionPelicula"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnID_Log = new global::System.Data.DataColumn("ID_Log", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Log);
+                this.columnFechaHoraLog = new global::System.Data.DataColumn("FechaHoraLog", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaHoraLog);
+                this.columnUsuarioLog = new global::System.Data.DataColumn("UsuarioLog", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUsuarioLog);
+                this.columnAccion = new global::System.Data.DataColumn("Accion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAccion);
+                this.columnID_Operacion = new global::System.Data.DataColumn("ID_Operacion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Operacion);
+                this.columnTabla_Cambio = new global::System.Data.DataColumn("Tabla_Cambio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTabla_Cambio);
+                this.columnDatos_Anteriores = new global::System.Data.DataColumn("Datos_Anteriores", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDatos_Anteriores);
+                this.columnDatos_Nuevos = new global::System.Data.DataColumn("Datos_Nuevos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDatos_Nuevos);
+                this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescripcion);
+                this.columnID_Transaccion = new global::System.Data.DataColumn("ID_Transaccion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Transaccion);
+                this.columnFechaHoraTransaccion = new global::System.Data.DataColumn("FechaHoraTransaccion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaHoraTransaccion);
+                this.columnTipo_Transaccion = new global::System.Data.DataColumn("Tipo_Transaccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipo_Transaccion);
+                this.columnCantidad_Asientos = new global::System.Data.DataColumn("Cantidad_Asientos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCantidad_Asientos);
+                this.columnEstadoTransaccion = new global::System.Data.DataColumn("EstadoTransaccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstadoTransaccion);
+                this.columnID_Usuario = new global::System.Data.DataColumn("ID_Usuario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Usuario);
+                this.columnID_Tipo_Asignacion = new global::System.Data.DataColumn("ID_Tipo_Asignacion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Tipo_Asignacion);
+                this.columnID_Sesion = new global::System.Data.DataColumn("ID_Sesion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Sesion);
+                this.columnFechaInicioSesion = new global::System.Data.DataColumn("FechaInicioSesion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaInicioSesion);
+                this.columnFechaFinSesion = new global::System.Data.DataColumn("FechaFinSesion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaFinSesion);
+                this.columnEstadoSesion = new global::System.Data.DataColumn("EstadoSesion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstadoSesion);
+                this.columnID_Sala = new global::System.Data.DataColumn("ID_Sala", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Sala);
+                this.columnID_Pelicula = new global::System.Data.DataColumn("ID_Pelicula", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Pelicula);
+                this.columnNombrePelicula = new global::System.Data.DataColumn("NombrePelicula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombrePelicula);
+                this.columnClasificacion = new global::System.Data.DataColumn("Clasificacion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClasificacion);
+                this.columnDuracion = new global::System.Data.DataColumn("Duracion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDuracion);
+                this.columnDescripcionPelicula = new global::System.Data.DataColumn("DescripcionPelicula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescripcionPelicula);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Log,
+                                this.columnID_Transaccion,
+                                this.columnID_Sesion,
+                                this.columnID_Pelicula}, true));
+                this.columnID_Log.AutoIncrement = true;
+                this.columnID_Log.AllowDBNull = false;
+                this.columnID_Log.ReadOnly = true;
+                this.columnFechaHoraLog.AllowDBNull = false;
+                this.columnUsuarioLog.AllowDBNull = false;
+                this.columnUsuarioLog.MaxLength = 50;
+                this.columnAccion.AllowDBNull = false;
+                this.columnAccion.MaxLength = 50;
+                this.columnID_Operacion.AllowDBNull = false;
+                this.columnTabla_Cambio.AllowDBNull = false;
+                this.columnTabla_Cambio.MaxLength = 50;
+                this.columnDatos_Anteriores.MaxLength = 2147483647;
+                this.columnDatos_Nuevos.MaxLength = 2147483647;
+                this.columnDescripcion.MaxLength = 2147483647;
+                this.columnID_Transaccion.AutoIncrement = true;
+                this.columnID_Transaccion.AllowDBNull = false;
+                this.columnID_Transaccion.ReadOnly = true;
+                this.columnFechaHoraTransaccion.AllowDBNull = false;
+                this.columnTipo_Transaccion.AllowDBNull = false;
+                this.columnTipo_Transaccion.MaxLength = 20;
+                this.columnCantidad_Asientos.AllowDBNull = false;
+                this.columnEstadoTransaccion.AllowDBNull = false;
+                this.columnEstadoTransaccion.MaxLength = 20;
+                this.columnID_Usuario.AllowDBNull = false;
+                this.columnID_Tipo_Asignacion.AllowDBNull = false;
+                this.columnID_Sesion.AutoIncrement = true;
+                this.columnID_Sesion.AllowDBNull = false;
+                this.columnID_Sesion.ReadOnly = true;
+                this.columnFechaInicioSesion.AllowDBNull = false;
+                this.columnFechaFinSesion.AllowDBNull = false;
+                this.columnEstadoSesion.AllowDBNull = false;
+                this.columnEstadoSesion.MaxLength = 20;
+                this.columnID_Sala.AllowDBNull = false;
+                this.columnID_Pelicula.AutoIncrement = true;
+                this.columnID_Pelicula.AllowDBNull = false;
+                this.columnID_Pelicula.ReadOnly = true;
+                this.columnNombrePelicula.AllowDBNull = false;
+                this.columnNombrePelicula.MaxLength = 100;
+                this.columnClasificacion.AllowDBNull = false;
+                this.columnClasificacion.MaxLength = 10;
+                this.columnDuracion.AllowDBNull = false;
+                this.columnDescripcionPelicula.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_LogTransacciones_RangoFechaRow Newsp_LogTransacciones_RangoFechaRow() {
+                return ((sp_LogTransacciones_RangoFechaRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sp_LogTransacciones_RangoFechaRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sp_LogTransacciones_RangoFechaRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sp_LogTransacciones_RangoFechaRowChanged != null)) {
+                    this.sp_LogTransacciones_RangoFechaRowChanged(this, new sp_LogTransacciones_RangoFechaRowChangeEvent(((sp_LogTransacciones_RangoFechaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sp_LogTransacciones_RangoFechaRowChanging != null)) {
+                    this.sp_LogTransacciones_RangoFechaRowChanging(this, new sp_LogTransacciones_RangoFechaRowChangeEvent(((sp_LogTransacciones_RangoFechaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sp_LogTransacciones_RangoFechaRowDeleted != null)) {
+                    this.sp_LogTransacciones_RangoFechaRowDeleted(this, new sp_LogTransacciones_RangoFechaRowChangeEvent(((sp_LogTransacciones_RangoFechaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sp_LogTransacciones_RangoFechaRowDeleting != null)) {
+                    this.sp_LogTransacciones_RangoFechaRowDeleting(this, new sp_LogTransacciones_RangoFechaRowChangeEvent(((sp_LogTransacciones_RangoFechaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removesp_LogTransacciones_RangoFechaRow(sp_LogTransacciones_RangoFechaRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                db_aadccb_cinebdDataSet ds = new db_aadccb_cinebdDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sp_LogTransacciones_RangoFechaDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Top5PeliculasMayorPromedioAsientosVendidosDataTable : global::System.Data.TypedTableBase<Top5PeliculasMayorPromedioAsientosVendidosRow> {
+            
+            private global::System.Data.DataColumn columnPelicula;
+            
+            private global::System.Data.DataColumn columnClasificacion;
+            
+            private global::System.Data.DataColumn columnDuracion;
+            
+            private global::System.Data.DataColumn columnPromedio_Asientos_Vendidos;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Top5PeliculasMayorPromedioAsientosVendidosDataTable() {
+                this.TableName = "Top5PeliculasMayorPromedioAsientosVendidos";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Top5PeliculasMayorPromedioAsientosVendidosDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected Top5PeliculasMayorPromedioAsientosVendidosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PeliculaColumn {
+                get {
+                    return this.columnPelicula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ClasificacionColumn {
+                get {
+                    return this.columnClasificacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DuracionColumn {
+                get {
+                    return this.columnDuracion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Promedio_Asientos_VendidosColumn {
+                get {
+                    return this.columnPromedio_Asientos_Vendidos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Top5PeliculasMayorPromedioAsientosVendidosRow this[int index] {
+                get {
+                    return ((Top5PeliculasMayorPromedioAsientosVendidosRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Top5PeliculasMayorPromedioAsientosVendidosRowChangeEventHandler Top5PeliculasMayorPromedioAsientosVendidosRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Top5PeliculasMayorPromedioAsientosVendidosRowChangeEventHandler Top5PeliculasMayorPromedioAsientosVendidosRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Top5PeliculasMayorPromedioAsientosVendidosRowChangeEventHandler Top5PeliculasMayorPromedioAsientosVendidosRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Top5PeliculasMayorPromedioAsientosVendidosRowChangeEventHandler Top5PeliculasMayorPromedioAsientosVendidosRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddTop5PeliculasMayorPromedioAsientosVendidosRow(Top5PeliculasMayorPromedioAsientosVendidosRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Top5PeliculasMayorPromedioAsientosVendidosRow AddTop5PeliculasMayorPromedioAsientosVendidosRow(string Pelicula, string Clasificacion, int Duracion, int Promedio_Asientos_Vendidos) {
+                Top5PeliculasMayorPromedioAsientosVendidosRow rowTop5PeliculasMayorPromedioAsientosVendidosRow = ((Top5PeliculasMayorPromedioAsientosVendidosRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Pelicula,
+                        Clasificacion,
+                        Duracion,
+                        Promedio_Asientos_Vendidos};
+                rowTop5PeliculasMayorPromedioAsientosVendidosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTop5PeliculasMayorPromedioAsientosVendidosRow);
+                return rowTop5PeliculasMayorPromedioAsientosVendidosRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Top5PeliculasMayorPromedioAsientosVendidosDataTable cln = ((Top5PeliculasMayorPromedioAsientosVendidosDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Top5PeliculasMayorPromedioAsientosVendidosDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnPelicula = base.Columns["Pelicula"];
+                this.columnClasificacion = base.Columns["Clasificacion"];
+                this.columnDuracion = base.Columns["Duracion"];
+                this.columnPromedio_Asientos_Vendidos = base.Columns["Promedio_Asientos_Vendidos"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnPelicula = new global::System.Data.DataColumn("Pelicula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPelicula);
+                this.columnClasificacion = new global::System.Data.DataColumn("Clasificacion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClasificacion);
+                this.columnDuracion = new global::System.Data.DataColumn("Duracion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDuracion);
+                this.columnPromedio_Asientos_Vendidos = new global::System.Data.DataColumn("Promedio_Asientos_Vendidos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPromedio_Asientos_Vendidos);
+                this.columnPelicula.AllowDBNull = false;
+                this.columnPelicula.MaxLength = 100;
+                this.columnClasificacion.AllowDBNull = false;
+                this.columnClasificacion.MaxLength = 10;
+                this.columnDuracion.AllowDBNull = false;
+                this.columnPromedio_Asientos_Vendidos.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Top5PeliculasMayorPromedioAsientosVendidosRow NewTop5PeliculasMayorPromedioAsientosVendidosRow() {
+                return ((Top5PeliculasMayorPromedioAsientosVendidosRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Top5PeliculasMayorPromedioAsientosVendidosRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Top5PeliculasMayorPromedioAsientosVendidosRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Top5PeliculasMayorPromedioAsientosVendidosRowChanged != null)) {
+                    this.Top5PeliculasMayorPromedioAsientosVendidosRowChanged(this, new Top5PeliculasMayorPromedioAsientosVendidosRowChangeEvent(((Top5PeliculasMayorPromedioAsientosVendidosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Top5PeliculasMayorPromedioAsientosVendidosRowChanging != null)) {
+                    this.Top5PeliculasMayorPromedioAsientosVendidosRowChanging(this, new Top5PeliculasMayorPromedioAsientosVendidosRowChangeEvent(((Top5PeliculasMayorPromedioAsientosVendidosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Top5PeliculasMayorPromedioAsientosVendidosRowDeleted != null)) {
+                    this.Top5PeliculasMayorPromedioAsientosVendidosRowDeleted(this, new Top5PeliculasMayorPromedioAsientosVendidosRowChangeEvent(((Top5PeliculasMayorPromedioAsientosVendidosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Top5PeliculasMayorPromedioAsientosVendidosRowDeleting != null)) {
+                    this.Top5PeliculasMayorPromedioAsientosVendidosRowDeleting(this, new Top5PeliculasMayorPromedioAsientosVendidosRowChangeEvent(((Top5PeliculasMayorPromedioAsientosVendidosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveTop5PeliculasMayorPromedioAsientosVendidosRow(Top5PeliculasMayorPromedioAsientosVendidosRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                db_aadccb_cinebdDataSet ds = new db_aadccb_cinebdDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Top5PeliculasMayorPromedioAsientosVendidosDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class AsientoRow : global::System.Data.DataRow {
@@ -4490,6 +8687,1456 @@ namespace CINEBD {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ListadoSesionesConAsientosOcupadosRow : global::System.Data.DataRow {
+            
+            private ListadoSesionesConAsientosOcupadosDataTable tableListadoSesionesConAsientosOcupados;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal ListadoSesionesConAsientosOcupadosRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableListadoSesionesConAsientosOcupados = ((ListadoSesionesConAsientosOcupadosDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Sesion {
+                get {
+                    return ((int)(this[this.tableListadoSesionesConAsientosOcupados.ID_SesionColumn]));
+                }
+                set {
+                    this[this.tableListadoSesionesConAsientosOcupados.ID_SesionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Fecha_Inicio {
+                get {
+                    return ((global::System.DateTime)(this[this.tableListadoSesionesConAsientosOcupados.Fecha_InicioColumn]));
+                }
+                set {
+                    this[this.tableListadoSesionesConAsientosOcupados.Fecha_InicioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Fecha_Fin {
+                get {
+                    return ((global::System.DateTime)(this[this.tableListadoSesionesConAsientosOcupados.Fecha_FinColumn]));
+                }
+                set {
+                    this[this.tableListadoSesionesConAsientosOcupados.Fecha_FinColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Estado {
+                get {
+                    return ((string)(this[this.tableListadoSesionesConAsientosOcupados.EstadoColumn]));
+                }
+                set {
+                    this[this.tableListadoSesionesConAsientosOcupados.EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Sala {
+                get {
+                    return ((int)(this[this.tableListadoSesionesConAsientosOcupados.ID_SalaColumn]));
+                }
+                set {
+                    this[this.tableListadoSesionesConAsientosOcupados.ID_SalaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Pelicula {
+                get {
+                    return ((int)(this[this.tableListadoSesionesConAsientosOcupados.ID_PeliculaColumn]));
+                }
+                set {
+                    this[this.tableListadoSesionesConAsientosOcupados.ID_PeliculaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Nombre_Pelicula {
+                get {
+                    return ((string)(this[this.tableListadoSesionesConAsientosOcupados.Nombre_PeliculaColumn]));
+                }
+                set {
+                    this[this.tableListadoSesionesConAsientosOcupados.Nombre_PeliculaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Clasificacion {
+                get {
+                    return ((string)(this[this.tableListadoSesionesConAsientosOcupados.ClasificacionColumn]));
+                }
+                set {
+                    this[this.tableListadoSesionesConAsientosOcupados.ClasificacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Duracion {
+                get {
+                    return ((int)(this[this.tableListadoSesionesConAsientosOcupados.DuracionColumn]));
+                }
+                set {
+                    this[this.tableListadoSesionesConAsientosOcupados.DuracionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tableListadoSesionesConAsientosOcupados.DescripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Descripcion\' de la tabla \'ListadoSesionesConAsientosOcupa" +
+                                "dos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableListadoSesionesConAsientosOcupados.DescripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Capacidad {
+                get {
+                    return ((int)(this[this.tableListadoSesionesConAsientosOcupados.CapacidadColumn]));
+                }
+                set {
+                    this[this.tableListadoSesionesConAsientosOcupados.CapacidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Asientos_Ocupados {
+                get {
+                    try {
+                        return ((int)(this[this.tableListadoSesionesConAsientosOcupados.Asientos_OcupadosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Asientos_Ocupados\' de la tabla \'ListadoSesionesConAsiento" +
+                                "sOcupados\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableListadoSesionesConAsientosOcupados.Asientos_OcupadosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDescripcionNull() {
+                return this.IsNull(this.tableListadoSesionesConAsientosOcupados.DescripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDescripcionNull() {
+                this[this.tableListadoSesionesConAsientosOcupados.DescripcionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAsientos_OcupadosNull() {
+                return this.IsNull(this.tableListadoSesionesConAsientosOcupados.Asientos_OcupadosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAsientos_OcupadosNull() {
+                this[this.tableListadoSesionesConAsientosOcupados.Asientos_OcupadosColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_ObtenerAsientosDisponiblesRow : global::System.Data.DataRow {
+            
+            private sp_ObtenerAsientosDisponiblesDataTable tablesp_ObtenerAsientosDisponibles;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_ObtenerAsientosDisponiblesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_ObtenerAsientosDisponibles = ((sp_ObtenerAsientosDisponiblesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Sala {
+                get {
+                    return ((int)(this[this.tablesp_ObtenerAsientosDisponibles.ID_SalaColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsientosDisponibles.ID_SalaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Fila {
+                get {
+                    return ((string)(this[this.tablesp_ObtenerAsientosDisponibles.FilaColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsientosDisponibles.FilaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Numero {
+                get {
+                    return ((int)(this[this.tablesp_ObtenerAsientosDisponibles.NumeroColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsientosDisponibles.NumeroColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_ObtenerAsientosPorSesionYTransaccionRow : global::System.Data.DataRow {
+            
+            private sp_ObtenerAsientosPorSesionYTransaccionDataTable tablesp_ObtenerAsientosPorSesionYTransaccion;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_ObtenerAsientosPorSesionYTransaccionRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_ObtenerAsientosPorSesionYTransaccion = ((sp_ObtenerAsientosPorSesionYTransaccionDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Fila {
+                get {
+                    return ((string)(this[this.tablesp_ObtenerAsientosPorSesionYTransaccion.FilaColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsientosPorSesionYTransaccion.FilaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Numero {
+                get {
+                    return ((int)(this[this.tablesp_ObtenerAsientosPorSesionYTransaccion.NumeroColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsientosPorSesionYTransaccion.NumeroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Sala {
+                get {
+                    return ((int)(this[this.tablesp_ObtenerAsientosPorSesionYTransaccion.ID_SalaColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsientosPorSesionYTransaccion.ID_SalaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Estado_Asignacion {
+                get {
+                    return ((string)(this[this.tablesp_ObtenerAsientosPorSesionYTransaccion.Estado_AsignacionColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsientosPorSesionYTransaccion.Estado_AsignacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Fecha_Hora_Asignacion {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_ObtenerAsientosPorSesionYTransaccion.Fecha_Hora_AsignacionColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsientosPorSesionYTransaccion.Fecha_Hora_AsignacionColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_ObtenerAsignacionesRow : global::System.Data.DataRow {
+            
+            private sp_ObtenerAsignacionesDataTable tablesp_ObtenerAsignaciones;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_ObtenerAsignacionesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_ObtenerAsignaciones = ((sp_ObtenerAsignacionesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Transaccion {
+                get {
+                    return ((int)(this[this.tablesp_ObtenerAsignaciones.ID_TransaccionColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsignaciones.ID_TransaccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Estado_Asignacion {
+                get {
+                    return ((string)(this[this.tablesp_ObtenerAsignaciones.Estado_AsignacionColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsignaciones.Estado_AsignacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Fecha_Hora_Asignacion {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_ObtenerAsignaciones.Fecha_Hora_AsignacionColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsignaciones.Fecha_Hora_AsignacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Fila {
+                get {
+                    return ((string)(this[this.tablesp_ObtenerAsignaciones.FilaColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsignaciones.FilaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Numero {
+                get {
+                    return ((int)(this[this.tablesp_ObtenerAsignaciones.NumeroColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsignaciones.NumeroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Sala {
+                get {
+                    return ((int)(this[this.tablesp_ObtenerAsignaciones.ID_SalaColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsignaciones.ID_SalaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Usuario {
+                get {
+                    return ((string)(this[this.tablesp_ObtenerAsignaciones.UsuarioColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerAsignaciones.UsuarioColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_ObtenerSesionPorPeliculaYSalaRow : global::System.Data.DataRow {
+            
+            private sp_ObtenerSesionPorPeliculaYSalaDataTable tablesp_ObtenerSesionPorPeliculaYSala;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_ObtenerSesionPorPeliculaYSalaRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_ObtenerSesionPorPeliculaYSala = ((sp_ObtenerSesionPorPeliculaYSalaDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Sesion {
+                get {
+                    return ((int)(this[this.tablesp_ObtenerSesionPorPeliculaYSala.ID_SesionColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerSesionPorPeliculaYSala.ID_SesionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Fecha_Inicio {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_ObtenerSesionPorPeliculaYSala.Fecha_InicioColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerSesionPorPeliculaYSala.Fecha_InicioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Fecha_Fin {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_ObtenerSesionPorPeliculaYSala.Fecha_FinColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerSesionPorPeliculaYSala.Fecha_FinColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Estado {
+                get {
+                    return ((string)(this[this.tablesp_ObtenerSesionPorPeliculaYSala.EstadoColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerSesionPorPeliculaYSala.EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Sala {
+                get {
+                    return ((int)(this[this.tablesp_ObtenerSesionPorPeliculaYSala.ID_SalaColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerSesionPorPeliculaYSala.ID_SalaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NombrePelicula {
+                get {
+                    return ((string)(this[this.tablesp_ObtenerSesionPorPeliculaYSala.NombrePeliculaColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerSesionPorPeliculaYSala.NombrePeliculaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Clasificacion {
+                get {
+                    return ((string)(this[this.tablesp_ObtenerSesionPorPeliculaYSala.ClasificacionColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerSesionPorPeliculaYSala.ClasificacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Duracion {
+                get {
+                    return ((int)(this[this.tablesp_ObtenerSesionPorPeliculaYSala.DuracionColumn]));
+                }
+                set {
+                    this[this.tablesp_ObtenerSesionPorPeliculaYSala.DuracionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_ObtenerSesionPorPeliculaYSala.DescripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Descripcion\' de la tabla \'sp_ObtenerSesionPorPeliculaYSal" +
+                                "a\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_ObtenerSesionPorPeliculaYSala.DescripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDescripcionNull() {
+                return this.IsNull(this.tablesp_ObtenerSesionPorPeliculaYSala.DescripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDescripcionNull() {
+                this[this.tablesp_ObtenerSesionPorPeliculaYSala.DescripcionColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ListadoTransaccionesConAsientosRow : global::System.Data.DataRow {
+            
+            private ListadoTransaccionesConAsientosDataTable tableListadoTransaccionesConAsientos;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal ListadoTransaccionesConAsientosRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableListadoTransaccionesConAsientos = ((ListadoTransaccionesConAsientosDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Transaccion {
+                get {
+                    return ((int)(this[this.tableListadoTransaccionesConAsientos.ID_TransaccionColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.ID_TransaccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Fecha_Compra {
+                get {
+                    return ((global::System.DateTime)(this[this.tableListadoTransaccionesConAsientos.Fecha_CompraColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.Fecha_CompraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Tipo_Transaccion {
+                get {
+                    return ((string)(this[this.tableListadoTransaccionesConAsientos.Tipo_TransaccionColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.Tipo_TransaccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Cantidad_Asientos {
+                get {
+                    return ((int)(this[this.tableListadoTransaccionesConAsientos.Cantidad_AsientosColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.Cantidad_AsientosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Estado_Transaccion {
+                get {
+                    return ((string)(this[this.tableListadoTransaccionesConAsientos.Estado_TransaccionColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.Estado_TransaccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Nombre_Usuario {
+                get {
+                    return ((string)(this[this.tableListadoTransaccionesConAsientos.Nombre_UsuarioColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.Nombre_UsuarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Sesion {
+                get {
+                    return ((int)(this[this.tableListadoTransaccionesConAsientos.ID_SesionColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.ID_SesionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Fecha_Sesion {
+                get {
+                    return ((global::System.DateTime)(this[this.tableListadoTransaccionesConAsientos.Fecha_SesionColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.Fecha_SesionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Fecha_Fin_Sesion {
+                get {
+                    return ((global::System.DateTime)(this[this.tableListadoTransaccionesConAsientos.Fecha_Fin_SesionColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.Fecha_Fin_SesionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Estado_Sesion {
+                get {
+                    return ((string)(this[this.tableListadoTransaccionesConAsientos.Estado_SesionColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.Estado_SesionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Nombre_Pelicula {
+                get {
+                    return ((string)(this[this.tableListadoTransaccionesConAsientos.Nombre_PeliculaColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.Nombre_PeliculaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Clasificacion {
+                get {
+                    return ((string)(this[this.tableListadoTransaccionesConAsientos.ClasificacionColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.ClasificacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Duracion {
+                get {
+                    return ((int)(this[this.tableListadoTransaccionesConAsientos.DuracionColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.DuracionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Descripcion_Pelicula {
+                get {
+                    try {
+                        return ((string)(this[this.tableListadoTransaccionesConAsientos.Descripcion_PeliculaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Descripcion_Pelicula\' de la tabla \'ListadoTransaccionesCo" +
+                                "nAsientos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.Descripcion_PeliculaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Capacidad_Sala {
+                get {
+                    return ((int)(this[this.tableListadoTransaccionesConAsientos.Capacidad_SalaColumn]));
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.Capacidad_SalaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Asientos_Asignados {
+                get {
+                    try {
+                        return ((int)(this[this.tableListadoTransaccionesConAsientos.Asientos_AsignadosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Asientos_Asignados\' de la tabla \'ListadoTransaccionesConA" +
+                                "sientos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableListadoTransaccionesConAsientos.Asientos_AsignadosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDescripcion_PeliculaNull() {
+                return this.IsNull(this.tableListadoTransaccionesConAsientos.Descripcion_PeliculaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDescripcion_PeliculaNull() {
+                this[this.tableListadoTransaccionesConAsientos.Descripcion_PeliculaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAsientos_AsignadosNull() {
+                return this.IsNull(this.tableListadoTransaccionesConAsientos.Asientos_AsignadosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAsientos_AsignadosNull() {
+                this[this.tableListadoTransaccionesConAsientos.Asientos_AsignadosColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class PromedioAsientosOcupadosYCantidadSesionesRow : global::System.Data.DataRow {
+            
+            private PromedioAsientosOcupadosYCantidadSesionesDataTable tablePromedioAsientosOcupadosYCantidadSesiones;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal PromedioAsientosOcupadosYCantidadSesionesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablePromedioAsientosOcupadosYCantidadSesiones = ((PromedioAsientosOcupadosYCantidadSesionesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Año {
+                get {
+                    try {
+                        return ((int)(this[this.tablePromedioAsientosOcupadosYCantidadSesiones.AñoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Año\' de la tabla \'PromedioAsientosOcupadosYCantidadSesion" +
+                                "es\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePromedioAsientosOcupadosYCantidadSesiones.AñoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Mes {
+                get {
+                    try {
+                        return ((int)(this[this.tablePromedioAsientosOcupadosYCantidadSesiones.MesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Mes\' de la tabla \'PromedioAsientosOcupadosYCantidadSesion" +
+                                "es\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePromedioAsientosOcupadosYCantidadSesiones.MesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Cantidad_Sesiones {
+                get {
+                    try {
+                        return ((int)(this[this.tablePromedioAsientosOcupadosYCantidadSesiones.Cantidad_SesionesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cantidad_Sesiones\' de la tabla \'PromedioAsientosOcupadosY" +
+                                "CantidadSesiones\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePromedioAsientosOcupadosYCantidadSesiones.Cantidad_SesionesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double Promedio_Asientos_Ocupados {
+                get {
+                    try {
+                        return ((double)(this[this.tablePromedioAsientosOcupadosYCantidadSesiones.Promedio_Asientos_OcupadosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Promedio_Asientos_Ocupados\' de la tabla \'PromedioAsientos" +
+                                "OcupadosYCantidadSesiones\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePromedioAsientosOcupadosYCantidadSesiones.Promedio_Asientos_OcupadosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAñoNull() {
+                return this.IsNull(this.tablePromedioAsientosOcupadosYCantidadSesiones.AñoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAñoNull() {
+                this[this.tablePromedioAsientosOcupadosYCantidadSesiones.AñoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMesNull() {
+                return this.IsNull(this.tablePromedioAsientosOcupadosYCantidadSesiones.MesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMesNull() {
+                this[this.tablePromedioAsientosOcupadosYCantidadSesiones.MesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCantidad_SesionesNull() {
+                return this.IsNull(this.tablePromedioAsientosOcupadosYCantidadSesiones.Cantidad_SesionesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCantidad_SesionesNull() {
+                this[this.tablePromedioAsientosOcupadosYCantidadSesiones.Cantidad_SesionesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPromedio_Asientos_OcupadosNull() {
+                return this.IsNull(this.tablePromedioAsientosOcupadosYCantidadSesiones.Promedio_Asientos_OcupadosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPromedio_Asientos_OcupadosNull() {
+                this[this.tablePromedioAsientosOcupadosYCantidadSesiones.Promedio_Asientos_OcupadosColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class SesionesAsientosOcupadosBajoPorcentajeRow : global::System.Data.DataRow {
+            
+            private SesionesAsientosOcupadosBajoPorcentajeDataTable tableSesionesAsientosOcupadosBajoPorcentaje;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal SesionesAsientosOcupadosBajoPorcentajeRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSesionesAsientosOcupadosBajoPorcentaje = ((SesionesAsientosOcupadosBajoPorcentajeDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Sesion {
+                get {
+                    return ((int)(this[this.tableSesionesAsientosOcupadosBajoPorcentaje.ID_SesionColumn]));
+                }
+                set {
+                    this[this.tableSesionesAsientosOcupadosBajoPorcentaje.ID_SesionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Fecha_Inicio {
+                get {
+                    return ((global::System.DateTime)(this[this.tableSesionesAsientosOcupadosBajoPorcentaje.Fecha_InicioColumn]));
+                }
+                set {
+                    this[this.tableSesionesAsientosOcupadosBajoPorcentaje.Fecha_InicioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Fecha_Fin {
+                get {
+                    return ((global::System.DateTime)(this[this.tableSesionesAsientosOcupadosBajoPorcentaje.Fecha_FinColumn]));
+                }
+                set {
+                    this[this.tableSesionesAsientosOcupadosBajoPorcentaje.Fecha_FinColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Asientos_Ocupados {
+                get {
+                    try {
+                        return ((int)(this[this.tableSesionesAsientosOcupadosBajoPorcentaje.Asientos_OcupadosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Asientos_Ocupados\' de la tabla \'SesionesAsientosOcupadosB" +
+                                "ajoPorcentaje\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSesionesAsientosOcupadosBajoPorcentaje.Asientos_OcupadosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Capacidad {
+                get {
+                    return ((int)(this[this.tableSesionesAsientosOcupadosBajoPorcentaje.CapacidadColumn]));
+                }
+                set {
+                    this[this.tableSesionesAsientosOcupadosBajoPorcentaje.CapacidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Porcentaje_Ocupacion {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSesionesAsientosOcupadosBajoPorcentaje.Porcentaje_OcupacionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Porcentaje_Ocupacion\' de la tabla \'SesionesAsientosOcupad" +
+                                "osBajoPorcentaje\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSesionesAsientosOcupadosBajoPorcentaje.Porcentaje_OcupacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAsientos_OcupadosNull() {
+                return this.IsNull(this.tableSesionesAsientosOcupadosBajoPorcentaje.Asientos_OcupadosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAsientos_OcupadosNull() {
+                this[this.tableSesionesAsientosOcupadosBajoPorcentaje.Asientos_OcupadosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPorcentaje_OcupacionNull() {
+                return this.IsNull(this.tableSesionesAsientosOcupadosBajoPorcentaje.Porcentaje_OcupacionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPorcentaje_OcupacionNull() {
+                this[this.tableSesionesAsientosOcupadosBajoPorcentaje.Porcentaje_OcupacionColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_LogTransacciones_RangoFechaRow : global::System.Data.DataRow {
+            
+            private sp_LogTransacciones_RangoFechaDataTable tablesp_LogTransacciones_RangoFecha;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_LogTransacciones_RangoFechaRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_LogTransacciones_RangoFecha = ((sp_LogTransacciones_RangoFechaDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Log {
+                get {
+                    return ((int)(this[this.tablesp_LogTransacciones_RangoFecha.ID_LogColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.ID_LogColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FechaHoraLog {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_LogTransacciones_RangoFecha.FechaHoraLogColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.FechaHoraLogColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string UsuarioLog {
+                get {
+                    return ((string)(this[this.tablesp_LogTransacciones_RangoFecha.UsuarioLogColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.UsuarioLogColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Accion {
+                get {
+                    return ((string)(this[this.tablesp_LogTransacciones_RangoFecha.AccionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.AccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Operacion {
+                get {
+                    return ((int)(this[this.tablesp_LogTransacciones_RangoFecha.ID_OperacionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.ID_OperacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Tabla_Cambio {
+                get {
+                    return ((string)(this[this.tablesp_LogTransacciones_RangoFecha.Tabla_CambioColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.Tabla_CambioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Datos_Anteriores {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_LogTransacciones_RangoFecha.Datos_AnterioresColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Datos_Anteriores\' de la tabla \'sp_LogTransacciones_RangoF" +
+                                "echa\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.Datos_AnterioresColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Datos_Nuevos {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_LogTransacciones_RangoFecha.Datos_NuevosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Datos_Nuevos\' de la tabla \'sp_LogTransacciones_RangoFecha" +
+                                "\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.Datos_NuevosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_LogTransacciones_RangoFecha.DescripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Descripcion\' de la tabla \'sp_LogTransacciones_RangoFecha\'" +
+                                " es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.DescripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Transaccion {
+                get {
+                    return ((int)(this[this.tablesp_LogTransacciones_RangoFecha.ID_TransaccionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.ID_TransaccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FechaHoraTransaccion {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_LogTransacciones_RangoFecha.FechaHoraTransaccionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.FechaHoraTransaccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Tipo_Transaccion {
+                get {
+                    return ((string)(this[this.tablesp_LogTransacciones_RangoFecha.Tipo_TransaccionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.Tipo_TransaccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Cantidad_Asientos {
+                get {
+                    return ((int)(this[this.tablesp_LogTransacciones_RangoFecha.Cantidad_AsientosColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.Cantidad_AsientosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string EstadoTransaccion {
+                get {
+                    return ((string)(this[this.tablesp_LogTransacciones_RangoFecha.EstadoTransaccionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.EstadoTransaccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Usuario {
+                get {
+                    return ((int)(this[this.tablesp_LogTransacciones_RangoFecha.ID_UsuarioColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.ID_UsuarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Tipo_Asignacion {
+                get {
+                    return ((int)(this[this.tablesp_LogTransacciones_RangoFecha.ID_Tipo_AsignacionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.ID_Tipo_AsignacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Sesion {
+                get {
+                    return ((int)(this[this.tablesp_LogTransacciones_RangoFecha.ID_SesionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.ID_SesionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FechaInicioSesion {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_LogTransacciones_RangoFecha.FechaInicioSesionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.FechaInicioSesionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FechaFinSesion {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_LogTransacciones_RangoFecha.FechaFinSesionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.FechaFinSesionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string EstadoSesion {
+                get {
+                    return ((string)(this[this.tablesp_LogTransacciones_RangoFecha.EstadoSesionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.EstadoSesionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Sala {
+                get {
+                    return ((int)(this[this.tablesp_LogTransacciones_RangoFecha.ID_SalaColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.ID_SalaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ID_Pelicula {
+                get {
+                    return ((int)(this[this.tablesp_LogTransacciones_RangoFecha.ID_PeliculaColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.ID_PeliculaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NombrePelicula {
+                get {
+                    return ((string)(this[this.tablesp_LogTransacciones_RangoFecha.NombrePeliculaColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.NombrePeliculaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Clasificacion {
+                get {
+                    return ((string)(this[this.tablesp_LogTransacciones_RangoFecha.ClasificacionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.ClasificacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Duracion {
+                get {
+                    return ((int)(this[this.tablesp_LogTransacciones_RangoFecha.DuracionColumn]));
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.DuracionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string DescripcionPelicula {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_LogTransacciones_RangoFecha.DescripcionPeliculaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DescripcionPelicula\' de la tabla \'sp_LogTransacciones_Ran" +
+                                "goFecha\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_LogTransacciones_RangoFecha.DescripcionPeliculaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDatos_AnterioresNull() {
+                return this.IsNull(this.tablesp_LogTransacciones_RangoFecha.Datos_AnterioresColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDatos_AnterioresNull() {
+                this[this.tablesp_LogTransacciones_RangoFecha.Datos_AnterioresColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDatos_NuevosNull() {
+                return this.IsNull(this.tablesp_LogTransacciones_RangoFecha.Datos_NuevosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDatos_NuevosNull() {
+                this[this.tablesp_LogTransacciones_RangoFecha.Datos_NuevosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDescripcionNull() {
+                return this.IsNull(this.tablesp_LogTransacciones_RangoFecha.DescripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDescripcionNull() {
+                this[this.tablesp_LogTransacciones_RangoFecha.DescripcionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDescripcionPeliculaNull() {
+                return this.IsNull(this.tablesp_LogTransacciones_RangoFecha.DescripcionPeliculaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDescripcionPeliculaNull() {
+                this[this.tablesp_LogTransacciones_RangoFecha.DescripcionPeliculaColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Top5PeliculasMayorPromedioAsientosVendidosRow : global::System.Data.DataRow {
+            
+            private Top5PeliculasMayorPromedioAsientosVendidosDataTable tableTop5PeliculasMayorPromedioAsientosVendidos;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Top5PeliculasMayorPromedioAsientosVendidosRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTop5PeliculasMayorPromedioAsientosVendidos = ((Top5PeliculasMayorPromedioAsientosVendidosDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Pelicula {
+                get {
+                    return ((string)(this[this.tableTop5PeliculasMayorPromedioAsientosVendidos.PeliculaColumn]));
+                }
+                set {
+                    this[this.tableTop5PeliculasMayorPromedioAsientosVendidos.PeliculaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Clasificacion {
+                get {
+                    return ((string)(this[this.tableTop5PeliculasMayorPromedioAsientosVendidos.ClasificacionColumn]));
+                }
+                set {
+                    this[this.tableTop5PeliculasMayorPromedioAsientosVendidos.ClasificacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Duracion {
+                get {
+                    return ((int)(this[this.tableTop5PeliculasMayorPromedioAsientosVendidos.DuracionColumn]));
+                }
+                set {
+                    this[this.tableTop5PeliculasMayorPromedioAsientosVendidos.DuracionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Promedio_Asientos_Vendidos {
+                get {
+                    try {
+                        return ((int)(this[this.tableTop5PeliculasMayorPromedioAsientosVendidos.Promedio_Asientos_VendidosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Promedio_Asientos_Vendidos\' de la tabla \'Top5PeliculasMay" +
+                                "orPromedioAsientosVendidos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTop5PeliculasMayorPromedioAsientosVendidos.Promedio_Asientos_VendidosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPromedio_Asientos_VendidosNull() {
+                return this.IsNull(this.tableTop5PeliculasMayorPromedioAsientosVendidos.Promedio_Asientos_VendidosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPromedio_Asientos_VendidosNull() {
+                this[this.tableTop5PeliculasMayorPromedioAsientosVendidos.Promedio_Asientos_VendidosColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -4781,6 +10428,346 @@ namespace CINEBD {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public UsuariosRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class ListadoSesionesConAsientosOcupadosRowChangeEvent : global::System.EventArgs {
+            
+            private ListadoSesionesConAsientosOcupadosRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoSesionesConAsientosOcupadosRowChangeEvent(ListadoSesionesConAsientosOcupadosRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoSesionesConAsientosOcupadosRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class sp_ObtenerAsientosDisponiblesRowChangeEvent : global::System.EventArgs {
+            
+            private sp_ObtenerAsientosDisponiblesRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosDisponiblesRowChangeEvent(sp_ObtenerAsientosDisponiblesRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosDisponiblesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class sp_ObtenerAsientosPorSesionYTransaccionRowChangeEvent : global::System.EventArgs {
+            
+            private sp_ObtenerAsientosPorSesionYTransaccionRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosPorSesionYTransaccionRowChangeEvent(sp_ObtenerAsientosPorSesionYTransaccionRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsientosPorSesionYTransaccionRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class sp_ObtenerAsignacionesRowChangeEvent : global::System.EventArgs {
+            
+            private sp_ObtenerAsignacionesRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsignacionesRowChangeEvent(sp_ObtenerAsignacionesRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerAsignacionesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class sp_ObtenerSesionPorPeliculaYSalaRowChangeEvent : global::System.EventArgs {
+            
+            private sp_ObtenerSesionPorPeliculaYSalaRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerSesionPorPeliculaYSalaRowChangeEvent(sp_ObtenerSesionPorPeliculaYSalaRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ObtenerSesionPorPeliculaYSalaRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class ListadoTransaccionesConAsientosRowChangeEvent : global::System.EventArgs {
+            
+            private ListadoTransaccionesConAsientosRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoTransaccionesConAsientosRowChangeEvent(ListadoTransaccionesConAsientosRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ListadoTransaccionesConAsientosRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class PromedioAsientosOcupadosYCantidadSesionesRowChangeEvent : global::System.EventArgs {
+            
+            private PromedioAsientosOcupadosYCantidadSesionesRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PromedioAsientosOcupadosYCantidadSesionesRowChangeEvent(PromedioAsientosOcupadosYCantidadSesionesRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PromedioAsientosOcupadosYCantidadSesionesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class SesionesAsientosOcupadosBajoPorcentajeRowChangeEvent : global::System.EventArgs {
+            
+            private SesionesAsientosOcupadosBajoPorcentajeRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SesionesAsientosOcupadosBajoPorcentajeRowChangeEvent(SesionesAsientosOcupadosBajoPorcentajeRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SesionesAsientosOcupadosBajoPorcentajeRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class sp_LogTransacciones_RangoFechaRowChangeEvent : global::System.EventArgs {
+            
+            private sp_LogTransacciones_RangoFechaRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_LogTransacciones_RangoFechaRowChangeEvent(sp_LogTransacciones_RangoFechaRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_LogTransacciones_RangoFechaRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class Top5PeliculasMayorPromedioAsientosVendidosRowChangeEvent : global::System.EventArgs {
+            
+            private Top5PeliculasMayorPromedioAsientosVendidosRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Top5PeliculasMayorPromedioAsientosVendidosRowChangeEvent(Top5PeliculasMayorPromedioAsientosVendidosRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Top5PeliculasMayorPromedioAsientosVendidosRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -8089,6 +14076,2448 @@ SELECT ID_Usuario, Nombre, Rol, Contraseña FROM Usuarios WHERE (ID_Usuario = @I
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class ListadoSesionesConAsientosOcupadosTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public ListadoSesionesConAsientosOcupadosTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "ListadoSesionesConAsientosOcupados";
+            tableMapping.ColumnMappings.Add("ID_Sesion", "ID_Sesion");
+            tableMapping.ColumnMappings.Add("Fecha_Inicio", "Fecha_Inicio");
+            tableMapping.ColumnMappings.Add("Fecha_Fin", "Fecha_Fin");
+            tableMapping.ColumnMappings.Add("Estado", "Estado");
+            tableMapping.ColumnMappings.Add("ID_Sala", "ID_Sala");
+            tableMapping.ColumnMappings.Add("ID_Pelicula", "ID_Pelicula");
+            tableMapping.ColumnMappings.Add("Nombre_Pelicula", "Nombre_Pelicula");
+            tableMapping.ColumnMappings.Add("Clasificacion", "Clasificacion");
+            tableMapping.ColumnMappings.Add("Duracion", "Duracion");
+            tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
+            tableMapping.ColumnMappings.Add("Capacidad", "Capacidad");
+            tableMapping.ColumnMappings.Add("Asientos_Ocupados", "Asientos_Ocupados");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.ListadoSesionesConAsientosOcupados";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaInicio", global::System.Data.SqlDbType.DateTime2, 8, global::System.Data.ParameterDirection.Input, 27, 7, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaFin", global::System.Data.SqlDbType.DateTime2, 8, global::System.Data.ParameterDirection.Input, 27, 7, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(db_aadccb_cinebdDataSet.ListadoSesionesConAsientosOcupadosDataTable dataTable, global::System.Nullable<global::System.DateTime> FechaInicio, global::System.Nullable<global::System.DateTime> FechaFin) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FechaInicio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FechaInicio.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((FechaFin.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(FechaFin.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual db_aadccb_cinebdDataSet.ListadoSesionesConAsientosOcupadosDataTable GetData(global::System.Nullable<global::System.DateTime> FechaInicio, global::System.Nullable<global::System.DateTime> FechaFin) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FechaInicio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FechaInicio.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((FechaFin.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(FechaFin.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            db_aadccb_cinebdDataSet.ListadoSesionesConAsientosOcupadosDataTable dataTable = new db_aadccb_cinebdDataSet.ListadoSesionesConAsientosOcupadosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class sp_ObtenerAsientosDisponiblesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public sp_ObtenerAsientosDisponiblesTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "sp_ObtenerAsientosDisponibles";
+            tableMapping.ColumnMappings.Add("ID_Sala", "ID_Sala");
+            tableMapping.ColumnMappings.Add("Fila", "Fila");
+            tableMapping.ColumnMappings.Add("Numero", "Numero");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.sp_ObtenerAsientosDisponibles";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Sala", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Sesion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(db_aadccb_cinebdDataSet.sp_ObtenerAsientosDisponiblesDataTable dataTable, global::System.Nullable<int> ID_Sala, global::System.Nullable<int> ID_Sesion) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ID_Sala.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Sala.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ID_Sesion.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(ID_Sesion.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual db_aadccb_cinebdDataSet.sp_ObtenerAsientosDisponiblesDataTable GetData(global::System.Nullable<int> ID_Sala, global::System.Nullable<int> ID_Sesion) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ID_Sala.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Sala.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ID_Sesion.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(ID_Sesion.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            db_aadccb_cinebdDataSet.sp_ObtenerAsientosDisponiblesDataTable dataTable = new db_aadccb_cinebdDataSet.sp_ObtenerAsientosDisponiblesDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class sp_ObtenerAsientosPorSesionYTransaccionTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public sp_ObtenerAsientosPorSesionYTransaccionTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "sp_ObtenerAsientosPorSesionYTransaccion";
+            tableMapping.ColumnMappings.Add("Fila", "Fila");
+            tableMapping.ColumnMappings.Add("Numero", "Numero");
+            tableMapping.ColumnMappings.Add("ID_Sala", "ID_Sala");
+            tableMapping.ColumnMappings.Add("Estado_Asignacion", "Estado_Asignacion");
+            tableMapping.ColumnMappings.Add("Fecha_Hora_Asignacion", "Fecha_Hora_Asignacion");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.sp_ObtenerAsientosPorSesionYTransaccion";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idSesion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTransaccion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(db_aadccb_cinebdDataSet.sp_ObtenerAsientosPorSesionYTransaccionDataTable dataTable, global::System.Nullable<int> idSesion, global::System.Nullable<int> idTransaccion) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idSesion.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idSesion.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((idTransaccion.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(idTransaccion.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual db_aadccb_cinebdDataSet.sp_ObtenerAsientosPorSesionYTransaccionDataTable GetData(global::System.Nullable<int> idSesion, global::System.Nullable<int> idTransaccion) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idSesion.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idSesion.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((idTransaccion.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(idTransaccion.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            db_aadccb_cinebdDataSet.sp_ObtenerAsientosPorSesionYTransaccionDataTable dataTable = new db_aadccb_cinebdDataSet.sp_ObtenerAsientosPorSesionYTransaccionDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class sp_ObtenerAsignacionesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public sp_ObtenerAsignacionesTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "sp_ObtenerAsignaciones";
+            tableMapping.ColumnMappings.Add("ID_Transaccion", "ID_Transaccion");
+            tableMapping.ColumnMappings.Add("Estado_Asignacion", "Estado_Asignacion");
+            tableMapping.ColumnMappings.Add("Fecha_Hora_Asignacion", "Fecha_Hora_Asignacion");
+            tableMapping.ColumnMappings.Add("Fila", "Fila");
+            tableMapping.ColumnMappings.Add("Numero", "Numero");
+            tableMapping.ColumnMappings.Add("ID_Sala", "ID_Sala");
+            tableMapping.ColumnMappings.Add("Usuario", "Usuario");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.sp_ObtenerAsignaciones";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTransaccion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(db_aadccb_cinebdDataSet.sp_ObtenerAsignacionesDataTable dataTable, global::System.Nullable<int> idTransaccion) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idTransaccion.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idTransaccion.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual db_aadccb_cinebdDataSet.sp_ObtenerAsignacionesDataTable GetData(global::System.Nullable<int> idTransaccion) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idTransaccion.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idTransaccion.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            db_aadccb_cinebdDataSet.sp_ObtenerAsignacionesDataTable dataTable = new db_aadccb_cinebdDataSet.sp_ObtenerAsignacionesDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class sp_ObtenerSesionPorPeliculaYSalaTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public sp_ObtenerSesionPorPeliculaYSalaTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "sp_ObtenerSesionPorPeliculaYSala";
+            tableMapping.ColumnMappings.Add("ID_Sesion", "ID_Sesion");
+            tableMapping.ColumnMappings.Add("Fecha_Inicio", "Fecha_Inicio");
+            tableMapping.ColumnMappings.Add("Fecha_Fin", "Fecha_Fin");
+            tableMapping.ColumnMappings.Add("Estado", "Estado");
+            tableMapping.ColumnMappings.Add("ID_Sala", "ID_Sala");
+            tableMapping.ColumnMappings.Add("NombrePelicula", "NombrePelicula");
+            tableMapping.ColumnMappings.Add("Clasificacion", "Clasificacion");
+            tableMapping.ColumnMappings.Add("Duracion", "Duracion");
+            tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.sp_ObtenerSesionPorPeliculaYSala";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idPelicula", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idSala", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(db_aadccb_cinebdDataSet.sp_ObtenerSesionPorPeliculaYSalaDataTable dataTable, global::System.Nullable<int> idPelicula, global::System.Nullable<int> idSala) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idPelicula.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idPelicula.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((idSala.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(idSala.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual db_aadccb_cinebdDataSet.sp_ObtenerSesionPorPeliculaYSalaDataTable GetData(global::System.Nullable<int> idPelicula, global::System.Nullable<int> idSala) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idPelicula.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idPelicula.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((idSala.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(idSala.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            db_aadccb_cinebdDataSet.sp_ObtenerSesionPorPeliculaYSalaDataTable dataTable = new db_aadccb_cinebdDataSet.sp_ObtenerSesionPorPeliculaYSalaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class ListadoTransaccionesConAsientosTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public ListadoTransaccionesConAsientosTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "ListadoTransaccionesConAsientos";
+            tableMapping.ColumnMappings.Add("ID_Transaccion", "ID_Transaccion");
+            tableMapping.ColumnMappings.Add("Fecha_Compra", "Fecha_Compra");
+            tableMapping.ColumnMappings.Add("Tipo_Transaccion", "Tipo_Transaccion");
+            tableMapping.ColumnMappings.Add("Cantidad_Asientos", "Cantidad_Asientos");
+            tableMapping.ColumnMappings.Add("Estado_Transaccion", "Estado_Transaccion");
+            tableMapping.ColumnMappings.Add("Nombre_Usuario", "Nombre_Usuario");
+            tableMapping.ColumnMappings.Add("ID_Sesion", "ID_Sesion");
+            tableMapping.ColumnMappings.Add("Fecha_Sesion", "Fecha_Sesion");
+            tableMapping.ColumnMappings.Add("Fecha_Fin_Sesion", "Fecha_Fin_Sesion");
+            tableMapping.ColumnMappings.Add("Estado_Sesion", "Estado_Sesion");
+            tableMapping.ColumnMappings.Add("Nombre_Pelicula", "Nombre_Pelicula");
+            tableMapping.ColumnMappings.Add("Clasificacion", "Clasificacion");
+            tableMapping.ColumnMappings.Add("Duracion", "Duracion");
+            tableMapping.ColumnMappings.Add("Descripcion_Pelicula", "Descripcion_Pelicula");
+            tableMapping.ColumnMappings.Add("Capacidad_Sala", "Capacidad_Sala");
+            tableMapping.ColumnMappings.Add("Asientos_Asignados", "Asientos_Asignados");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.ListadoTransaccionesConAsientos";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaInicio", global::System.Data.SqlDbType.DateTime2, 8, global::System.Data.ParameterDirection.Input, 27, 7, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaFin", global::System.Data.SqlDbType.DateTime2, 8, global::System.Data.ParameterDirection.Input, 27, 7, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(db_aadccb_cinebdDataSet.ListadoTransaccionesConAsientosDataTable dataTable, global::System.Nullable<global::System.DateTime> FechaInicio, global::System.Nullable<global::System.DateTime> FechaFin) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FechaInicio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FechaInicio.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((FechaFin.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(FechaFin.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual db_aadccb_cinebdDataSet.ListadoTransaccionesConAsientosDataTable GetData(global::System.Nullable<global::System.DateTime> FechaInicio, global::System.Nullable<global::System.DateTime> FechaFin) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FechaInicio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FechaInicio.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((FechaFin.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(FechaFin.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            db_aadccb_cinebdDataSet.ListadoTransaccionesConAsientosDataTable dataTable = new db_aadccb_cinebdDataSet.ListadoTransaccionesConAsientosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class PromedioAsientosOcupadosYCantidadSesionesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public PromedioAsientosOcupadosYCantidadSesionesTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "PromedioAsientosOcupadosYCantidadSesiones";
+            tableMapping.ColumnMappings.Add("Año", "Año");
+            tableMapping.ColumnMappings.Add("Mes", "Mes");
+            tableMapping.ColumnMappings.Add("Cantidad_Sesiones", "Cantidad_Sesiones");
+            tableMapping.ColumnMappings.Add("Promedio_Asientos_Ocupados", "Promedio_Asientos_Ocupados");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.PromedioAsientosOcupadosYCantidadSesiones";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Sala", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(db_aadccb_cinebdDataSet.PromedioAsientosOcupadosYCantidadSesionesDataTable dataTable, global::System.Nullable<int> ID_Sala) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ID_Sala.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Sala.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual db_aadccb_cinebdDataSet.PromedioAsientosOcupadosYCantidadSesionesDataTable GetData(global::System.Nullable<int> ID_Sala) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ID_Sala.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Sala.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            db_aadccb_cinebdDataSet.PromedioAsientosOcupadosYCantidadSesionesDataTable dataTable = new db_aadccb_cinebdDataSet.PromedioAsientosOcupadosYCantidadSesionesDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class SesionesAsientosOcupadosBajoPorcentajeTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public SesionesAsientosOcupadosBajoPorcentajeTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "SesionesAsientosOcupadosBajoPorcentaje";
+            tableMapping.ColumnMappings.Add("ID_Sesion", "ID_Sesion");
+            tableMapping.ColumnMappings.Add("Fecha_Inicio", "Fecha_Inicio");
+            tableMapping.ColumnMappings.Add("Fecha_Fin", "Fecha_Fin");
+            tableMapping.ColumnMappings.Add("Asientos_Ocupados", "Asientos_Ocupados");
+            tableMapping.ColumnMappings.Add("Capacidad", "Capacidad");
+            tableMapping.ColumnMappings.Add("Porcentaje_Ocupacion", "Porcentaje_Ocupacion");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.SesionesAsientosOcupadosBajoPorcentaje";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Sala", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Porcentaje", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 5, 2, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(db_aadccb_cinebdDataSet.SesionesAsientosOcupadosBajoPorcentajeDataTable dataTable, global::System.Nullable<int> ID_Sala, global::System.Nullable<decimal> Porcentaje) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ID_Sala.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Sala.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Porcentaje.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((decimal)(Porcentaje.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual db_aadccb_cinebdDataSet.SesionesAsientosOcupadosBajoPorcentajeDataTable GetData(global::System.Nullable<int> ID_Sala, global::System.Nullable<decimal> Porcentaje) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ID_Sala.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID_Sala.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Porcentaje.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((decimal)(Porcentaje.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            db_aadccb_cinebdDataSet.SesionesAsientosOcupadosBajoPorcentajeDataTable dataTable = new db_aadccb_cinebdDataSet.SesionesAsientosOcupadosBajoPorcentajeDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class sp_LogTransacciones_RangoFechaTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public sp_LogTransacciones_RangoFechaTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "sp_LogTransacciones_RangoFecha";
+            tableMapping.ColumnMappings.Add("ID_Log", "ID_Log");
+            tableMapping.ColumnMappings.Add("FechaHoraLog", "FechaHoraLog");
+            tableMapping.ColumnMappings.Add("UsuarioLog", "UsuarioLog");
+            tableMapping.ColumnMappings.Add("Accion", "Accion");
+            tableMapping.ColumnMappings.Add("ID_Operacion", "ID_Operacion");
+            tableMapping.ColumnMappings.Add("Tabla_Cambio", "Tabla_Cambio");
+            tableMapping.ColumnMappings.Add("Datos_Anteriores", "Datos_Anteriores");
+            tableMapping.ColumnMappings.Add("Datos_Nuevos", "Datos_Nuevos");
+            tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
+            tableMapping.ColumnMappings.Add("ID_Transaccion", "ID_Transaccion");
+            tableMapping.ColumnMappings.Add("FechaHoraTransaccion", "FechaHoraTransaccion");
+            tableMapping.ColumnMappings.Add("Tipo_Transaccion", "Tipo_Transaccion");
+            tableMapping.ColumnMappings.Add("Cantidad_Asientos", "Cantidad_Asientos");
+            tableMapping.ColumnMappings.Add("EstadoTransaccion", "EstadoTransaccion");
+            tableMapping.ColumnMappings.Add("ID_Usuario", "ID_Usuario");
+            tableMapping.ColumnMappings.Add("ID_Tipo_Asignacion", "ID_Tipo_Asignacion");
+            tableMapping.ColumnMappings.Add("ID_Sesion", "ID_Sesion");
+            tableMapping.ColumnMappings.Add("FechaInicioSesion", "FechaInicioSesion");
+            tableMapping.ColumnMappings.Add("FechaFinSesion", "FechaFinSesion");
+            tableMapping.ColumnMappings.Add("EstadoSesion", "EstadoSesion");
+            tableMapping.ColumnMappings.Add("ID_Sala", "ID_Sala");
+            tableMapping.ColumnMappings.Add("ID_Pelicula", "ID_Pelicula");
+            tableMapping.ColumnMappings.Add("NombrePelicula", "NombrePelicula");
+            tableMapping.ColumnMappings.Add("Clasificacion", "Clasificacion");
+            tableMapping.ColumnMappings.Add("Duracion", "Duracion");
+            tableMapping.ColumnMappings.Add("DescripcionPelicula", "DescripcionPelicula");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.sp_LogTransacciones_RangoFecha";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaInicio", global::System.Data.SqlDbType.DateTime2, 8, global::System.Data.ParameterDirection.Input, 27, 7, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaFin", global::System.Data.SqlDbType.DateTime2, 8, global::System.Data.ParameterDirection.Input, 27, 7, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(db_aadccb_cinebdDataSet.sp_LogTransacciones_RangoFechaDataTable dataTable, global::System.Nullable<global::System.DateTime> FechaInicio, global::System.Nullable<global::System.DateTime> FechaFin) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FechaInicio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FechaInicio.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((FechaFin.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(FechaFin.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual db_aadccb_cinebdDataSet.sp_LogTransacciones_RangoFechaDataTable GetData(global::System.Nullable<global::System.DateTime> FechaInicio, global::System.Nullable<global::System.DateTime> FechaFin) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FechaInicio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FechaInicio.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((FechaFin.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(FechaFin.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            db_aadccb_cinebdDataSet.sp_LogTransacciones_RangoFechaDataTable dataTable = new db_aadccb_cinebdDataSet.sp_LogTransacciones_RangoFechaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Top5PeliculasMayorPromedioAsientosVendidosTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public Top5PeliculasMayorPromedioAsientosVendidosTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Top5PeliculasMayorPromedioAsientosVendidos";
+            tableMapping.ColumnMappings.Add("Pelicula", "Pelicula");
+            tableMapping.ColumnMappings.Add("Clasificacion", "Clasificacion");
+            tableMapping.ColumnMappings.Add("Duracion", "Duracion");
+            tableMapping.ColumnMappings.Add("Promedio_Asientos_Vendidos", "Promedio_Asientos_Vendidos");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.Top5PeliculasMayorPromedioAsientosVendidos";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(db_aadccb_cinebdDataSet.Top5PeliculasMayorPromedioAsientosVendidosDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual db_aadccb_cinebdDataSet.Top5PeliculasMayorPromedioAsientosVendidosDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            db_aadccb_cinebdDataSet.Top5PeliculasMayorPromedioAsientosVendidosDataTable dataTable = new db_aadccb_cinebdDataSet.Top5PeliculasMayorPromedioAsientosVendidosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class QueriesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.IDbCommand[] _commandCollection;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.IDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.IDbCommand[7];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.sp_AnularTransaccion";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTransaccion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mensajeError", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.InputOutput, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Connection = new global::System.Data.SqlClient.SqlConnection(global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandText = "dbo.sp_CambiarBoletos";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTransaccion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idSesion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@asientosAntiguos", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nuevosAsientos", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mensajeError", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.InputOutput, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Connection = new global::System.Data.SqlClient.SqlConnection(global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandText = "dbo.sp_CrearPelicula";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@clasificacion", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@duracion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descripcion", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mensajeError", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.InputOutput, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Connection = new global::System.Data.SqlClient.SqlConnection(global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandText = "dbo.sp_CrearSesion";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaInicio", global::System.Data.SqlDbType.DateTime2, 8, global::System.Data.ParameterDirection.Input, 27, 7, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idSala", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idPelicula", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mensajeError", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.InputOutput, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Connection = new global::System.Data.SqlClient.SqlConnection(global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).CommandText = "dbo.sp_desactivarSesion";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idSesion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mensajeError", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.InputOutput, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Connection = new global::System.Data.SqlClient.SqlConnection(global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).CommandText = "dbo.sp_VentaBoletos";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idSesion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombreUsuario", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cantAsientos", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTipoAsignacion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@asientosTipoManual", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mensajeError", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.InputOutput, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Connection = new global::System.Data.SqlClient.SqlConnection(global::CINEBD.Properties.Settings.Default.db_aadccb_cinebdConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).CommandText = "dbo.VerificaUsuario";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contraseña", global::System.Data.SqlDbType.VarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rol", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.InputOutput, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mensajeError", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.InputOutput, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int sp_AnularTransaccion(global::System.Nullable<int> idTransaccion, ref string mensajeError) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[0]));
+            if ((idTransaccion.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(idTransaccion.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((mensajeError == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(mensajeError));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((command.Parameters[2].Value == null) 
+                        || (command.Parameters[2].Value.GetType() == typeof(global::System.DBNull)))) {
+                mensajeError = null;
+            }
+            else {
+                mensajeError = ((string)(command.Parameters[2].Value));
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int sp_CambiarBoletos(global::System.Nullable<int> idTransaccion, global::System.Nullable<int> idSesion, string asientosAntiguos, string nuevosAsientos, ref string mensajeError) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[1]));
+            if ((idTransaccion.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(idTransaccion.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((idSesion.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(idSesion.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((asientosAntiguos == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(asientosAntiguos));
+            }
+            if ((nuevosAsientos == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(nuevosAsientos));
+            }
+            if ((mensajeError == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(mensajeError));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((command.Parameters[5].Value == null) 
+                        || (command.Parameters[5].Value.GetType() == typeof(global::System.DBNull)))) {
+                mensajeError = null;
+            }
+            else {
+                mensajeError = ((string)(command.Parameters[5].Value));
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int sp_CrearPelicula(string nombre, string clasificacion, global::System.Nullable<int> duracion, string descripcion, ref string mensajeError) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[2]));
+            if ((nombre == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(nombre));
+            }
+            if ((clasificacion == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(clasificacion));
+            }
+            if ((duracion.HasValue == true)) {
+                command.Parameters[3].Value = ((int)(duracion.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((descripcion == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(descripcion));
+            }
+            if ((mensajeError == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(mensajeError));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((command.Parameters[5].Value == null) 
+                        || (command.Parameters[5].Value.GetType() == typeof(global::System.DBNull)))) {
+                mensajeError = null;
+            }
+            else {
+                mensajeError = ((string)(command.Parameters[5].Value));
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int sp_CrearSesion(global::System.Nullable<global::System.DateTime> fechaInicio, global::System.Nullable<int> idSala, global::System.Nullable<int> idPelicula, ref string mensajeError) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[3]));
+            if ((fechaInicio.HasValue == true)) {
+                command.Parameters[1].Value = ((System.DateTime)(fechaInicio.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((idSala.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(idSala.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((idPelicula.HasValue == true)) {
+                command.Parameters[3].Value = ((int)(idPelicula.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((mensajeError == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(mensajeError));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((command.Parameters[4].Value == null) 
+                        || (command.Parameters[4].Value.GetType() == typeof(global::System.DBNull)))) {
+                mensajeError = null;
+            }
+            else {
+                mensajeError = ((string)(command.Parameters[4].Value));
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int sp_desactivarSesion(global::System.Nullable<int> idSesion, ref string mensajeError) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[4]));
+            if ((idSesion.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(idSesion.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((mensajeError == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(mensajeError));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((command.Parameters[2].Value == null) 
+                        || (command.Parameters[2].Value.GetType() == typeof(global::System.DBNull)))) {
+                mensajeError = null;
+            }
+            else {
+                mensajeError = ((string)(command.Parameters[2].Value));
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int sp_VentaBoletos(global::System.Nullable<int> idSesion, string nombreUsuario, global::System.Nullable<int> cantAsientos, global::System.Nullable<int> idTipoAsignacion, string asientosTipoManual, ref string mensajeError) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[5]));
+            if ((idSesion.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(idSesion.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((nombreUsuario == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(nombreUsuario));
+            }
+            if ((cantAsientos.HasValue == true)) {
+                command.Parameters[3].Value = ((int)(cantAsientos.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((idTipoAsignacion.HasValue == true)) {
+                command.Parameters[4].Value = ((int)(idTipoAsignacion.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((asientosTipoManual == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(asientosTipoManual));
+            }
+            if ((mensajeError == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(mensajeError));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((command.Parameters[6].Value == null) 
+                        || (command.Parameters[6].Value.GetType() == typeof(global::System.DBNull)))) {
+                mensajeError = null;
+            }
+            else {
+                mensajeError = ((string)(command.Parameters[6].Value));
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int VerificaUsuario(string Nombre, string Contraseña, ref string Rol, ref string mensajeError) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[6]));
+            if ((Nombre == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Nombre));
+            }
+            if ((Contraseña == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Contraseña));
+            }
+            if ((Rol == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(Rol));
+            }
+            if ((mensajeError == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(mensajeError));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((command.Parameters[3].Value == null) 
+                        || (command.Parameters[3].Value.GetType() == typeof(global::System.DBNull)))) {
+                Rol = null;
+            }
+            else {
+                Rol = ((string)(command.Parameters[3].Value));
+            }
+            if (((command.Parameters[4].Value == null) 
+                        || (command.Parameters[4].Value.GetType() == typeof(global::System.DBNull)))) {
+                mensajeError = null;
+            }
+            else {
+                mensajeError = ((string)(command.Parameters[4].Value));
+            }
+            return returnValue;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8428,21 +16857,21 @@ SELECT ID_Usuario, Nombre, Rol, Contraseña FROM Usuarios WHERE (ID_Usuario = @I
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._log_TransaccionTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Log_Transaccion.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._log_TransaccionTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._transaccion_AsientoTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Transaccion_Asiento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._transaccion_AsientoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._log_TransaccionTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Log_Transaccion.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._log_TransaccionTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -8512,19 +16941,19 @@ SELECT ID_Usuario, Nombre, Rol, Contraseña FROM Usuarios WHERE (ID_Usuario = @I
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._log_TransaccionTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Log_Transaccion.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._log_TransaccionTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._transaccion_AsientoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Transaccion_Asiento.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._transaccion_AsientoTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._log_TransaccionTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Log_Transaccion.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._log_TransaccionTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -8538,19 +16967,19 @@ SELECT ID_Usuario, Nombre, Rol, Contraseña FROM Usuarios WHERE (ID_Usuario = @I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(db_aadccb_cinebdDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._transaccion_AsientoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Transaccion_Asiento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._transaccion_AsientoTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._log_TransaccionTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Log_Transaccion.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._log_TransaccionTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._transaccion_AsientoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Transaccion_Asiento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._transaccion_AsientoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
